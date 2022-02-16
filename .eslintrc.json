@@ -1,0 +1,6 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["next/core-web-vitals", "yehezgun"]
+}
