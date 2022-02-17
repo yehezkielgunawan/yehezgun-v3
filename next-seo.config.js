@@ -1,23 +1,24 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  defaultTitle: "yehez-nexttw-starter",
+  defaultTitle: "Yehezkiel Gunawan | YehezGun",
   description:
-    "Yehezkiel Gunawan's personalized Next.js + Tailwind CSS + TypeScript starter template",
-  canonical: "https://yehez-nexttailwind-starter.yehezgun.com",
+    "Yehezkiel Gunawan's personal site, made using Next.js + Tailwind CSS",
+  canonical: "https://v3.yehezgun.com",
   openGraph: {
-    url: "https://yehez-nexttailwind-starter.yehezgun.com",
-    title: "yehez-nexttailwind-starter",
-    description: "Next.js + Tailwind CSS + TypeScript template",
+    url: "https://v3.yehezgun.com",
+    title: "yehezgun",
+    description:
+      "Yehezkiel Gunawan's personal site, made using Next.js + Tailwind CSS",
     type: "website",
     images: [
       {
-        url: "https://og.yehezgun.com/api/base?description=A%20personalized%20Next.js%20%2B%20TS%20%2B%20Tailwind%20CSS%20starter%20template%20by%20Yehezkiel%20Gunawan&siteName=nexttw-starter.yehezgun.com&templateTitle=Next.js%20%2B%20TS%20%2BTailwind%20Starter%20Template&theme=dark",
-        alt: "yehez-nexttailwind-starter.yehezgun.com og-image",
+        url: "https://og.yehezgun.com/api/base?description=An%20online%20portfolio%20and%20article%20site%20by%20Yehezkiel%20Gunawan.%20Showcase%20about%20my%20projects%20and%20thoughts%20about%20my%20experience%20as%20a%20Frontend%20Engineer&siteName=yehezgun.com&templateTitle=Yehezkiel%20Gunawan&theme=dark",
+        alt: "v4.yehezgun.com og-image",
         width: 800,
         height: 600,
       },
     ],
-    site_name: "yehez-nexttailwind-starter",
+    site_name: "yehezgun",
   },
   twitter: {
     handle: "@handle",
@@ -27,7 +28,7 @@ const defaultSEOConfig = {
   additionalLinkTags: [
     {
       rel: "icon",
-      href: "https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png",
+      href: "https://res.cloudinary.com/yehez/image/upload/v1636202181/peep_amkhuu.svg",
     },
   ],
 };
