@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 
@@ -11,6 +12,7 @@ import UnstyledLink from "./links/UnstyledLink";
 
 const HeaderComponent = () => {
   const { resolvedTheme, setTheme } = useTheme();
+  const router = useRouter();
   const [mounted, setMounted] = useState<boolean>(false);
 
   const handleChangeTheme = () => {
@@ -43,7 +45,10 @@ const HeaderComponent = () => {
             <UnstyledLink
               href={menu.route}
               key={index}
-              className="hidden font-bold hover:underline md:table-cell"
+              className={clsxm(
+                "hidden font-semibold hover:underline md:table-cell",
+                router.pathname === menu.route && "font-black underline"
+              )}
             >
               {menu.menu_name}
             </UnstyledLink>
