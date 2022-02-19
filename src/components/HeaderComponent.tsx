@@ -26,7 +26,7 @@ const HeaderComponent = () => {
   if (!mounted) return null;
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white p-0.5 opacity-90 dark:bg-gray-700">
+    <header className="fixed top-0 z-50 w-full bg-white p-0.5 opacity-90 dark:bg-primary-700">
       <div
         className={clsx(
           "layout flex items-center justify-between",
@@ -54,11 +54,11 @@ const HeaderComponent = () => {
             </UnstyledLink>
           ))}
           <Button
-            variant="outline"
             className={clsxm(
-              "dark:border-white dark:text-white dark:hover:bg-gray-500",
-              "hover:border-black hover:bg-gray-200",
-              "ml-2 border-black p-2 text-black"
+              "bg-primary-200 dark:bg-slate-600",
+              "hover:bg-gray-200 dark:hover:bg-gray-400",
+              "ml-2  p-2 text-black dark:text-white",
+              "rounded-full border-none"
             )}
             onClick={() => handleChangeTheme()}
           >

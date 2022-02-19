@@ -18,7 +18,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div
         className={clsxm(
           "fixed bottom-4 left-1/2 flex w-11/12 -translate-x-1/2 items-center justify-around",
-          "rounded-lg bg-slate-300 py-2 opacity-90 shadow-xl",
+          "rounded-lg bg-slate-400 py-2 opacity-90 shadow-xl",
           "dark:bg-slate-600 md:hidden"
         )}
       >
@@ -29,6 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             className={clsxm(
               "flex flex-col items-center justify-center gap-2 p-2",
               "hover:rounded-md hover:border hover:border-primary-100",
+              "active:border-sky-300 active:bg-primary-300",
               router.pathname === menu.route &&
                 "rounded-md border-2 border-primary-100"
             )}
