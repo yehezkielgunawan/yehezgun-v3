@@ -6,7 +6,6 @@ import HeaderComponent from "@/components/HeaderComponent";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import { menuList } from "@/constants/MenuList";
 import clsxm from "@/lib/helpers/clsxm";
-import { menuIcon } from "@/lib/helpers/menuIcon";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
@@ -31,10 +30,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               "hover:rounded-md hover:border hover:border-primary-100",
               "active:border-sky-300 active:bg-primary-300",
               router.pathname === menu.route &&
-                "rounded-md border-2 border-primary-100"
+                "rounded-md border-2 border-primary-200"
             )}
           >
-            {menuIcon(menu.menu_name)}
+            {menu.icon}
             <h5 className="font-bold">{menu.menu_name}</h5>
           </UnstyledLink>
         ))}
