@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["assets.vercel.com"],
+    domains: ["assets.vercel.com", "dl.airtable.com"],
   },
   swcMinify: true,
 };
