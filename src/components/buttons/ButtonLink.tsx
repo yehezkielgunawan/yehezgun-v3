@@ -37,9 +37,9 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
               "disabled:bg-primary-400 disabled:hover:bg-primary-400",
             ],
             variant === "outline" && [
-              "text-primary-500",
+              "text-primary-500 dark:text-primary-200",
               "border border-primary-500",
-              "hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100",
+              "hover:bg-primary-200 hover:underline active:bg-primary-100 disabled:bg-primary-100 dark:hover:bg-primary-500",
             ],
             variant === "ghost" && [
               "text-primary-500",
