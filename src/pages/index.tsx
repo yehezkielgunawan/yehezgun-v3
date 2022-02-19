@@ -1,114 +1,92 @@
-import type { NextPage } from "next";
-import Image from "next/image";
-import { AiFillGithub } from "react-icons/ai";
-import { SiNetlify, SiVercel } from "react-icons/si";
+/* eslint-disable @next/next/no-img-element */
 
 import ButtonLink from "@/components/buttons/ButtonLink";
-import ArrowLink from "@/components/links/ArrowLink";
+import UnstyledLink from "@/components/links/UnstyledLink";
+import NextImage from "@/components/NextImage";
+import { DEFAULT_IMG } from "@/constants/baseConstants";
+import { techStackList } from "@/constants/techStacks";
 import Layout from "@/layouts/Layout";
 import clsxm from "@/lib/helpers/clsxm";
+import { getFeaturedProjects } from "@/lib/services/fetcher";
+import { Projects } from "@/lib/services/types";
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+  const featuredProjects = await getFeaturedProjects();
+
+  return {
+    props: {
+      featuredProjects,
+    },
+    revalidate: 60,
+  };
+}
+
+const Home = ({ featuredProjects }: { featuredProjects: Projects }) => {
   return (
     <Layout>
-      <main className="flex flex-col gap-3">
-        <h1 className="underline">Hello World!</h1>
-        <p
-          className={clsxm(
-            "bg-gray-200",
-            "dark:bg-gray-700",
-            "rounded-lg px-1 text-sm md:text-lg"
-          )}
-        >
-          This is just a starter template, made using Next.js + Typescript +
-          Tailwind CSS.
-        </p>
-        <figure className="my-4 flex animate-spin content-center justify-center py-3">
-          <Image
-            src="https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png"
-            alt="Next.jsLogo"
-            width={120}
-            height={120}
+      <main className="space-y-3">
+        <div className="my-8 flex items-center justify-between">
+          <div className="block">
+            <h1 className="mb-3">Hi, I&apos;m Yehezkiel Gunawan.</h1>
+            <p>Currently work as a frontend engineer.</p>
+            <p>
+              You&apos;ve found my personal slice of the internet. Take a look
+              and enjoy.
+            </p>
+          </div>
+          <NextImage
+            src="/peep_yehez.svg"
+            alt="avatar_me"
+            width={240}
+            height={240}
+            imgClassName="rounded-full"
+            className="hidden sm:table-cell"
           />
-        </figure>
-        <div className="my-4 content-center justify-center text-center">
-          <code
-            className={clsxm(
-              "bg-gray-200 dark:bg-gray-700",
-              "rounded-lg text-sm md:text-lg"
-            )}
-          >
-            npx degit yehezkielgunawan/yehez-nexttailwind-starter [APP_NAME]
-          </code>
-          <h3>OR</h3>
-          <code
-            className={clsxm(
-              "bg-gray-200 dark:bg-gray-700",
-              "rounded-lg text-sm md:text-lg"
-            )}
-          >
-            npx create-next-app --example
-            https://github.com/yehezkielgunawan/yehez-nexttailwind-starter
-            [YOUR_APP_NAME]
-          </code>
         </div>
-        <ButtonLink
-          href="https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/generate"
-          variant="outline"
-          className={clsxm(
-            "items-center justify-center rounded-md",
-            "border-2 border-teal-700 dark:border-teal-400",
-            "text-teal-800 dark:text-teal-300",
-            "font-semibold hover:bg-teal-200 dark:hover:bg-teal-600"
-          )}
-        >
-          Use This Template
-        </ButtonLink>
-        <ArrowLink
-          as={ButtonLink}
-          direction="right"
-          href="/components"
-          variant="outline"
-          className={clsxm(
-            "items-center justify-center rounded-md border-2 shadow-md",
-            "border-gray-400 text-gray-500 dark:border-gray-300 dark:text-white",
-            "hover:bg-gray-200 dark:hover:bg-gray-500"
-          )}
-        >
-          See Components
-        </ArrowLink>
-
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="block space-y-3">
+          <h3>Current Favorite Tech Stacks</h3>
+          <div className="flex flex-wrap items-center gap-4">
+            {techStackList.map((techStack, index) => (
+              <div key={index}>{techStack.icon}</div>
+            ))}
+          </div>
+        </div>
+        <div className="block pt-10">
+          <h3 className="py-2">Featured Projects</h3>
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:flex-nowrap">
+            {featuredProjects.map((project, index) => (
+              <UnstyledLink
+                href={project.fields.project_url}
+                key={index}
+                className={clsxm(
+                  "flex w-full flex-col items-center justify-center",
+                  "rounded-md border p-2",
+                  "duration-200 ease-in hover:-translate-y-1",
+                  "hover:border-zinc-300 hover:ring hover:ring-zinc-300"
+                )}
+              >
+                <h4 className="w-full border-b p-2 text-center">
+                  {project.fields.project_title}
+                </h4>
+                <img
+                  src={
+                    project.fields.image_url
+                      ? project.fields.image_url[0].url
+                      : DEFAULT_IMG
+                  }
+                  alt="project-image"
+                  className="h-52 w-full object-contain p-2"
+                  loading="lazy"
+                />
+              </UnstyledLink>
+            ))}
+          </div>
           <ButtonLink
-            href="https://github.com/yehezkielgunawan/yehez-nexttailwind-starter"
-            className={clsxm(
-              "rounded-lg ",
-              "bg-gray-700",
-              "hover:bg-gray-400",
-              "border-0"
-            )}
+            variant="outline"
+            href="/projects"
+            className="mt-4 w-full justify-center"
           >
-            <AiFillGithub size={20} className="mr-1" /> Open in Github
-          </ButtonLink>
-          <ButtonLink
-            href="https://vercel.com/import/git?s=https://github.com/yehezkielgunawan/yehez-nexttailwind-starter"
-            className={clsxm(
-              "rounded-lg bg-blue-600 hover:bg-blue-400",
-              "border-0"
-            )}
-          >
-            <SiVercel size={20} className="mr-1" />
-            Deploy To Vercel
-          </ButtonLink>
-          <ButtonLink
-            href="https://app.netlify.com/start/deploy?repository=https://github.com/yehezkielgunawan/yehez-nexttailwind-starter"
-            className={clsxm(
-              "rounded-lg bg-sky-600 hover:bg-sky-400",
-              "border-0"
-            )}
-          >
-            <SiNetlify size={20} className="mr-1" />
-            Deploy To Netlifly
+            See More Projects
           </ButtonLink>
         </div>
       </main>
