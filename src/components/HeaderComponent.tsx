@@ -56,7 +56,7 @@ const HeaderComponent = () => {
           <Button
             className={clsxm(
               "bg-primary-200 dark:bg-slate-600",
-              "hover:bg-gray-200 dark:hover:bg-gray-400",
+              "hover:bg-gray-500 dark:hover:bg-gray-400",
               "ml-2 p-2 text-black dark:text-white",
               "rounded-full border-none"
             )}
