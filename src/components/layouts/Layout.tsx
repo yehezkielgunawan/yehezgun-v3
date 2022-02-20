@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React from "react";
 
-import FooterComponent from "@/components/FooterComponent";
-import HeaderComponent from "@/components/HeaderComponent";
+import FooterComponent from "@/components/layouts/FooterComponent";
+import HeaderComponent from "@/components/layouts/HeaderComponent";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import { menuList } from "@/constants/MenuList";
 import clsxm from "@/lib/helpers/clsxm";
@@ -17,7 +17,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div
         className={clsxm(
           "fixed bottom-2 left-1/2 flex w-11/12 -translate-x-1/2 items-center justify-around",
-          "rounded-lg bg-slate-500 py-2 opacity-95 shadow-md shadow-primary-600 dark:shadow-primary-100",
+          "rounded-lg bg-slate-300 py-2 opacity-95 shadow-md shadow-primary-600 dark:shadow-primary-100",
           "dark:bg-slate-600 md:hidden"
         )}
       >

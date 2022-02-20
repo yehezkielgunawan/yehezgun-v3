@@ -3,11 +3,11 @@
 import { Tooltip } from "react-tippy";
 
 import ButtonLink from "@/components/buttons/ButtonLink";
+import Layout from "@/components/layouts/Layout";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { DEFAULT_IMG } from "@/constants/baseConstants";
 import { techStackList } from "@/constants/techStacks";
-import Layout from "@/layouts/Layout";
 import clsxm from "@/lib/helpers/clsxm";
 import { getFeaturedProjects } from "@/lib/services/fetcher";
 import { Projects } from "@/lib/services/types";

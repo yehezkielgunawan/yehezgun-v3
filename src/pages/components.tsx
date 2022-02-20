@@ -5,12 +5,12 @@ import ButtonLink from "@/components/buttons/ButtonLink";
 import UnstyledInput from "@/components/forms/UnstyledInput";
 import UnstyledSelect from "@/components/forms/UnstyledSelect";
 import UnstyledTextArea from "@/components/forms/UnstyledTextArea";
+import Layout from "@/components/layouts/Layout";
 import ArrowLink from "@/components/links/ArrowLink";
 import PrimaryLink from "@/components/links/PrimaryLink";
 import UnderlineLink from "@/components/links/UnderlineLink";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
-import Layout from "@/layouts/Layout";
 
 const Components = () => {
   const optionListValuesExample = [

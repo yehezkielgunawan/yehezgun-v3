@@ -7,8 +7,8 @@ import { BiMoon, BiSun } from "react-icons/bi";
 import { menuList } from "@/constants/MenuList";
 import clsxm from "@/lib/helpers/clsxm";
 
-import Button from "./buttons/Button";
-import UnstyledLink from "./links/UnstyledLink";
+import Button from "../buttons/Button";
+import UnstyledLink from "../links/UnstyledLink";
 
 const HeaderComponent = () => {
   const { resolvedTheme, setTheme } = useTheme();
