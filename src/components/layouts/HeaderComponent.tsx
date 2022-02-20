@@ -26,11 +26,12 @@ const HeaderComponent = () => {
   if (!mounted) return null;
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white p-0.5 opacity-90 dark:bg-primary-700">
+    <header className="fixed top-0 z-50 w-full bg-white opacity-90 dark:bg-primary-700">
+      <div className="linear-animation w-full"></div>
       <div
         className={clsx(
           "layout flex items-center justify-between",
-          "mx-auto h-14 max-w-4xl px-2 md:px-1"
+          "mx-auto h-14 max-w-4xl px-4 py-0.5 md:px-1"
         )}
       >
         <UnstyledLink
