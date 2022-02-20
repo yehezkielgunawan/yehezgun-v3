@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "@fontsource/catamaran";
+import "react-tippy/dist/tippy.css";
 
 import defaultSEOConfig from "../../next-seo.config";
 

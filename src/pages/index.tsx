@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { Tooltip } from "react-tippy";
+
 import ButtonLink from "@/components/buttons/ButtonLink";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
@@ -47,7 +49,15 @@ const Home = ({ featuredProjects }: { featuredProjects: Projects }) => {
           <h3>Current Favorite Tech Stacks</h3>
           <div className="flex flex-wrap items-center gap-4">
             {techStackList.map((techStack, index) => (
-              <div key={index}>{techStack.icon}</div>
+              <Tooltip
+                key={index}
+                interactive
+                trigger="mouseenter"
+                position="top"
+                html={<div>{techStack.description}</div>}
+              >
+                <techStack.icon className="text-4xl" />
+              </Tooltip>
             ))}
           </div>
         </div>
