@@ -2,22 +2,36 @@ import React from "react";
 
 import clsxm from "@/lib/helpers/clsxm";
 
+export type SingleOptionList = {
+  value: string;
+  labelName: string;
+};
+
 export type UnstyledSelectProps = {
   className?: string;
+  wrapperClassName?: string;
   labelName?: string;
   defaultValue?: string;
   helperText?: string;
-  optionList: Array<string>;
+  optionList: Array<SingleOptionList>;
 } & React.ComponentPropsWithRef<"select">;
 
 const UnstyledSelect = React.forwardRef<HTMLSelectElement, UnstyledSelectProps>(
   (
-    { className, labelName, defaultValue, optionList, helperText, ...rest },
+    {
+      className,
+      labelName,
+      wrapperClassName,
+      defaultValue,
+      optionList,
+      helperText,
+      ...rest
+    },
     ref
   ) => {
     if (labelName) {
       return (
-        <label className="block">
+        <label className={clsxm("block", wrapperClassName)}>
           <span className="text-gray-700 dark:text-gray-100">{labelName}</span>
           <select
             ref={ref}
@@ -29,8 +43,8 @@ const UnstyledSelect = React.forwardRef<HTMLSelectElement, UnstyledSelectProps>(
             )}
             {optionList.map((singleOption, index) => {
               return (
-                <option key={index} value={singleOption}>
-                  {singleOption}
+                <option key={index} value={singleOption.value}>
+                  {singleOption.labelName}
                 </option>
               );
             })}
@@ -49,8 +63,8 @@ const UnstyledSelect = React.forwardRef<HTMLSelectElement, UnstyledSelectProps>(
       >
         {optionList.map((singleOption, index) => {
           return (
-            <option key={index} value={singleOption}>
-              {singleOption}
+            <option key={index} value={singleOption.value}>
+              {singleOption.labelName}
             </option>
           );
         })}
