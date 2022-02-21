@@ -27,8 +27,8 @@ const HeaderComponent = () => {
 
   return (
     <header className="fixed top-0 z-50 w-full bg-white opacity-90 dark:bg-primary-700">
-      <div className="linear-animation w-full"></div>
-      <div
+      <div className="h-1.5 bg-gradient-to-r from-primary-500 via-slate-500 to-zinc-500"></div>
+      <nav
         className={clsx(
           "layout flex items-center justify-between",
           "mx-auto h-14 max-w-4xl px-4 py-0.5 md:px-1"
@@ -70,7 +70,7 @@ const HeaderComponent = () => {
             )}
           </Button>
         </div>
-      </div>
+      </nav>
     </header>
   );
 };
