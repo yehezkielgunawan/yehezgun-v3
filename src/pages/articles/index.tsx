@@ -58,7 +58,7 @@ const Articles = ({ articleList }: { articleList: ArticlesType }) => {
         wrapperClassName="flex items-center gap-3 my-4"
         labelName="Choose Language"
         defaultValue={language}
-        className="w-2/12 rounded-lg"
+        className="w-6/12 rounded-lg md:w-32"
         onChange={filterByLanguage}
       />
 
