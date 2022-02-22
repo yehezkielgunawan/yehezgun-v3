@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 
 import { menuList } from "@/constants/MenuList";
@@ -13,17 +13,10 @@ import UnstyledLink from "../links/UnstyledLink";
 const HeaderComponent = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const router = useRouter();
-  const [mounted, setMounted] = useState<boolean>(false);
 
   const handleChangeTheme = () => {
     return setTheme(resolvedTheme === "light" ? "dark" : "light");
   };
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
 
   return (
     <header className="fixed top-0 z-50 w-full bg-white opacity-90 dark:bg-primary-700">
