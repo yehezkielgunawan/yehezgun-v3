@@ -47,6 +47,7 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
           </p>
         </div>
         <NextImage
+          useSkeleton
           alt="my-profile"
           src="/yehez-profile.png"
           width={1600}
@@ -73,7 +74,7 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
       <div className="my-6 border-b-2"></div>
       <div className="block">
         <h1 className="my-4">Work Experience</h1>
-        <div className="grid grid-cols-2 items-center gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
           {experienceList.map((experience, index) => (
             <div
               key={index}
@@ -82,13 +83,13 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
                 "border border-primary-500 p-3 dark:border-primary-300"
               )}
             >
-              <p className="flex gap-2 font-bold">
+              <p className="flex items-center gap-2 font-bold">
                 <BsBriefcase size={20} /> {experience.fields.name}
               </p>
-              <p className="flex gap-2 text-sm">
+              <p className="flex items-center gap-2 text-sm">
                 <BsBuilding size={20} /> {experience.fields.company_name}
               </p>
-              <p className="flex gap-2 font-bold italic">
+              <p className="flex items-center gap-2 font-bold italic">
                 <GiJourney size={20} /> {experience.fields.duration}
               </p>
             </div>
