@@ -1353,10 +1353,10 @@ eslint-config-next@12.0.7:
     eslint-plugin-react "^7.27.0"
     eslint-plugin-react-hooks "^4.3.0"
 
-eslint-config-yehezgun@^1.1.6:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/eslint-config-yehezgun/-/eslint-config-yehezgun-1.1.8.tgz#7f69aea33853558ad846708005df52aeedfbc636"
-  integrity sha512-HqBX0CR4SSQ3eKGbOljKzqIcAT2cv0pq5LRwbAKjB0UfnafL9xCvb8zEzfvjq2oYj+rzivn8BHLaD5PmMoA6ig==
+eslint-config-yehezgun@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/eslint-config-yehezgun/-/eslint-config-yehezgun-1.1.9.tgz#5b5e2d062a9a00145396acbca3a89ffad18fa00a"
+  integrity sha512-gJA+HFdC06+wiZzvoDhxrS90VwNWvhObKvmHsvjNn1dvF9ppHTNZGnFsRg5XjoUZxiP2HpJHVCnc+knD1EydlA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.11.0"
     "@typescript-eslint/parser" "^5.11.0"
@@ -2555,10 +2555,10 @@ next-seo@^4.29.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.29.0.tgz#d281e95ba47914117cc99e9e468599f0547d9b9b"
   integrity sha512-xmwzcz4uHaYJ8glbuhs6FSBQ7z3irmdPYdJJ5saWm72Uy3o+mPKGaPCXQetTCE6/xxVnpoDV4yFtFlEjUcljSg==
 
-next-themes@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.0.15.tgz#ab0cee69cd763b77d41211f631e108beab39bf7d"
-  integrity sha512-LTmtqYi03c4gMTJmWwVK9XkHL7h0/+XrtR970Ujvtu3s0kZNeJN24aJsi4rkZOI8i19+qq6f8j+8Duwy5jqcrQ==
+next-themes@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.1.1.tgz#122113a458bf1d1be5ffed66778ab924c106f82a"
+  integrity sha512-Iqxt6rhS/KfK/iHJ0tfFjTcdLEAI0AgwFuAFrMwLOPK5e+MI3I+fzyvBoS+VaOS+NldUiazurhgwYhrfV0VXsQ==
 
 next@^12.1.0:
   version "12.1.0"
