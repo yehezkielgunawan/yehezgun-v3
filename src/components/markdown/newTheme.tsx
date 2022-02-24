@@ -9,28 +9,28 @@ import UnstyledLink from "../links/UnstyledLink";
 export const newTheme = {
   h1: (props: React.ComponentPropsWithRef<"h1">) => {
     return (
-      <h1 id={props.id} className="mt-8 mb-4 hover:underline">
+      <h1 id={props.id} className="mt-8 mb-4 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h1>
     );
   },
   h2: (props: React.ComponentPropsWithRef<"h2">) => {
     return (
-      <h2 id={props.id} className="mt-12 mb-4 hover:underline">
+      <h2 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h2>
     );
   },
   h3: (props: React.ComponentPropsWithRef<"h3">) => {
     return (
-      <h3 id={props.id} className="mt-12 mb-4">
+      <h3 id={props.id} className="mt-12 mb-4 scroll-mt-16">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h3>
     );
   },
   h4: (props: React.ComponentPropsWithRef<"h4">) => {
     return (
-      <h4 id={props.id} className="mt-12 mb-4">
+      <h4 id={props.id} className="mt-12 mb-4 scroll-mt-16">
         <UnstyledLink href={`#${props.id}`}>
           <h4>{props.children}</h4>
         </UnstyledLink>
@@ -39,7 +39,7 @@ export const newTheme = {
   },
   h5: (props: React.ComponentPropsWithRef<"h5">) => {
     return (
-      <h5 id={props.id} className="mt-12 mb-4">
+      <h5 id={props.id} className="mt-12 mb-4 scroll-mt-16">
         <UnstyledLink href={`${props.id}`}>
           <h5>{props.children}</h5>
         </UnstyledLink>
