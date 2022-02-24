@@ -27,7 +27,9 @@
     "react-tippy": "^1.4.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-raw": "^6.1.1",
+    "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.1",
     "tailwind-merge": "^1.2.0"
   },
   "devDependencies": {
