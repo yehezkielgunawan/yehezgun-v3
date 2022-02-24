@@ -5,10 +5,14 @@ import { FaCheck, FaCopy } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+import remarkHtml from "remark-html";
 
 import Button from "@/components/buttons/Button";
+import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
+import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import clsxm from "@/lib/helpers/clsxm";
@@ -92,14 +96,23 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
         </div>
       </div>
       <hr className="my-4" />
-      <div className="my-2 flex flex-col gap-2">
+      <div className="my-2 block">
         <ReactMarkdown
           components={newTheme}
           children={postData.fields.content}
-          remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeRaw, rehypeAutolinkHeadings]}
+          remarkPlugins={[remarkGfm, remarkHtml]}
+          rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
         />
       </div>
+      <ArrowLink
+        as={ButtonLink}
+        direction="left"
+        href="/articles"
+        className="my-6 flex items-start justify-center gap-4"
+        variant="outline"
+      >
+        Back To Articles Page
+      </ArrowLink>
     </Layout>
   );
 };
