@@ -2,5 +2,8 @@
   "env": {
     "node": true
   },
-  "extends": ["next/core-web-vitals", "yehezgun"]
+  "extends": ["next/core-web-vitals", "yehezgun"],
+  "rules": {
+    "react/jsx-key": "off"
+  }
 }
