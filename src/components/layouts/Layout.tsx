@@ -17,7 +17,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div
         className={clsxm(
           "fixed bottom-2 left-1/2 flex w-11/12 -translate-x-1/2 items-center justify-around",
-          "rounded-lg bg-slate-300 py-2 opacity-95 shadow-md shadow-primary-600 dark:shadow-primary-100",
+          "rounded-lg bg-slate-300 py-2 opacity-95 shadow-sm shadow-primary-600 dark:shadow-primary-100",
           "dark:bg-slate-600 md:hidden"
         )}
       >
@@ -32,8 +32,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 "rounded-md border-2 border-primary-500 dark:border-primary-200"
             )}
           >
-            {menu.icon}
-            <h5 className="font-bold">{menu.menu_name}</h5>
+            <menu.icon size={32} />
           </UnstyledLink>
         ))}
       </div>
