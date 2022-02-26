@@ -5,6 +5,7 @@ import FooterComponent from "@/components/layouts/FooterComponent";
 import HeaderComponent from "@/components/layouts/HeaderComponent";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import { menuList } from "@/constants/MenuList";
+import { PreloadProvider } from "@/context/PreloadContext";
 import clsxm from "@/lib/helpers/clsxm";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -12,7 +13,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <section>
       <HeaderComponent />
-      <div className="layout-container">{children}</div>
+      <PreloadProvider>
+        <div className="layout-container">{children}</div>
+      </PreloadProvider>
       <FooterComponent />
       <div
         className={clsxm(
