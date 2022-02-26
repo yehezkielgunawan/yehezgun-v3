@@ -71,10 +71,11 @@ export const newTheme = {
     return (
       <blockquote
         className={clsxm(
-          "rounded-md bg-cyan-200 py-1 px-2 dark:bg-cyan-500",
+          "rounded-md bg-cyan-200 py-1 px-2 dark:bg-cyan-800",
           "text-black dark:text-white",
-          "border-l-8 border-blue-500 dark:border-blue-600",
-          "shadow-md dark:shadow-gray-300"
+          "border-l-8 border-blue-500 dark:border-blue-300",
+          "shadow-md dark:shadow-gray-500",
+          "my-6"
         )}
       >
         {props.children}
@@ -102,6 +103,7 @@ export const newTheme = {
           language={language}
           style={nightOwl}
           showLineNumbers={false}
+          className="rounded-md"
         >
           {childrenValue}
         </SyntaxHighlighter>
@@ -128,7 +130,7 @@ export const newTheme = {
         {language && (
           <p
             className={clsxm(
-              "absolute top-0 -translate-y-1/2",
+              "absolute top-0 -translate-y-1/3",
               "bg-slate-200 p-0.5 dark:bg-slate-600",
               "rounded-md"
             )}

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-children-prop */
 /* eslint-disable @next/next/no-img-element */
+import { Giscus, GiscusProps } from "@giscus/react";
 import React, { useState } from "react";
 import { FaCheck, FaCopy } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
@@ -59,6 +60,7 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
       setIsCopied(false);
     }, 5000);
   };
+  const giscusTheme: GiscusProps["theme"] = "dark_dimmed";
 
   return (
     <Layout>
@@ -70,7 +72,7 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
               : DEFAULT_IMG_ARTICLE
           }
           alt="article-image"
-          className="w-full"
+          className="w-full rounded-sm"
         />
         <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
           <div className="space-y-1">
@@ -108,11 +110,22 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
         as={ButtonLink}
         direction="left"
         href="/articles"
-        className="my-6 flex items-start justify-center gap-4"
+        className="my-6 flex items-center justify-center gap-4"
         variant="outline"
       >
         Back To Articles Page
       </ArrowLink>
+      <Giscus
+        repo="yehezkielgunawan/yehezgun-v3"
+        repoId="R_kgDOG2uTxA"
+        mapping="pathname"
+        reactionsEnabled="0"
+        theme={giscusTheme}
+        category="Article Post"
+        categoryId="DIC_kwDOG2uTxM4CBVyS"
+        emitMetadata="0"
+        lang="en"
+      />
     </Layout>
   );
 };
