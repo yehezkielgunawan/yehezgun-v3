@@ -6,7 +6,7 @@ const defaultSEOConfig = {
   canonical: "https://yehezgun.com",
   openGraph: {
     url: "https://yehezgun.com",
-    title: "yehezgun",
+    title: "YehezGun",
     description:
       "Yehezkiel Gunawan's personal site, made using Next.js + Tailwind CSS",
     type: "website",
@@ -18,7 +18,7 @@ const defaultSEOConfig = {
         height: 600,
       },
     ],
-    site_name: "yehezgun",
+    site_name: "yehezgun.com",
   },
   twitter: {
     handle: "@handle",

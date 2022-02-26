@@ -18,7 +18,7 @@ const MetaHead = ({ pageTitle, pageDesc, route, isArticle }: MetaHeadProps) => {
       canonical={`https://yehezgun.com/${route ? route : ""}`}
       openGraph={{
         url: `https://yehezgun.com/${route ? route : ""}`,
-        title: pageTitle,
+        title: `${pageTitle} | YehezGun`,
         description: pageDesc,
         type: "website",
         images: [
