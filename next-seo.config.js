@@ -3,9 +3,9 @@ const defaultSEOConfig = {
   defaultTitle: "Yehezkiel Gunawan | YehezGun",
   description:
     "Yehezkiel Gunawan's personal site, made using Next.js + Tailwind CSS",
-  canonical: "https://v3.yehezgun.com",
+  canonical: "https://yehezgun.com",
   openGraph: {
-    url: "https://v3.yehezgun.com",
+    url: "https://yehezgun.com",
     title: "yehezgun",
     description:
       "Yehezkiel Gunawan's personal site, made using Next.js + Tailwind CSS",
@@ -13,7 +13,7 @@ const defaultSEOConfig = {
     images: [
       {
         url: "https://og.yehezgun.com/api/base?description=An%20online%20portfolio%20and%20article%20site%20by%20Yehezkiel%20Gunawan.%20Showcase%20about%20my%20projects%20and%20thoughts%20about%20my%20experience%20as%20a%20Frontend%20Engineer&siteName=yehezgun.com&templateTitle=Yehezkiel%20Gunawan&theme=dark",
-        alt: "v3.yehezgun.com og-image",
+        alt: "yehezgun.com og-image",
         width: 800,
         height: 600,
       },
