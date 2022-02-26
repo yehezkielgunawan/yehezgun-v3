@@ -208,6 +208,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/catamaran/-/catamaran-4.5.3.tgz#9502d0986ac122ee7c26b623e1e9022532b182f4"
   integrity sha512-5yLGN82c3evVqPZlyMCPd0FHIhiyPkS6zC//2EkQR65Hu9/38t/GwORaTZ/TG34gZS/VRPv8KH3hGRpM2q2HhQ==
 
+"@giscus/react@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-1.1.2.tgz#c97f06aab1272c0fbe567c69ebffe3bad7206e7a"
+  integrity sha512-htSAAiTtoHTRE8GqSSkWmT+Iq7LJhtqSmr+HjEC1cXlNd1WeLVZXjnuiIj7+L8DOUnAdfh+1FClN304FVxIcsQ==
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"

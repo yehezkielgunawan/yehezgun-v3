@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fontsource/catamaran": "^4.5.3",
+    "@giscus/react": "^1.1.2",
     "@tailwindcss/forms": "^0.4.0",
     "airtable": "^0.11.2",
     "clsx": "^1.1.1",
