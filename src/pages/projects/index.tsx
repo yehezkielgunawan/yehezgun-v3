@@ -3,6 +3,7 @@ import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 import Layout from "@/components/layouts/Layout";
+import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import { DEFAULT_IMG } from "@/constants/baseConstants";
 import { usePreloadState } from "@/context/PreloadContext";
@@ -25,6 +26,12 @@ const Projects = ({ projectList }: { projectList: Projects }) => {
   const isLoaded = usePreloadState();
   return (
     <Layout>
+      <MetaHead
+        pageTitle="Projects"
+        pageDesc="This is my personal and public projects that I've done before."
+        route="projects"
+        isArticle={false}
+      />
       <main className={clsxm(isLoaded && "fade-start")}>
         <h1>Projects</h1>
         <p className="my-2">

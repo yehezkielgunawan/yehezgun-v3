@@ -5,6 +5,7 @@ import UnstyledSelect, {
   SingleOptionList,
 } from "@/components/forms/UnstyledSelect";
 import Layout from "@/components/layouts/Layout";
+import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import { usePreloadState } from "@/context/PreloadContext";
@@ -50,6 +51,12 @@ const Articles = ({ articleList }: { articleList: ArticlesType }) => {
 
   return (
     <Layout>
+      <MetaHead
+        pageTitle="Articles"
+        pageDesc="Just some random thoughts."
+        route="articles"
+        isArticle={false}
+      />
       <main className={clsxm(isLoaded && "fade-start")}>
         <h1>Articles</h1>
         <p className="my-2">

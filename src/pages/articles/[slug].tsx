@@ -13,6 +13,7 @@ import remarkHtml from "remark-html";
 import Button from "@/components/buttons/Button";
 import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
+import MetaHead from "@/components/layouts/MetaHead";
 import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
@@ -66,6 +67,12 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
 
   return (
     <Layout>
+      <MetaHead
+        pageTitle={postData.fields.title}
+        pageDesc="Yehezkiel Gunawan's Article Post"
+        route={`articles/${postData.fields.slug}`}
+        isArticle={true}
+      />
       <div className={clsxm("space-y-2", isLoaded && "fade-start")}>
         <img
           src={

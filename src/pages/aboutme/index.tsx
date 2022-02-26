@@ -5,6 +5,7 @@ import { GiJourney } from "react-icons/gi";
 import { Tooltip } from "react-tippy";
 
 import Layout from "@/components/layouts/Layout";
+import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { contactList } from "@/constants/contactList";
@@ -28,6 +29,12 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
   const isLoaded = usePreloadState();
   return (
     <Layout>
+      <MetaHead
+        pageTitle="About Me"
+        pageDesc="A little description about me."
+        route="aboutme"
+        isArticle={false}
+      />
       <main className={clsxm(isLoaded && "fade-start")}>
         <h1 className="my-4">Yo, hello there!</h1>
         <div className="flex flex-wrap-reverse items-center gap-4 md:flex-nowrap">
