@@ -16,7 +16,7 @@ const FooterComponent = () => {
         "px-2 md:px-1"
       )}
     >
-      <UnderlineLink href="#">
+      <UnderlineLink href="https://yehezgun.com">
         {new Date().getFullYear()} | Yehezkiel Gunawan
       </UnderlineLink>
       <div className="flex items-center justify-end md:mt-0">

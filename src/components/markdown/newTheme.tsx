@@ -28,14 +28,14 @@ export const newTheme = {
   },
   h3: (props: React.ComponentPropsWithRef<"h3">) => {
     return (
-      <h3 id={props.id} className="mt-12 mb-4 scroll-mt-16">
+      <h3 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h3>
     );
   },
   h4: (props: React.ComponentPropsWithRef<"h4">) => {
     return (
-      <h4 id={props.id} className="mt-12 mb-4 scroll-mt-16">
+      <h4 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>
           <h4>{props.children}</h4>
         </UnstyledLink>
@@ -44,7 +44,7 @@ export const newTheme = {
   },
   h5: (props: React.ComponentPropsWithRef<"h5">) => {
     return (
-      <h5 id={props.id} className="mt-12 mb-4 scroll-mt-16">
+      <h5 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
         <UnstyledLink href={`${props.id}`}>
           <h5>{props.children}</h5>
         </UnstyledLink>
