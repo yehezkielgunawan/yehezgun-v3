@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="scroll-smooth">
+      <Html>
         <Head />
         <body className="dark:bg-dark">
           <Main />
