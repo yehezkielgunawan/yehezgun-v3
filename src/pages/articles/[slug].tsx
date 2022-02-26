@@ -16,6 +16,7 @@ import Layout from "@/components/layouts/Layout";
 import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
+import { usePreloadState } from "@/context/PreloadContext";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
 import { getArticleList, getArticlePost } from "@/lib/services/fetcher";
@@ -61,10 +62,11 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
     }, 5000);
   };
   const giscusTheme: GiscusProps["theme"] = "dark_dimmed";
+  const isLoaded = usePreloadState();
 
   return (
     <Layout>
-      <div className="space-y-2">
+      <div className={clsxm("space-y-2", isLoaded && "fade-start")}>
         <img
           src={
             postData.fields.article_image

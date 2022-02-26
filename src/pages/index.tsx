@@ -8,6 +8,7 @@ import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { DEFAULT_IMG } from "@/constants/baseConstants";
 import { techStackList } from "@/constants/techStacks";
+import { usePreloadState } from "@/context/PreloadContext";
 import clsxm from "@/lib/helpers/clsxm";
 import { getFeaturedProjects } from "@/lib/services/fetcher";
 import { Projects } from "@/lib/services/types";
@@ -24,9 +25,10 @@ export async function getStaticProps() {
 }
 
 const Home = ({ featuredProjects }: { featuredProjects: Projects }) => {
+  const isLoaded = usePreloadState();
   return (
     <Layout>
-      <main className="space-y-3">
+      <main className={clsxm("space-y-3", isLoaded && "fade-start")}>
         <div className="my-8 flex items-center justify-between">
           <div className="block">
             <h1 className="mb-3">Hi, I&apos;m Yehezkiel Gunawan.</h1>
