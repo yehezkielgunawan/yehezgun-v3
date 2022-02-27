@@ -105,7 +105,13 @@ const Articles = ({ articleList }: { articleList: ArticlesType }) => {
                   />
                   <div className="block space-y-4 group-hover:underline">
                     <h3>{article.fields.title}</h3>
-                    <p>{formatDate(article.fields.date)}</p>
+                    <p>
+                      {formatDate(
+                        article.fields.date,
+                        false,
+                        language === "en" ? "en-EN" : "in-IN"
+                      )}
+                    </p>
                   </div>
                 </div>
               </UnstyledLink>

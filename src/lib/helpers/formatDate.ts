@@ -1,4 +1,8 @@
-export const formatDate = (date: string | Date, time = true): string => {
+export const formatDate = (
+  date: string | Date,
+  time: boolean = true,
+  lang: string = "en-EN"
+): string => {
   const convertedDate = new Date(date);
   const options: Intl.DateTimeFormatOptions = {
     day: "numeric",
@@ -11,7 +15,7 @@ export const formatDate = (date: string | Date, time = true): string => {
     year: "numeric",
   };
   return convertedDate.toLocaleDateString(
-    "en-EN",
+    lang,
     time ? options : optionsWithoutTime
   );
 };
