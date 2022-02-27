@@ -45,6 +45,7 @@ const Home = ({ featuredProjects }: { featuredProjects: Projects }) => {
             height={240}
             imgClassName="rounded-full"
             className="hidden sm:table-cell"
+            priority={true}
           />
         </div>
         <div className="block space-y-3">
