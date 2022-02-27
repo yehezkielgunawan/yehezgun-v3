@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-title-in-document-head */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Document, {
   Html,
   Head,
@@ -8,6 +5,8 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+
+import { UMAMI_WEB_ID, UMAMI_WEB_SRC } from "@/constants/baseConstants";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -18,7 +17,14 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <script
+            async
+            defer
+            data-website-id={UMAMI_WEB_ID}
+            src={UMAMI_WEB_SRC}
+          ></script>
+        </Head>
         <body className="dark:bg-dark">
           <Main />
           <NextScript />
