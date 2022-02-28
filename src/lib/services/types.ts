@@ -60,11 +60,12 @@ export type SingleArticle = {
   content: string;
   alternative_link?: string;
   translated_link?: string;
+  category: string;
 };
 
 export type SingleArticleInList = Pick<
   SingleArticle,
-  "title" | "slug" | "article_image" | "date" | "lang"
+  "title" | "slug" | "article_image" | "date" | "lang" | "category"
 >;
 
 export type Articles = Array<SingleRes<SingleArticleInList>>;

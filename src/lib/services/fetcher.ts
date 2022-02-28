@@ -47,7 +47,7 @@ export const getArticleList = async () => {
   const records = await base("Blog")
     .select({
       sort: [{ field: "date", direction: "desc" }],
-      fields: ["title", "slug", "date", "article_image", "lang"],
+      fields: ["title", "slug", "date", "article_image", "lang", "category"],
     })
     .all();
   return getMinifiedRecords(records);
