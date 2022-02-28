@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { BsBriefcase, BsBuilding } from "react-icons/bs";
-import { GiJourney } from "react-icons/gi";
+import { GiJourney, GiPayMoney } from "react-icons/gi";
+import { SiKofi } from "react-icons/si";
 import { Tooltip } from "react-tippy";
 
+import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
@@ -72,7 +74,8 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
               key={index}
               interactive
               trigger="mouseenter"
-              position="bottom"
+              position="top"
+              arrow={true}
               title={contact.name}
             >
               <UnstyledLink href={contact.link_route}>
@@ -81,7 +84,19 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
             </Tooltip>
           ))}
         </div>
-        <div className="my-6 border-b-2"></div>
+        <div className="flex items-center gap-3">
+          <ButtonLink
+            href="https://ko-fi.com/kaz200"
+            variant="outline"
+            className="border-2"
+          >
+            <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
+          </ButtonLink>
+          <ButtonLink href="  " variant="outline" className="border-2">
+            <GiPayMoney size={20} className="mr-2" /> Support me on Saweria
+          </ButtonLink>
+        </div>
+        <hr className="my-6" />
         <div className="block">
           <h1 className="my-4">Work Experience</h1>
           <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
