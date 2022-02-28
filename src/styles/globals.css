@@ -92,3 +92,20 @@
     @apply translate-y-0 opacity-100;
   }
 }
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    @apply h-4 w-4;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    @apply bg-primary-200 dark:bg-primary-500;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 100vh;
+    @apply border border-zinc-200 bg-zinc-400 dark:bg-zinc-600;
+    @apply hover:bg-slate-400;
+  }
+}
