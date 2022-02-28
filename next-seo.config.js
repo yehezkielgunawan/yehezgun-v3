@@ -28,7 +28,7 @@ const defaultSEOConfig = {
   additionalLinkTags: [
     {
       rel: "icon",
-      href: "https://res.cloudinary.com/yehez/image/upload/v1636202181/peep_amkhuu.svg",
+      href: "/peep_yehez.svg",
     },
   ],
 };
