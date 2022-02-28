@@ -19,6 +19,7 @@ import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import { usePreloadState } from "@/context/PreloadContext";
+import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
 import { getArticleList, getArticlePost } from "@/lib/services/fetcher";
@@ -87,13 +88,23 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
         <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
           <div className="space-y-1">
             <h3>{postData.fields.title}</h3>
-            <p className="text-sm italic">
-              {formatDate(
-                postData.fields.date,
-                false,
-                postData.fields.lang === "en" ? "en-EN" : "in-IN"
-              )}
-            </p>
+            <div className="flex items-center gap-3 pb-4">
+              <p className="text-sm italic">
+                {formatDate(
+                  postData.fields.date,
+                  false,
+                  postData.fields.lang === "en" ? "en-EN" : "in-IN"
+                )}
+              </p>
+              <p
+                className={clsxm(
+                  "rounded-md px-2 py-0.5 text-sm",
+                  categoryColorList[postData.fields.category]
+                )}
+              >
+                {postData.fields.category}
+              </p>
+            </div>
             <div className="flex gap-2">
               {postData.fields.alternative_link && (
                 <ButtonLink
