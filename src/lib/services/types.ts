@@ -58,6 +58,8 @@ export type SingleArticle = {
   article_image?: Array<SingleProjectImg>;
   lang: string;
   content: string;
+  alternative_link?: string;
+  translated_link?: string;
 };
 
 export type SingleArticleInList = Pick<
