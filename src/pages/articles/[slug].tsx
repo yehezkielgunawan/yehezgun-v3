@@ -2,7 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Giscus, GiscusProps } from "@giscus/react";
 import React, { useState } from "react";
-import { FaCheck, FaCopy } from "react-icons/fa";
+import { BsTranslate } from "react-icons/bs";
+import { FaCheck, FaCopy, FaDev } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeRaw from "rehype-raw";
@@ -86,7 +87,34 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
         <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
           <div className="space-y-1">
             <h3>{postData.fields.title}</h3>
-            <p className="text-sm italic">{formatDate(postData.fields.date)}</p>
+            <p className="text-sm italic">
+              {formatDate(
+                postData.fields.date,
+                false,
+                postData.fields.lang === "en" ? "en-EN" : "in-IN"
+              )}
+            </p>
+            <div className="flex gap-2">
+              {postData.fields.alternative_link && (
+                <ButtonLink
+                  href={postData.fields.alternative_link}
+                  variant="dark"
+                  className="dark:border-primary-700"
+                >
+                  <FaDev size={20} className="mr-1" /> Read in{" "}
+                  {postData.fields.lang === "en" ? "Dev.to" : "Diskusi.tech"}
+                </ButtonLink>
+              )}
+              {postData.fields.translated_link && (
+                <ButtonLink
+                  href={postData.fields.translated_link}
+                  variant="light"
+                >
+                  <BsTranslate size={20} className="mr-1" /> Read in{" "}
+                  {postData.fields.lang === "en" ? "Bahasa" : "English"}
+                </ButtonLink>
+              )}
+            </div>
           </div>
           <Button
             variant="outline"
