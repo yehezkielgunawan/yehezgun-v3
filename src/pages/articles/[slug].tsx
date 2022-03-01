@@ -3,7 +3,7 @@
 import { Giscus, GiscusProps } from "@giscus/react";
 import React, { useState } from "react";
 import { BsTranslate } from "react-icons/bs";
-import { FaCheck, FaCopy, FaDev } from "react-icons/fa";
+import { FaCheck, FaCopy, FaDev, FaTwitter } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeRaw from "rehype-raw";
@@ -66,6 +66,7 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
   };
   const giscusTheme: GiscusProps["theme"] = "dark_dimmed";
   const isLoaded = usePreloadState();
+  const twitterCaption = `${postData.fields.title} by @YehezGun`;
 
   return (
     <Layout>
@@ -127,22 +128,40 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
               )}
             </div>
           </div>
-          <Button
-            variant="outline"
-            className={clsxm(
-              "rounded-lg border border-teal-600",
-              "font-bold text-teal-600 dark:text-teal-300",
-              "hover:bg-teal-100 dark:hover:bg-teal-700"
-            )}
-            onClick={() => handleCopyLink()}
-          >
-            {!isCopied ? (
-              <FaCopy size={20} className="mr-2" />
-            ) : (
-              <FaCheck size={20} className="mr-2" />
-            )}
-            Copy Link
-          </Button>
+          <div className="flex gap-3 md:flex-col">
+            <Button
+              variant="outline"
+              className={clsxm(
+                "rounded-lg border border-teal-600",
+                "font-bold text-teal-600 dark:text-teal-300",
+                "hover:bg-teal-100 dark:hover:bg-teal-700"
+              )}
+              onClick={() => handleCopyLink()}
+            >
+              {!isCopied ? (
+                <>
+                  <FaCopy size={20} className="mr-2" /> Copy Article Link
+                </>
+              ) : (
+                <>
+                  <FaCheck size={20} className="mr-2" /> Copied{" "}
+                </>
+              )}
+            </Button>
+            <ButtonLink
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                twitterCaption
+              )}&url=${encodeURIComponent(window.location.href)}`}
+              variant="outline"
+              className={clsxm(
+                "rounded-lg border border-sky-600",
+                "font-bold text-sky-600 dark:text-sky-300",
+                "hover:bg-sky-100 dark:hover:bg-sky-700"
+              )}
+            >
+              <FaTwitter size={20} className="mr-2" /> Share on Twitter
+            </ButtonLink>
+          </div>
         </div>
       </div>
       <hr className="my-4" />
