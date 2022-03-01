@@ -67,6 +67,7 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
   const giscusTheme: GiscusProps["theme"] = "dark_dimmed";
   const isLoaded = usePreloadState();
   const twitterCaption = `${postData.fields.title} by @YehezGun`;
+  const twitterUrl = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <Layout>
@@ -151,7 +152,7 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
             <ButtonLink
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 twitterCaption
-              )}&url=${encodeURIComponent(window.location.href)}`}
+              )}&url=${encodeURIComponent(twitterUrl)}`}
               variant="outline"
               className={clsxm(
                 "rounded-lg border border-sky-600",
