@@ -30,6 +30,11 @@ const defaultSEOConfig = {
       rel: "icon",
       href: "/peep_yehez.svg",
     },
+    {
+      rel: "apple-touch-icon",
+      href: "/peep_yehez.svg",
+      sizes: "76x76",
+    },
   ],
 };
 
