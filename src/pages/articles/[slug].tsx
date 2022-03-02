@@ -66,9 +66,7 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
   };
   const giscusTheme: GiscusProps["theme"] = "dark_dimmed";
   const isLoaded = usePreloadState();
-  const twitterCaption = `${encodeURIComponent(
-    postData.fields.title
-  )} by @YehezGun`;
+  const twitterCaption = `${postData.fields.title} by @YehezGun`;
   const twitterUrl =
     typeof window !== "undefined"
       ? encodeURIComponent(window.location.href)
