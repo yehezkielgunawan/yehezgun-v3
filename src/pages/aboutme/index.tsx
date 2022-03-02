@@ -88,11 +88,15 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
           <ButtonLink
             href="https://ko-fi.com/kaz200"
             variant="outline"
-            className="border-2"
+            className="border-2 text-primary-700"
           >
             <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
           </ButtonLink>
-          <ButtonLink href="  " variant="outline" className="border-2">
+          <ButtonLink
+            href="  "
+            variant="outline"
+            className="border-2 text-primary-700"
+          >
             <GiPayMoney size={20} className="mr-2" /> Support me on Saweria
           </ButtonLink>
         </div>

@@ -16,8 +16,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Exo-2", ...fontFamily.sans],
-        secondary: ["Alegreya", ...fontFamily.sans],
+        primary: ["Fira Sans", ...fontFamily.sans],
+        secondary: ["PT Serif", ...fontFamily.sans],
       },
       colors: {
         primary: {

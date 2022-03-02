@@ -203,15 +203,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/alegreya@^4.5.3":
+"@fontsource/fira-sans@^4.5.3":
   version "4.5.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/alegreya/-/alegreya-4.5.3.tgz#b4edb630ef0a3014f4e032a2e2e36561a983223a"
-  integrity sha512-TLsuKBLm2ALazohdKHHqPiQMTP8I6auY1sX7bZQqXiRZHPAYqN63NBLLupadndJCieYT2MOAMopo5o8FdS3s+Q==
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.3.tgz#b802137fc5a762639dea29a5827c469bc8e0154e"
+  integrity sha512-SAWbrOb9BKwQk3TGPA7jRv9QB5fo3OqQKc1KGfNs6X1/VrTTH+bXPZkRzlOOiYa1erwDCb+apNWKE4YETWFeig==
 
-"@fontsource/exo-2@^4.5.4":
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/@fontsource/exo-2/-/exo-2-4.5.4.tgz#38e26996d677875b8dc9c8cac8f77a2774a0d294"
-  integrity sha512-L6MTi58CpEKTIySB3TIUDvPrOt6tUNhO1UaOhIzfKOO8s9IEEZaQK2LKvaWyHmC4/8T6THNrHXY+skFwa66sTw==
+"@fontsource/pt-serif@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/pt-serif/-/pt-serif-4.5.2.tgz#475b24f7ff92236657bc47eb3aaa2889d92e92c8"
+  integrity sha512-8nnVehr92S7ubAPrI7QBOeyLBNBnB4EUvPL72EO+k0QNATPjMVGAwA0P2NSb3CZBtT8mBprYxoHsfijTiMl6Pg==
 
 "@giscus/react@^1.1.2":
   version "1.1.2"
