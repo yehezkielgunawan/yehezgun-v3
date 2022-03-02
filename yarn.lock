@@ -203,10 +203,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/catamaran@^4.5.3":
+"@fontsource/alegreya@^4.5.3":
   version "4.5.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/catamaran/-/catamaran-4.5.3.tgz#9502d0986ac122ee7c26b623e1e9022532b182f4"
-  integrity sha512-5yLGN82c3evVqPZlyMCPd0FHIhiyPkS6zC//2EkQR65Hu9/38t/GwORaTZ/TG34gZS/VRPv8KH3hGRpM2q2HhQ==
+  resolved "https://registry.yarnpkg.com/@fontsource/alegreya/-/alegreya-4.5.3.tgz#b4edb630ef0a3014f4e032a2e2e36561a983223a"
+  integrity sha512-TLsuKBLm2ALazohdKHHqPiQMTP8I6auY1sX7bZQqXiRZHPAYqN63NBLLupadndJCieYT2MOAMopo5o8FdS3s+Q==
+
+"@fontsource/exo-2@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/exo-2/-/exo-2-4.5.4.tgz#38e26996d677875b8dc9c8cac8f77a2774a0d294"
+  integrity sha512-L6MTi58CpEKTIySB3TIUDvPrOt6tUNhO1UaOhIzfKOO8s9IEEZaQK2LKvaWyHmC4/8T6THNrHXY+skFwa66sTw==
 
 "@giscus/react@^1.1.2":
   version "1.1.2"

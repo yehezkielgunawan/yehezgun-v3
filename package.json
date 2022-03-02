@@ -11,7 +11,8 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "@fontsource/catamaran": "^4.5.3",
+    "@fontsource/alegreya": "^4.5.3",
+    "@fontsource/exo-2": "^4.5.4",
     "@giscus/react": "^1.1.2",
     "@tailwindcss/forms": "^0.4.0",
     "airtable": "^0.11.2",
