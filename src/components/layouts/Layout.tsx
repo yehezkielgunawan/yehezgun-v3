@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             key={index}
             href={menu.route}
             className={clsxm(
-              "flex flex-col items-center justify-center gap-2 p-2",
+              "flex flex-col items-center justify-center gap-2 py-2 px-4",
               "hover:rounded-md hover:border hover:border-primary-200",
               router.pathname === menu.route &&
                 "rounded-md border-2 border-primary-500 dark:border-primary-200"

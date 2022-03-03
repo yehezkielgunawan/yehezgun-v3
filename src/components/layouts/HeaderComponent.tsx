@@ -19,7 +19,7 @@ const HeaderComponent = () => {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white opacity-90 dark:bg-primary-700">
+    <header className="fixed top-0 z-50 w-full bg-white font-primary opacity-90 dark:bg-primary-700">
       <div className="h-1.5 bg-gradient-to-r from-primary-500 via-slate-500 to-zinc-500"></div>
       <nav
         className={clsx(
@@ -27,12 +27,8 @@ const HeaderComponent = () => {
           "mx-auto h-14 max-w-4xl px-4 py-0.5 md:px-1"
         )}
       >
-        <UnstyledLink
-          href="https://yehezgun.com"
-          openNewTab={false}
-          className="font-bold"
-        >
-          yehezgun.com
+        <UnstyledLink href="/" openNewTab={false} className="font-bold">
+          <h5>yehezgun.com</h5>
         </UnstyledLink>
         <div className="flex items-center justify-end gap-3">
           {menuList.map((menu, index) => (
