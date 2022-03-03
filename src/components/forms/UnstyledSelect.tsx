@@ -35,7 +35,10 @@ const UnstyledSelect = React.forwardRef<HTMLSelectElement, UnstyledSelectProps>(
           <span className="text-gray-700 dark:text-gray-100">{labelName}</span>
           <select
             ref={ref}
-            className={clsxm("mt-1 block w-full dark:bg-slate-600", className)}
+            className={clsxm(
+              "mt-1 block w-full dark:bg-primary-700",
+              className
+            )}
             {...rest}
           >
             {!defaultValue && (

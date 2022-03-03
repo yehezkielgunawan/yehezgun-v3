@@ -88,7 +88,7 @@ const Articles = ({ articleList }: { articleList: ArticlesType }) => {
           wrapperClassName="flex items-center gap-3 my-4"
           labelName="Choose Language"
           defaultValue={language}
-          className="w-6/12 rounded-lg md:w-32"
+          className="w-6/12 rounded-lg md:w-36"
           onChange={filterByLanguage}
         />
         <div className="my-4 flex flex-wrap items-center gap-3">
@@ -96,10 +96,10 @@ const Articles = ({ articleList }: { articleList: ArticlesType }) => {
             <p
               key={index}
               className={clsxm(
-                "rounded-lg border border-primary-400 py-1 px-2",
+                "rounded-md border border-primary-400 py-1 px-2",
                 "cursor-pointer",
                 "hover:bg-primary-200 dark:hover:bg-primary-500",
-                categoryState === category && "bg-zinc-200 dark:bg-zinc-500"
+                categoryState === category && "bg-slate-200 dark:bg-slate-500"
               )}
               onClick={() => handleCategory(category)}
             >
