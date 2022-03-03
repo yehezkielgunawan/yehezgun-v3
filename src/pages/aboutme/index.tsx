@@ -93,7 +93,7 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
             <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
           </ButtonLink>
           <ButtonLink
-            href="  "
+            href="https://saweria.co/yehezgun"
             variant="outline"
             className="border-2 text-primary-700"
           >
