@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.1...v0.0.2) (2022-03-03)
+
+### Features
+
+- :sparkles: add share to twitter button link at article post ([8a02909](https://github.com/yehezkielgunawan/yehezgun-v3/commit/8a0290998ce8f8a930480db66e8653b2b3d1dabf))
+- **baseConstant and \_document:** :sparkles: add umami snippet code ([9b2558b](https://github.com/yehezkielgunawan/yehezgun-v3/commit/9b2558b7469ac5dbe589385855eb132b49b42dd6))
+- **categoryList and categoryColor:** :sparkles: initiate object and base variable for category ([f5bd5a7](https://github.com/yehezkielgunawan/yehezgun-v3/commit/f5bd5a7f37d9ecc0ea7c7fa1de00af9669b4343c))
+- **types.ts:** :sparkles: add alternative_link and translation_link at SingleArticle Type ([be47ff2](https://github.com/yehezkielgunawan/yehezgun-v3/commit/be47ff234698baad42ddf9cafbc9b605a5513fcc))
+
+### Bug Fixes
+
+- **aboutme:** :bug: fix saweria link ([651a77c](https://github.com/yehezkielgunawan/yehezgun-v3/commit/651a77c8b9af39163b3fd2f4ed4315648801331a))
+- **slug:** :bug: fix share twitter link bug ([1121185](https://github.com/yehezkielgunawan/yehezgun-v3/commit/112118535a2b387a649f6bf8a4aaaf96fc638333))
+- **slug:** :bug: fix twitter button link bug ([699fcfa](https://github.com/yehezkielgunawan/yehezgun-v3/commit/699fcfa7188c25ccda8c547139ce5303a2584e60))
+- **slug:** :bug: fix twitter url bug on twitter button ([eda3b7a](https://github.com/yehezkielgunawan/yehezgun-v3/commit/eda3b7af12cc3da169bb97a22cfe6edfff7479f6))
+- **slug:** :bug: implement URI Component to url and twitter caption ([27dc23c](https://github.com/yehezkielgunawan/yehezgun-v3/commit/27dc23c1f52982855ae3b9a8dcc3315313c19835))
+- **tailwind.config:** :wrench: change font into fira-sans and pt-serif ([cd49cea](https://github.com/yehezkielgunawan/yehezgun-v3/commit/cd49cea9455038ba91b3595ef9d16b4ab1031770))
+
 ### 0.0.1 (2022-02-27)
 
 ### Features
