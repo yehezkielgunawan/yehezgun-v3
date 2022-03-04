@@ -57,12 +57,9 @@ export const newTheme = {
     );
   },
   img: (props: React.ComponentPropsWithRef<"img">) => (
-    <img
-      alt="article-image"
-      loading="lazy"
-      className="my-2 w-full"
-      {...props}
-    />
+    <figure className="flex w-full items-center justify-center">
+      <img alt="article-image" loading="lazy" className="my-4" {...props} />
+    </figure>
   ),
   li: (props: React.ComponentPropsWithRef<"li">) => {
     return <li className="my-2 ml-4 list-disc">{props.children}</li>;
