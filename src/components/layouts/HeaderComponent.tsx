@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React from "react";
-import { BiMoon, BiSun } from "react-icons/bi";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 import { menuList } from "@/constants/MenuList";
 import clsxm from "@/lib/helpers/clsxm";
@@ -11,11 +11,11 @@ import Button from "../buttons/Button";
 import UnstyledLink from "../links/UnstyledLink";
 
 const HeaderComponent = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const router = useRouter();
 
   const handleChangeTheme = () => {
-    return setTheme(resolvedTheme === "light" ? "dark" : "light");
+    return setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -52,11 +52,7 @@ const HeaderComponent = () => {
             )}
             onClick={() => handleChangeTheme()}
           >
-            {resolvedTheme === "light" ? (
-              <BiMoon size={20} />
-            ) : (
-              <BiSun size={20} />
-            )}
+            {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
           </Button>
         </div>
       </nav>
