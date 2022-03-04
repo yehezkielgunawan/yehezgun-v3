@@ -11,7 +11,7 @@ import clsxm from "@/lib/helpers/clsxm";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   return (
-    <section>
+    <>
       <HeaderComponent />
       <PreloadProvider>
         <div className="layout-container">{children}</div>
@@ -39,7 +39,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </UnstyledLink>
         ))}
       </div>
-    </section>
+    </>
   );
 };
 
