@@ -32,43 +32,45 @@ export default function Home({
   const isLoaded = usePreloadState();
   return (
     <Layout>
-      <main className={clsxm("space-y-3", isLoaded && "fade-start")}>
-        <div className="my-8 flex items-center justify-between">
-          <div className="block">
-            <h1 className="mb-3">Hi, I&apos;m Yehezkiel Gunawan.</h1>
-            <p>Currently work as a frontend engineer.</p>
-            <p>
-              You&apos;ve found my personal slice of the internet. Take a look
-              and enjoy.
-            </p>
+      <main className={clsxm(isLoaded && "fade-start")}>
+        <section className="space-y-3">
+          <div className="my-8 flex items-center justify-between">
+            <div className="block">
+              <h1 className="mb-3">Hi, I&apos;m Yehezkiel Gunawan.</h1>
+              <p>Currently work as a frontend engineer.</p>
+              <p>
+                You&apos;ve found my personal slice of the internet. Take a look
+                and enjoy.
+              </p>
+            </div>
+            <NextImage
+              src="/peep_yehez.svg"
+              alt="avatar_me"
+              width={240}
+              height={240}
+              imgClassName="rounded-full"
+              className="hidden sm:table-cell"
+              priority={true}
+            />
           </div>
-          <NextImage
-            src="/peep_yehez.svg"
-            alt="avatar_me"
-            width={240}
-            height={240}
-            imgClassName="rounded-full"
-            className="hidden sm:table-cell"
-            priority={true}
-          />
-        </div>
-        <div className="block space-y-3">
-          <h3>Current Favorite Tech Stacks</h3>
-          <div className="flex flex-wrap items-center gap-4">
-            {techStackList.map((techStack, index) => (
-              <Tooltip
-                key={index}
-                interactive
-                trigger="mouseenter"
-                position="top"
-                html={<div>{techStack.description}</div>}
-              >
-                <techStack.icon className="text-4xl" />
-              </Tooltip>
-            ))}
+          <div className="block space-y-3">
+            <h3>Current Favorite Tech Stacks</h3>
+            <div className="flex flex-wrap items-center gap-4">
+              {techStackList.map((techStack, index) => (
+                <Tooltip
+                  key={index}
+                  interactive
+                  trigger="mouseenter"
+                  position="top"
+                  html={<div>{techStack.description}</div>}
+                >
+                  <techStack.icon className="text-4xl" />
+                </Tooltip>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="block pt-10">
+        </section>
+        <section className="space-y-3 pt-10">
           <h3 className="py-2">Featured Projects</h3>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:flex-nowrap">
             {featuredProjects.map((project, index) => (
@@ -105,7 +107,7 @@ export default function Home({
           >
             See More Projects
           </ButtonLink>
-        </div>
+        </section>
       </main>
     </Layout>
   );

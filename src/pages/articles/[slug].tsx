@@ -81,123 +81,128 @@ export default function Post({
         route={`articles/${postData.fields.slug}`}
         isArticle={true}
       />
-      <div className={clsxm("space-y-2", isLoaded && "fade-start")}>
-        <img
-          src={
-            postData.fields.article_image
-              ? postData.fields.article_image[0].url
-              : DEFAULT_IMG_ARTICLE
-          }
-          alt="article-image"
-          className="w-full rounded-sm"
-        />
-        <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
-          <div className="space-y-1">
-            <h3>{postData.fields.title}</h3>
-            <div className="flex items-center gap-3 pb-4">
-              <p className="text-sm italic">
-                {formatDate(
-                  postData.fields.date,
-                  false,
-                  postData.fields.lang === "en" ? "en-EN" : "in-IN"
+
+      <main className={clsxm(isLoaded && "fade-start")}>
+        <section className="space-y-2">
+          <img
+            src={
+              postData.fields.article_image
+                ? postData.fields.article_image[0].url
+                : DEFAULT_IMG_ARTICLE
+            }
+            alt="article-image"
+            className="w-full rounded-sm"
+          />
+          <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
+            <div className="space-y-1">
+              <h3>{postData.fields.title}</h3>
+              <div className="flex items-center gap-3 pb-4">
+                <p className="text-sm italic">
+                  {formatDate(
+                    postData.fields.date,
+                    false,
+                    postData.fields.lang === "en" ? "en-EN" : "in-IN"
+                  )}
+                </p>
+                <p
+                  className={clsxm(
+                    "rounded-md px-2 py-0.5 text-sm",
+                    categoryColorList[postData.fields.category]
+                  )}
+                >
+                  {postData.fields.category}
+                </p>
+              </div>
+              <div className="flex gap-2">
+                {postData.fields.alternative_link && (
+                  <ButtonLink
+                    href={postData.fields.alternative_link}
+                    variant="dark"
+                    className="dark:border-primary-700"
+                  >
+                    <FaDev size={20} className="mr-1" /> Read in{" "}
+                    {postData.fields.lang === "en" ? "Dev.to" : "Diskusi.tech"}
+                  </ButtonLink>
                 )}
-              </p>
-              <p
+                {postData.fields.translated_link && (
+                  <ButtonLink
+                    href={postData.fields.translated_link}
+                    variant="light"
+                  >
+                    <BsTranslate size={20} className="mr-1" /> Read in{" "}
+                    {postData.fields.lang === "en" ? "Bahasa" : "English"}
+                  </ButtonLink>
+                )}
+              </div>
+            </div>
+            <div className="flex gap-3 md:flex-col">
+              <Button
+                variant="outline"
                 className={clsxm(
-                  "rounded-md px-2 py-0.5 text-sm",
-                  categoryColorList[postData.fields.category]
+                  "rounded-lg border border-teal-600",
+                  "font-bold text-teal-600 dark:text-teal-300",
+                  "hover:bg-teal-100 dark:hover:bg-teal-700"
+                )}
+                onClick={() => handleCopyLink()}
+              >
+                {!isCopied ? (
+                  <>
+                    <FaCopy size={20} className="mr-2" /> Copy Article Link
+                  </>
+                ) : (
+                  <>
+                    <FaCheck size={20} className="mr-2" /> Copied{" "}
+                  </>
+                )}
+              </Button>
+              <ButtonLink
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                  twitterCaption
+                )}&url=${encodeURIComponent(twitterUrl)}`}
+                variant="outline"
+                className={clsxm(
+                  "rounded-lg border border-sky-600",
+                  "font-bold text-sky-600 dark:text-sky-300",
+                  "hover:bg-sky-100 dark:hover:bg-sky-700"
                 )}
               >
-                {postData.fields.category}
-              </p>
-            </div>
-            <div className="flex gap-2">
-              {postData.fields.alternative_link && (
-                <ButtonLink
-                  href={postData.fields.alternative_link}
-                  variant="dark"
-                  className="dark:border-primary-700"
-                >
-                  <FaDev size={20} className="mr-1" /> Read in{" "}
-                  {postData.fields.lang === "en" ? "Dev.to" : "Diskusi.tech"}
-                </ButtonLink>
-              )}
-              {postData.fields.translated_link && (
-                <ButtonLink
-                  href={postData.fields.translated_link}
-                  variant="light"
-                >
-                  <BsTranslate size={20} className="mr-1" /> Read in{" "}
-                  {postData.fields.lang === "en" ? "Bahasa" : "English"}
-                </ButtonLink>
-              )}
+                <FaTwitter size={20} className="mr-2" /> Share on Twitter
+              </ButtonLink>
             </div>
           </div>
-          <div className="flex gap-3 md:flex-col">
-            <Button
-              variant="outline"
-              className={clsxm(
-                "rounded-lg border border-teal-600",
-                "font-bold text-teal-600 dark:text-teal-300",
-                "hover:bg-teal-100 dark:hover:bg-teal-700"
-              )}
-              onClick={() => handleCopyLink()}
-            >
-              {!isCopied ? (
-                <>
-                  <FaCopy size={20} className="mr-2" /> Copy Article Link
-                </>
-              ) : (
-                <>
-                  <FaCheck size={20} className="mr-2" /> Copied{" "}
-                </>
-              )}
-            </Button>
-            <ButtonLink
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                twitterCaption
-              )}&url=${encodeURIComponent(twitterUrl)}`}
-              variant="outline"
-              className={clsxm(
-                "rounded-lg border border-sky-600",
-                "font-bold text-sky-600 dark:text-sky-300",
-                "hover:bg-sky-100 dark:hover:bg-sky-700"
-              )}
-            >
-              <FaTwitter size={20} className="mr-2" /> Share on Twitter
-            </ButtonLink>
-          </div>
-        </div>
-      </div>
+        </section>
+      </main>
       <hr className="my-4" />
-      <div className="my-2 block">
+      <section className="my-2 block">
         <ReactMarkdown
           components={newTheme}
           children={postData.fields.content}
           remarkPlugins={[remarkGfm, remarkHtml]}
           rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
         />
-      </div>
-      <ArrowLink
-        as={ButtonLink}
-        direction="left"
-        href="/articles"
-        className="my-6 flex items-center justify-center gap-4"
-        variant="outline"
-      >
-        Back To Articles Page
-      </ArrowLink>
-      <Giscus
-        repo="yehezkielgunawan/yehezgun-v3"
-        repoId="R_kgDOG2uTxA"
-        mapping="pathname"
-        reactionsEnabled="0"
-        theme={giscusTheme}
-        category="Article Post"
-        categoryId="DIC_kwDOG2uTxM4CBVyS"
-        emitMetadata="0"
-        lang="en"
-      />
+      </section>
+      <section>
+        <ArrowLink
+          as={ButtonLink}
+          direction="left"
+          href="/articles"
+          className="my-6 flex items-center justify-center gap-4"
+          variant="outline"
+        >
+          Back To Articles Page
+        </ArrowLink>
+        <Giscus
+          repo="yehezkielgunawan/yehezgun-v3"
+          repoId="R_kgDOG2uTxA"
+          mapping="pathname"
+          reactionsEnabled="0"
+          theme={giscusTheme}
+          category="Article Post"
+          categoryId="DIC_kwDOG2uTxM4CBVyS"
+          emitMetadata="0"
+          lang="en"
+        />
+      </section>
     </Layout>
   );
 }

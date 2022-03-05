@@ -81,91 +81,94 @@ export default function Articles({
         isArticle={false}
       />
       <main className={clsxm(isLoaded && "fade-start")}>
-        <h1>Articles</h1>
-        <p className="my-2">
-          Just some random thoughts. For me, writting can sharpen my
-          understanding of something.
-        </p>
+        <section className="space-y-3">
+          <h1>Articles</h1>
+          <p className="my-2">
+            Just some random thoughts. For me, writting can sharpen my
+            understanding of something.
+          </p>
 
-        <UnstyledSelect
-          optionList={languageOptions}
-          wrapperClassName="flex items-center gap-3 my-4"
-          labelName="Choose Language"
-          defaultValue={language}
-          className="w-6/12 rounded-lg md:w-36"
-          onChange={filterByLanguage}
-        />
-        <div className="my-4 flex flex-wrap items-center gap-3">
-          {categoryList.map((category, index) => (
-            <p
-              key={index}
-              className={clsxm(
-                "rounded-md border border-primary-400 py-1 px-2",
-                "cursor-pointer",
-                "hover:bg-primary-200 dark:hover:bg-primary-500",
-                categoryState === category && "bg-slate-200 dark:bg-slate-500"
-              )}
-              onClick={() => handleCategory(category)}
-            >
-              {category}
-            </p>
-          ))}
-        </div>
-
-        <div className="flex flex-col gap-4 md:gap-6">
-          {filteredArticles.length > 0 ? (
-            filteredArticles.map((article, index) => (
-              <UnstyledLink
+          <UnstyledSelect
+            optionList={languageOptions}
+            wrapperClassName="flex items-center gap-3 my-4"
+            labelName="Choose Language"
+            defaultValue={language}
+            className="w-6/12 rounded-lg md:w-36"
+            onChange={filterByLanguage}
+          />
+          <div className="my-4 flex flex-wrap items-center gap-3">
+            {categoryList.map((category, index) => (
+              <p
                 key={index}
-                className="group"
-                href={`/articles/${article.fields.slug}`}
+                className={clsxm(
+                  "rounded-md border border-primary-400 py-1 px-2",
+                  "cursor-pointer",
+                  "hover:bg-primary-200 dark:hover:bg-primary-500",
+                  categoryState === category && "bg-slate-200 dark:bg-slate-500"
+                )}
+                onClick={() => handleCategory(category)}
               >
-                <div
-                  className={clsxm(
-                    "h-42 flex items-center gap-4 p-4 md:h-48",
-                    "duration-100 ease-in group-hover:scale-105",
-                    "rounded-md group-hover:shadow-lg",
-                    "group-hover:shadow-primary-200 dark:group-hover:shadow-primary-600"
-                  )}
+                {category}
+              </p>
+            ))}
+          </div>
+        </section>
+        <section>
+          <div className="flex flex-col gap-4 md:gap-6">
+            {filteredArticles.length > 0 ? (
+              filteredArticles.map((article, index) => (
+                <UnstyledLink
+                  key={index}
+                  className="group"
+                  href={`/articles/${article.fields.slug}`}
                 >
-                  <img
-                    alt="article-images"
-                    src={
-                      article.fields.article_image
-                        ? article.fields.article_image[0].url
-                        : DEFAULT_IMG_ARTICLE
-                    }
-                    className="w-20 rounded-sm sm:w-32 md:w-44"
-                    loading="lazy"
-                  />
+                  <div
+                    className={clsxm(
+                      "h-42 flex items-center gap-4 p-4 md:h-48",
+                      "duration-100 ease-in group-hover:scale-105",
+                      "rounded-md group-hover:shadow-lg",
+                      "group-hover:shadow-primary-200 dark:group-hover:shadow-primary-600"
+                    )}
+                  >
+                    <img
+                      alt="article-images"
+                      src={
+                        article.fields.article_image
+                          ? article.fields.article_image[0].url
+                          : DEFAULT_IMG_ARTICLE
+                      }
+                      className="w-20 rounded-sm sm:w-32 md:w-44"
+                      loading="lazy"
+                    />
 
-                  <div className="block space-y-2 group-hover:underline md:space-y-4">
-                    <h3>{article.fields.title}</h3>
-                    <p>
-                      {formatDate(
-                        article.fields.date,
-                        false,
-                        language === "en" ? "en-EN" : "in-IN"
-                      )}
-                    </p>
-                    <p>
-                      <span
-                        className={clsxm(
-                          "rounded-md py-1 px-2 text-xs md:text-sm",
-                          categoryColorList[article.fields.category]
+                    <div className="block space-y-2 group-hover:underline md:space-y-4">
+                      <h3>{article.fields.title}</h3>
+                      <p>
+                        {formatDate(
+                          article.fields.date,
+                          false,
+                          language === "en" ? "en-EN" : "in-IN"
                         )}
-                      >
-                        {article.fields.category}
-                      </span>
-                    </p>
+                      </p>
+                      <p>
+                        <span
+                          className={clsxm(
+                            "rounded-md py-1 px-2 text-xs md:text-sm",
+                            categoryColorList[article.fields.category]
+                          )}
+                        >
+                          {article.fields.category}
+                        </span>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </UnstyledLink>
-            ))
-          ) : (
-            <p>Oops no article list in this category.</p>
-          )}
-        </div>
+                </UnstyledLink>
+              ))
+            ) : (
+              <p>Oops no article list in this category.</p>
+            )}
+          </div>
+        </section>
       </main>
     </Layout>
   );
