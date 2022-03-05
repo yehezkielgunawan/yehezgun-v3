@@ -55,7 +55,11 @@ export async function getStaticPaths() {
   };
 }
 
-const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
+export default function Post({
+  postData,
+}: {
+  postData: SingleRes<SingleArticle>;
+}) {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const handleCopyLink = () => {
     setIsCopied(true);
@@ -196,6 +200,4 @@ const Post = ({ postData }: { postData: SingleRes<SingleArticle> }) => {
       />
     </Layout>
   );
-};
-
-export default Post;
+}

@@ -21,7 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-const Projects = ({ projectList }: { projectList: Projects }) => {
+export default function Projects({ projectList }: { projectList: Projects }) {
   const isLoaded = usePreloadState();
 
   return (
@@ -84,6 +84,4 @@ const Projects = ({ projectList }: { projectList: Projects }) => {
       </main>
     </Layout>
   );
-};
-
-export default Projects;
+}

@@ -31,7 +31,11 @@ export async function getStaticProps() {
   };
 }
 
-const Articles = ({ articleList }: { articleList: ArticlesType }) => {
+export default function Articles({
+  articleList,
+}: {
+  articleList: ArticlesType;
+}) {
   const languageOptions: Array<SingleOptionList> = [
     {
       labelName: "English",
@@ -165,6 +169,4 @@ const Articles = ({ articleList }: { articleList: ArticlesType }) => {
       </main>
     </Layout>
   );
-};
-
-export default Articles;
+}

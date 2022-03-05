@@ -27,7 +27,11 @@ export async function getStaticProps() {
   };
 }
 
-const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
+export default function AboutMe({
+  experienceList,
+}: {
+  experienceList: Experiences;
+}) {
   const isLoaded = usePreloadState();
   return (
     <Layout>
@@ -128,6 +132,4 @@ const AboutMe = ({ experienceList }: { experienceList: Experiences }) => {
       </main>
     </Layout>
   );
-};
-
-export default AboutMe;
+}

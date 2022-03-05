@@ -24,7 +24,11 @@ export async function getStaticProps() {
   };
 }
 
-const Home = ({ featuredProjects }: { featuredProjects: Projects }) => {
+export default function Home({
+  featuredProjects,
+}: {
+  featuredProjects: Projects;
+}) {
   const isLoaded = usePreloadState();
   return (
     <Layout>
@@ -105,6 +109,4 @@ const Home = ({ featuredProjects }: { featuredProjects: Projects }) => {
       </main>
     </Layout>
   );
-};
-
-export default Home;
+}
