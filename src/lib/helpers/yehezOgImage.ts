@@ -4,9 +4,9 @@ export default function yehezOgImage(
   desc: string
 ): string {
   if (isArticle) {
-    return `https://og.yehezgun.com/api/article?logo=https%3A%2F%2Fres.cloudinary.com%2Fyehez%2Fimage%2Fupload%2Fv1630902976%2FAssassination_Classroom_-_Koro-sensei_smiling_head_fwpndi.svg&templateTitle=${encodeURIComponent(
+    return `https://og.yehezgun.com/api/article?logoWidth=124&templateTitle=${encodeURIComponent(
       text
-    )}&theme=dark&logoWidth=124`;
+    )}&theme=dark`;
   }
   return `https://og.yehezgun.com/api/base?description=${encodeURIComponent(
     desc
