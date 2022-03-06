@@ -36,7 +36,7 @@ const MetaHead = ({ pageTitle, pageDesc, route, isArticle }: MetaHeadProps) => {
       additionalLinkTags={[
         {
           rel: "icon",
-          href: "/peep_yehez.png",
+          href: "/yehez_avatar.png",
         },
       ]}
     />

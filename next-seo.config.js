@@ -14,8 +14,8 @@ const defaultSEOConfig = {
       {
         url: "https://og.yehezgun.com/api/base?description=A%20personal%20website%20by%20Yehezkiel%20Gunawan.%20Showcase%20about%20my%20projects%2C%20thoughts%2C%20and%20experience%20as%20Frontend%20Engineer&siteName=yehezgun.com&templateTitle=Yehezkiel%20Gunawan&theme=dark",
         alt: "yehezgun.com og-image",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
       },
     ],
     site_name: "yehezgun.com",
@@ -28,11 +28,11 @@ const defaultSEOConfig = {
   additionalLinkTags: [
     {
       rel: "icon",
-      href: "/peep_yehez.svg",
+      href: "/yehez_avatar.svg",
     },
     {
       rel: "apple-touch-icon",
-      href: "/peep_yehez.svg",
+      href: "/yehez_avatar.svg",
       sizes: "76x76",
     },
   ],

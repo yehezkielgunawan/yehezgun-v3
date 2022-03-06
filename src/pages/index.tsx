@@ -44,12 +44,11 @@ export default function Home({
               </p>
             </div>
             <NextImage
-              src="/peep_yehez.svg"
+              src="/yehez_avatar_transparent.svg"
               alt="avatar_me"
               width={240}
               height={240}
-              imgClassName="rounded-full"
-              className="hidden sm:table-cell"
+              className="hidden rounded-full bg-primary-300 dark:bg-primary-500 sm:table-cell"
               priority={true}
             />
           </div>
