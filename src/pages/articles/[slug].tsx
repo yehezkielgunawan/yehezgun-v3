@@ -17,6 +17,7 @@ import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
+import NextImage from "@/components/NextImage";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import { usePreloadState } from "@/context/PreloadContext";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
@@ -84,14 +85,19 @@ export default function Post({
 
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-2">
-          <img
+          <NextImage
+            alt="post-image"
             src={
               postData.fields.article_image
                 ? postData.fields.article_image[0].url
                 : DEFAULT_IMG_ARTICLE
             }
-            alt="article-image"
+            width={72}
+            height={36}
             className="w-full rounded-sm"
+            objectFit="contain"
+            priority
+            useSkeleton
           />
           <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
             <div className="space-y-1">

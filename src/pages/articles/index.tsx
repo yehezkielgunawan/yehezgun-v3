@@ -7,6 +7,7 @@ import UnstyledSelect, {
 import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
+import NextImage from "@/components/NextImage";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import { categoryList } from "@/constants/categoryList";
 import { usePreloadState } from "@/context/PreloadContext";
@@ -130,15 +131,18 @@ export default function Articles({
                       "group-hover:shadow-primary-200 dark:group-hover:shadow-primary-600"
                     )}
                   >
-                    <img
-                      alt="article-images"
+                    <NextImage
+                      alt="article-image"
                       src={
                         article.fields.article_image
                           ? article.fields.article_image[0].url
                           : DEFAULT_IMG_ARTICLE
                       }
+                      useSkeleton
+                      width={100}
+                      height={100}
                       className="w-20 rounded-sm sm:w-32 md:w-44"
-                      loading="lazy"
+                      objectFit="contain"
                     />
 
                     <div className="block space-y-2 group-hover:underline md:space-y-4">
