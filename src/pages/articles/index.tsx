@@ -141,7 +141,7 @@ export default function Articles({
                       useSkeleton
                       width={100}
                       height={100}
-                      className="w-20 rounded-sm sm:w-32 md:w-44"
+                      className="w-24 min-w-[6rem] rounded-sm sm:w-32 md:w-44"
                       objectFit="contain"
                     />
 
