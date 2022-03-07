@@ -6,6 +6,7 @@ import clsxm from "@/lib/helpers/clsxm";
 import { SingleProjectImg } from "@/lib/services/types";
 
 import UnstyledLink from "../links/UnstyledLink";
+import NextImage from "../NextImage";
 
 type ProjectCardProps = {
   url: string;
@@ -38,19 +39,29 @@ const ProjectCard = ({
         </div>
         <div className="flex items-center justify-between">
           <p className="pr-4 group-hover:underline">{projectDesc}</p>
-          <img
-            src={projectImg}
+          <NextImage
             alt="image-project"
-            className="h-24 w-32 rounded-md object-contain md:h-32 md:w-40"
+            src={projectImg}
+            width={32}
+            height={32}
+            className={clsxm(
+              "w-32 min-w-[6rem] max-w-[6rem] md:w-40",
+              "md:min-w-[8rem] md:max-w-[8rem]"
+            )}
+            objectFit="contain"
           />
         </div>
         <div className="flex gap-3">
           {madeUsing.map((tool, index) => (
-            <img
+            <NextImage
+              alt="icon-tool"
               key={index}
               src={tool.url}
-              alt="icon-tool"
-              className="h-10 rounded-lg md:h-12"
+              width={24}
+              height={24}
+              className="w-10 md:w-12"
+              objectFit="contain"
+              imgClassName="rounded-sm"
             />
           ))}
         </div>
