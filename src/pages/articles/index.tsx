@@ -114,7 +114,7 @@ export default function Articles({
             ))}
           </div>
         </section>
-        <section>
+        <section className="mt-4">
           <div className="flex flex-col gap-4 md:gap-6">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article, index) => (
