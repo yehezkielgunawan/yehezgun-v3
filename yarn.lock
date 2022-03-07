@@ -1490,10 +1490,10 @@ eslint-config-next@12.0.7:
     eslint-plugin-react "^7.27.0"
     eslint-plugin-react-hooks "^4.3.0"
 
-eslint-config-yehezgun@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/eslint-config-yehezgun/-/eslint-config-yehezgun-1.1.9.tgz#5b5e2d062a9a00145396acbca3a89ffad18fa00a"
-  integrity sha512-gJA+HFdC06+wiZzvoDhxrS90VwNWvhObKvmHsvjNn1dvF9ppHTNZGnFsRg5XjoUZxiP2HpJHVCnc+knD1EydlA==
+eslint-config-yehezgun@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-yehezgun/-/eslint-config-yehezgun-1.2.0.tgz#d9444ed9ae676403ce4ba09a4c7ec0d7e2f80218"
+  integrity sha512-OYrvCizeBYLgsHdkxupbPsgdD7XCVbDfkAbQV5infKhQ/3oH3lPwzB+Q2hLNUImTAcTiTZ2+RNktECoiraT+vw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.11.0"
     "@typescript-eslint/parser" "^5.11.0"
