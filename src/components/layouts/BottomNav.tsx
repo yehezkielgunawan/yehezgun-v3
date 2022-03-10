@@ -24,18 +24,16 @@ const BottomNav = () => {
             "flex flex-col items-center justify-center",
             "hover:rounded-md hover:border hover:border-primary-200",
             "focus:border-none"
-            // router.pathname === menu.route &&
-            //   "rounded-md border-2 border-primary-500 dark:border-primary-200"
           )}
         >
           <div
             className={clsxm(
               router.pathname === menu.route &&
                 "rounded-full bg-blue-400  dark:bg-blue-500",
-              "px-4 py-2"
+              "px-3 py-1"
             )}
           >
-            <menu.icon size={36} />
+            <menu.icon size={32} />
           </div>
           <h5 className="font-primary">{menu.menu_name}</h5>
         </UnstyledLink>
