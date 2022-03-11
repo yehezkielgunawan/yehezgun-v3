@@ -32,7 +32,9 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
     }
     return (
       <Link href={href} {...nextLinkProps} {...rest}>
-        <a className={className}>{children}</a>
+        <a ref={ref} className={className}>
+          {children}
+        </a>
       </Link>
     );
   }

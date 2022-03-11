@@ -58,7 +58,13 @@ export const newTheme = {
   },
   img: (props: React.ComponentPropsWithRef<"img">) => (
     <figure className="flex w-full items-center justify-center">
-      <img alt="article-image" loading="lazy" className="my-4" {...props} />
+      <img
+        alt="article-image"
+        loading="lazy"
+        decoding="async"
+        className="my-4"
+        {...props}
+      />
     </figure>
   ),
   li: (props: React.ComponentPropsWithRef<"li">) => {
@@ -78,6 +84,9 @@ export const newTheme = {
         {props.children}
       </blockquote>
     );
+  },
+  body: (props: React.ComponentPropsWithRef<"body">) => {
+    return <body>{props.children}</body>;
   },
   p: (props: React.ComponentPropsWithRef<"p">) => {
     return <p className="my-4">{props.children}</p>;
@@ -118,11 +127,16 @@ export const newTheme = {
           }}
         >
           {!isCopied ? (
-            <FaCopy size={20} className="mr-2" />
+            <>
+              <FaCopy size={20} className="mr-2" />
+              Copy
+            </>
           ) : (
-            <FaCheckCircle size={20} className="mr-2" />
-          )}{" "}
-          Copy
+            <>
+              <FaCheckCircle size={20} className="mr-2" />
+              Copied
+            </>
+          )}
         </Button>
         {language && (
           <p
