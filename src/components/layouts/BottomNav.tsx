@@ -33,7 +33,7 @@ const BottomNav = () => {
               "px-3 py-1"
             )}
           >
-            <menu.icon size={32} />
+            <menu.icon size={28} />
           </div>
           <h5 className="font-primary">{menu.menu_name}</h5>
         </UnstyledLink>

@@ -46,7 +46,7 @@ export default function AboutMe({
           <h1 className="my-4">Yo, hello there!</h1>
           <div className="flex flex-wrap-reverse items-center gap-4 md:flex-nowrap">
             <div className="block space-y-6 text-justify">
-              <p>
+              <p className="text-xs md:text-sm">
                 I&apos;m Yehezkiel Gunawan, a front-end engineer. You can call
                 me Yehez. Recently, I&apos;m learning React and its libraries
                 while working in its ecosystem. To sharpen my understanding of
@@ -55,11 +55,11 @@ export default function AboutMe({
                 experience, testimonies, or tips & tricks as a frontend
                 developer.
               </p>
-              <p>
+              <p className="text-xs md:text-sm">
                 Besides of programming things, I like to explore some new tech
                 stuff, playing games sometimes, and watching animes.
               </p>
-              <p className="text-xs italic">
+              <p className="text-[10px] italic md:text-xs">
                 Fun Fact: Actually, I&apos;m still struggling with native CSS
                 even I&apos;m a frontend engineer, LOL.
               </p>
