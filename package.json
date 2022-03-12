@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@fontsource/fira-sans": "^4.5.3",
-    "@fontsource/pt-serif": "^4.5.2",
+    "@fontsource/pt-serif": "^4.5.3",
     "@giscus/react": "^1.1.2",
     "@tailwindcss/forms": "^0.4.0",
     "airtable": "^0.11.2",
