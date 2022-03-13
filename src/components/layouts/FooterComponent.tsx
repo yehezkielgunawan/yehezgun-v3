@@ -1,7 +1,6 @@
 import React from "react";
-import { BsNewspaper } from "react-icons/bs";
-import { FcTemplate } from "react-icons/fc";
 
+import { footerLinks } from "@/constants/footerLink";
 import clsxm from "@/lib/helpers/clsxm";
 
 import ButtonLink from "../buttons/ButtonLink";
@@ -16,19 +15,19 @@ const FooterComponent = () => {
         "px-2 md:px-1"
       )}
     >
-      <UnderlineLink href="https://yehezgun.com">
+      <UnderlineLink
+        href="https://yehezgun.com"
+        className="font-primary text-sm"
+      >
         {new Date().getFullYear()} | Yehezkiel Gunawan
       </UnderlineLink>
-      <div className="flex items-center justify-end md:mt-0">
-        <ButtonLink
-          variant="ghost"
-          href="https://github.com/yehezkielgunawan?tab=repositories&q=starter&type=&language=&sort="
-        >
-          <FcTemplate size={20} className="mr-2" /> Starter Template
-        </ButtonLink>
-        <ButtonLink variant="ghost" href="https://docs.yehezgun.com">
-          <BsNewspaper size={20} className="mr-2" /> Personal Docs
-        </ButtonLink>
+      <div className="flex items-center justify-end gap-2 font-primary text-sm md:mt-0">
+        {footerLinks.map((footerLink, index) => (
+          <ButtonLink key={index} variant="ghost" href={footerLink.url}>
+            <footerLink.icon size={16} className="mr-2" />{" "}
+            {footerLink.labelName}
+          </ButtonLink>
+        ))}
       </div>
     </footer>
   );
