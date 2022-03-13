@@ -76,19 +76,19 @@
     background-position: 0 100%;
   }
   [data-fade] {
-    @apply translate-y-12 opacity-0 transition duration-500 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100;
+    @apply translate-y-10 opacity-0 transition duration-300 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100;
   }
   .fade-start [data-fade] {
     @apply translate-y-0 opacity-100;
   }
-  .fade-in-start [data-fade="1"] {
-    @apply delay-100;
+  .fade-start [data-fade="1"] {
+    @apply delay-150;
   }
-  .fade-in-start [data-fade="2"] {
-    @apply delay-200;
-  }
-  .fade-in-start [data-fade="3"] {
+  .fade-start [data-fade="2"] {
     @apply delay-300;
+  }
+  .fade-start [data-fade="3"] {
+    @apply delay-500;
   }
 }
 
