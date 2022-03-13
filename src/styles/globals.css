@@ -81,6 +81,15 @@
   .fade-start [data-fade] {
     @apply translate-y-0 opacity-100;
   }
+  .fade-in-start [data-fade="1"] {
+    @apply delay-100;
+  }
+  .fade-in-start [data-fade="2"] {
+    @apply delay-200;
+  }
+  .fade-in-start [data-fade="3"] {
+    @apply delay-300;
+  }
 }
 
 @layer utilities {
