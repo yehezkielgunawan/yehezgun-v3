@@ -177,38 +177,38 @@ export default function Post({
             </div>
           </div>
         </section>
+        <hr className="my-4" />
+        <article className="my-2 block" data-fade="1">
+          <ReactMarkdown
+            components={newTheme}
+            children={postData.fields.content}
+            remarkPlugins={[remarkGfm, remarkHtml]}
+            rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
+          />
+        </article>
+        <section data-fade="2">
+          <ArrowLink
+            as={ButtonLink}
+            direction="left"
+            href="/articles"
+            className="my-6 flex items-center justify-center gap-4"
+            variant="outline"
+          >
+            Back To Articles Page
+          </ArrowLink>
+          <Giscus
+            repo="yehezkielgunawan/yehezgun-v3"
+            repoId="R_kgDOG2uTxA"
+            mapping="pathname"
+            reactionsEnabled="0"
+            theme={giscusTheme}
+            category="Article Post"
+            categoryId="DIC_kwDOG2uTxM4CBVyS"
+            emitMetadata="0"
+            lang="en"
+          />
+        </section>
       </main>
-      <hr className="my-4" />
-      <article className="my-2 block" data-fade="1">
-        <ReactMarkdown
-          components={newTheme}
-          children={postData.fields.content}
-          remarkPlugins={[remarkGfm, remarkHtml]}
-          rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
-        />
-      </article>
-      <section data-fade="2">
-        <ArrowLink
-          as={ButtonLink}
-          direction="left"
-          href="/articles"
-          className="my-6 flex items-center justify-center gap-4"
-          variant="outline"
-        >
-          Back To Articles Page
-        </ArrowLink>
-        <Giscus
-          repo="yehezkielgunawan/yehezgun-v3"
-          repoId="R_kgDOG2uTxA"
-          mapping="pathname"
-          reactionsEnabled="0"
-          theme={giscusTheme}
-          category="Article Post"
-          categoryId="DIC_kwDOG2uTxM4CBVyS"
-          emitMetadata="0"
-          lang="en"
-        />
-      </section>
     </Layout>
   );
 }
