@@ -5,7 +5,7 @@ import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { DEFAULT_IMG } from "@/constants/baseConstants";
-import { usePreloadState } from "@/context/PreloadContext";
+import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
 import { getAllProjectsTable } from "@/lib/services/fetcher";
 import {
@@ -30,7 +30,7 @@ export default function Projects({
 }: {
   projectList: ProjectsType;
 }) {
-  const isLoaded = usePreloadState();
+  const isLoaded = useLoaded();
 
   return (
     <Layout>
@@ -41,13 +41,15 @@ export default function Projects({
         isArticle={false}
       />
       <main className={clsxm(isLoaded && "fade-start")}>
-        <h1>Projects</h1>
-        <p className="my-2">
-          This is my previous works, personal (experiments), and freelance (if
-          it&apos;s public) project list.
-        </p>
-        <section>
-          <h3 className="mt-8">Featured Projects</h3>
+        <section className="space-y-2" data-fade="0">
+          <h1>Projects</h1>
+          <p className="my-2">
+            This is my previous works, personal (experiments), and freelance (if
+            it&apos;s public) project list.
+          </p>
+        </section>
+        <section className="mt-8" data-fade="1">
+          <h3>Featured Projects</h3>
           <div className="grid grid-cols-1 gap-x-8 gap-y-1 md:grid-cols-2">
             {projectList
               .filter(
@@ -70,7 +72,7 @@ export default function Projects({
               ))}
           </div>
         </section>
-        <section className="mt-8">
+        <section className="mt-8" data-fade="2">
           <h3>Other Projects</h3>
           <div className="grid grid-cols-1 gap-x-8 gap-y-1 md:grid-cols-2">
             {projectList

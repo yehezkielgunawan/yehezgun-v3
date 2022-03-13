@@ -10,7 +10,7 @@ import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import { categoryList } from "@/constants/categoryList";
-import { usePreloadState } from "@/context/PreloadContext";
+import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
@@ -55,7 +55,7 @@ export default function Articles({
   };
   const [categoryState, setCategoryState] = useState<string>("All");
 
-  const isLoaded = usePreloadState();
+  const isLoaded = useLoaded();
 
   const handleCategory = (categoryName: string) => {
     return setCategoryState(categoryName);
@@ -82,7 +82,7 @@ export default function Articles({
         isArticle={false}
       />
       <main className={clsxm(isLoaded && "fade-start")}>
-        <section className="space-y-3">
+        <section className="space-y-3" data-fade="0">
           <h1>Articles</h1>
           <p className="my-2">
             Just some random thoughts. For me, writting can sharpen my
@@ -114,7 +114,7 @@ export default function Articles({
             ))}
           </div>
         </section>
-        <section className="mt-4">
+        <section className="mt-4" data-fade="1">
           <div className="flex flex-col gap-4 md:gap-6">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article, index) => (

@@ -11,7 +11,7 @@ import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { contactList } from "@/constants/contactList";
-import { usePreloadState } from "@/context/PreloadContext";
+import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
 import { getAllExperiences } from "@/lib/services/fetcher";
 import { Experiences } from "@/lib/services/types";
@@ -32,7 +32,7 @@ export default function AboutMe({
 }: {
   experienceList: Experiences;
 }) {
-  const isLoaded = usePreloadState();
+  const isLoaded = useLoaded();
   return (
     <Layout>
       <MetaHead
@@ -42,8 +42,8 @@ export default function AboutMe({
         isArticle={false}
       />
       <main className={clsxm(isLoaded && "fade-start")}>
-        <section>
-          <h1 className="my-4">Yo, hello there!</h1>
+        <section className="my-4" data-fade="0">
+          <h1>Yo, hello there!</h1>
           <div className="flex flex-wrap-reverse items-center gap-4 md:flex-nowrap">
             <div className="block space-y-6 text-justify">
               <p className="text-xs md:text-sm">
@@ -109,7 +109,7 @@ export default function AboutMe({
           </div>
           <hr className="my-4" />
         </section>
-        <section className="my-6">
+        <section className="my-6" data-fade="1">
           <div className="block">
             <h1 className="my-4">Work Experience</h1>
             <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">

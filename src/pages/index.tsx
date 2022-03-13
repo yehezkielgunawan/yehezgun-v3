@@ -8,7 +8,7 @@ import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { DEFAULT_IMG } from "@/constants/baseConstants";
 import { techStackList } from "@/constants/techStacks";
-import { usePreloadState } from "@/context/PreloadContext";
+import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
 import { getFeaturedProjects } from "@/lib/services/fetcher";
 import { Projects } from "@/lib/services/types";
@@ -29,12 +29,12 @@ export default function Home({
 }: {
   featuredProjects: Projects;
 }) {
-  const isLoaded = usePreloadState();
+  const isLoaded = useLoaded();
   return (
     <Layout>
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-3">
-          <div className="my-8 flex items-center justify-between">
+          <div className="my-8 flex items-center justify-between" data-fade="0">
             <div className="block">
               <h1 className="mb-3">Hi, I&apos;m Yehezkiel Gunawan.</h1>
               <p>Currently work as a frontend engineer.</p>
@@ -53,7 +53,7 @@ export default function Home({
               priority={true}
             />
           </div>
-          <div className="block space-y-3">
+          <div className="block space-y-3" data-fade="1">
             <h3>Current Favorite Tech Stacks</h3>
             <div className="flex flex-wrap items-center gap-4">
               {techStackList.map((techStack, index) => (
@@ -70,7 +70,7 @@ export default function Home({
             </div>
           </div>
         </section>
-        <section className="space-y-3 pt-10">
+        <section className="space-y-3 pt-10" data-fade="2">
           <h3 className="py-2">Featured Projects</h3>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:flex-nowrap">
             {featuredProjects.map((project, index) => (

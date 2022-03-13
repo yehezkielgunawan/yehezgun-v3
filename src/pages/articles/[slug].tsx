@@ -19,7 +19,7 @@ import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import NextImage from "@/components/NextImage";
 import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
-import { usePreloadState } from "@/context/PreloadContext";
+import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
@@ -70,7 +70,7 @@ export default function Post({
     }, 5000);
   };
   const giscusTheme: GiscusProps["theme"] = "dark_dimmed";
-  const isLoaded = usePreloadState();
+  const isLoaded = useLoaded();
   const twitterCaption = `${postData.fields.title} by @YehezGun`;
   const twitterUrl = typeof window !== "undefined" ? window.location.href : "";
 
@@ -84,7 +84,7 @@ export default function Post({
       />
 
       <main className={clsxm(isLoaded && "fade-start")}>
-        <section className="space-y-2">
+        <section className="space-y-2" data-fade="0">
           <NextImage
             alt="post-image"
             src={
@@ -179,15 +179,15 @@ export default function Post({
         </section>
       </main>
       <hr className="my-4" />
-      <section className="my-2 block">
+      <article className="my-2 block" data-fade="1">
         <ReactMarkdown
           components={newTheme}
           children={postData.fields.content}
           remarkPlugins={[remarkGfm, remarkHtml]}
           rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
         />
-      </section>
-      <section>
+      </article>
+      <section data-fade="2">
         <ArrowLink
           as={ButtonLink}
           direction="left"
