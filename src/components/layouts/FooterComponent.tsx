@@ -21,10 +21,14 @@ const FooterComponent = () => {
       >
         {new Date().getFullYear()} | Yehezkiel Gunawan
       </UnderlineLink>
-      <div className="flex items-center justify-end gap-2 font-primary text-sm md:mt-0">
+      <div
+        className={clsxm(
+          "flex flex-wrap items-center justify-center md:justify-end",
+          "gap-2 font-primary text-sm md:mt-0 md:flex-nowrap"
+        )}
+      >
         {footerLinks.map((footerLink, index) => (
           <ButtonLink key={index} variant="ghost" href={footerLink.url}>
-            <footerLink.icon size={16} className="mr-2" />{" "}
             {footerLink.labelName}
           </ButtonLink>
         ))}
