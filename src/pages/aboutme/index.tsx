@@ -72,7 +72,6 @@ export default function AboutMe({
               height={1000}
               priority={true}
               imgClassName="rounded-md"
-              objectFit="contain"
             />
           </div>
           <div className="my-4 flex items-center gap-3">
