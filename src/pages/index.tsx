@@ -35,13 +35,36 @@ export default function Home({
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-3">
           <div className="my-8 flex items-center justify-between" data-fade="0">
-            <div className="block">
+            <div className="block space-y-1">
               <h1 className="mb-3">Hi, I&apos;m Yehezkiel Gunawan.</h1>
               <p>Currently work as a frontend engineer.</p>
               <p>
                 You&apos;ve found my personal slice of the internet. Take a look
                 and enjoy.
               </p>
+              <div className="flex gap-4 pt-6 font-primary">
+                <ButtonLink
+                  href="/articles"
+                  variant="outline"
+                  className={clsxm(
+                    "border-4 border-double border-zinc-400",
+                    "hover:dark:bg-primary-700"
+                  )}
+                >
+                  Read The Articles
+                </ButtonLink>
+
+                <ButtonLink
+                  href="/aboutme"
+                  variant="outline"
+                  className={clsxm(
+                    "border-dashed",
+                    "hover:ring-1 hover:ring-primary-500 hover:dark:bg-primary-700 hover:dark:ring-primary-200"
+                  )}
+                >
+                  Learn About Me
+                </ButtonLink>
+              </div>
             </div>
             <NextImage
               src="/yehez_avatar_transparent.svg"
@@ -94,7 +117,7 @@ export default function Home({
                       : DEFAULT_IMG
                   }
                   alt="project-image"
-                  className="h-52 w-full object-contain p-2"
+                  className="aspect-[4/2] object-cover p-1 brightness-90"
                   loading="lazy"
                 />
               </UnstyledLink>
