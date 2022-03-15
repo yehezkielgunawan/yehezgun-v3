@@ -53,7 +53,12 @@ export const newTheme = {
   },
   a: (props: React.ComponentPropsWithRef<"a">) => {
     return (
-      <UnderlineLink href={String(props.href)}>{props.children}</UnderlineLink>
+      <UnderlineLink
+        href={String(props.href)}
+        className="text-zinc-700 dark:text-zinc-300"
+      >
+        {props.children}
+      </UnderlineLink>
     );
   },
   img: (props: React.ComponentPropsWithRef<"img">) => (
