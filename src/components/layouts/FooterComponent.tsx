@@ -3,34 +3,39 @@ import React from "react";
 import { footerLinks } from "@/constants/footerLink";
 import clsxm from "@/lib/helpers/clsxm";
 
-import ButtonLink from "../buttons/ButtonLink";
 import UnderlineLink from "../links/UnderlineLink";
+import UnstyledLink from "../links/UnstyledLink";
 
 const FooterComponent = () => {
   return (
     <footer
       className={clsxm(
         "mx-auto max-w-4xl border-t pt-12 pb-32 text-center md:pb-12",
-        "flex flex-wrap-reverse items-center justify-center gap-4 md:flex-nowrap md:justify-between",
+        "flex flex-wrap-reverse items-center justify-center gap-12 md:justify-between",
         "px-2 md:px-1"
       )}
     >
       <UnderlineLink
         href="https://yehezgun.com"
-        className="font-primary text-sm"
+        className="ml-2 font-primary text-sm md:ml-0"
       >
         {new Date().getFullYear()} | Yehezkiel Gunawan
       </UnderlineLink>
       <div
         className={clsxm(
-          "flex flex-wrap items-center justify-center md:justify-end",
-          "gap-2 font-primary text-sm md:mt-0 md:flex-nowrap"
+          "flex flex-wrap items-center justify-center",
+          "gap-4 font-primary text-sm md:mt-0 md:flex-nowrap",
+          "mx-4 md:mx-0"
         )}
       >
         {footerLinks.map((footerLink, index) => (
-          <ButtonLink key={index} variant="ghost" href={footerLink.url}>
+          <UnstyledLink
+            key={index}
+            href={footerLink.url}
+            className="text-base font-semibold hover:underline"
+          >
             {footerLink.labelName}
-          </ButtonLink>
+          </UnstyledLink>
         ))}
       </div>
     </footer>
