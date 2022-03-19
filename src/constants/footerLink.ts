@@ -20,4 +20,8 @@ export const footerLinks: Array<FooterLinkProps> = [
     url: "https://statuspage.freshping.io/60373-YehezGunWebAppStatus",
     labelName: "Status",
   },
+  {
+    url: "https://poly.work/yehezgun",
+    labelName: "Polywork",
+  },
 ];
