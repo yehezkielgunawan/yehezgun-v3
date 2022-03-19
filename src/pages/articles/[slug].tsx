@@ -191,7 +191,7 @@ export default function Post({
             as={ButtonLink}
             direction="left"
             href="/articles"
-            className="my-6 flex items-center justify-center gap-4"
+            className="my-6 flex items-center justify-center gap-4 font-primary"
             variant="outline"
           >
             Back To Articles Page

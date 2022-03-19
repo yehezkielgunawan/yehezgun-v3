@@ -126,7 +126,7 @@ export default function Home({
           <ButtonLink
             variant="outline"
             href="/projects"
-            className="mt-4 w-full justify-center"
+            className="mt-4 w-full justify-center font-primary"
           >
             See More Projects
           </ButtonLink>
