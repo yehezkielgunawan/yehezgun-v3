@@ -98,28 +98,35 @@ export default function Home({
           <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:flex-nowrap">
             {featuredProjects.map((project, index) => (
               <UnstyledLink
-                href={project.fields.project_url}
                 key={index}
+                href={project.fields.project_url}
                 className={clsxm(
-                  "flex w-full flex-col items-center justify-center",
-                  "rounded-md border p-2",
-                  "duration-200 ease-in hover:-translate-y-1",
-                  "hover:border-zinc-300 hover:ring hover:ring-zinc-300"
+                  "relative w-full overflow-hidden rounded-md",
+                  "hover:border-zinc-400 hover:ring hover:ring-zinc-400",
+                  "dark:hover:border-zinc-100 dark:hover:ring-zinc-100",
+                  "duration-200 ease-in hover:-translate-y-1"
                 )}
               >
-                <h4 className="w-full border-b p-2 text-center">
-                  {project.fields.project_title}
-                </h4>
                 <img
                   src={
                     project.fields.image_url
                       ? project.fields.image_url[0].url
                       : DEFAULT_IMG
                   }
-                  alt="project-image"
-                  className="aspect-[4/2] object-cover p-1 brightness-90"
                   loading="lazy"
+                  decoding="async"
+                  alt="Avatar"
+                  className="h-full w-full object-cover brightness-75"
                 />
+                <h4
+                  className={clsxm(
+                    "absolute inset-x-0 bottom-0 w-full",
+                    "bg-primary-800 bg-opacity-75 py-2",
+                    "text-center text-base text-white"
+                  )}
+                >
+                  {project.fields.project_title}
+                </h4>
               </UnstyledLink>
             ))}
           </div>
