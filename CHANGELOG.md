@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.3...v0.0.4) (2022-03-19)
+
+### Features
+
+- **footerComponent:** :lipstick: change footerlink to unstyled link ([dff82ec](https://github.com/yehezkielgunawan/yehezgun-v3/commit/dff82ecf2b4285a87f56efdd0650edddae470c99))
+- **useLoaded:** :sparkles: add new hook to check if the elements is loaded ([b16b988](https://github.com/yehezkielgunawan/yehezgun-v3/commit/b16b9886eb3cba0da0467fbb90620aaddbcd5d8c))
+
+### Bug Fixes
+
+- **global.css:** :bug: fix class name fade-in-start to fade-start ([7b03adb](https://github.com/yehezkielgunawan/yehezgun-v3/commit/7b03adb7dcee65433cef6b8d0741ecfe09583a19))
+- **slug:** :bug: fix html structure so the article will be loaded ([f3fa389](https://github.com/yehezkielgunawan/yehezgun-v3/commit/f3fa389f868ea8a96a6c6467c61513bfeb361e4e))
+
 ### [0.0.3](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.2...v0.0.3) (2022-03-13)
 
 ### [0.0.2](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.1...v0.0.2) (2022-03-03)
