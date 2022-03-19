@@ -17,7 +17,7 @@ const FooterComponent = () => {
     >
       <UnderlineLink
         href="https://yehezgun.com"
-        className="ml-2 font-primary text-sm md:ml-0"
+        className="ml-2 font-primary text-sm md:ml-0 md:text-base"
       >
         {new Date().getFullYear()} | Yehezkiel Gunawan
       </UnderlineLink>
@@ -32,7 +32,7 @@ const FooterComponent = () => {
           <UnstyledLink
             key={index}
             href={footerLink.url}
-            className="text-base font-semibold hover:underline"
+            className="text-sm font-semibold hover:underline md:text-base"
           >
             {footerLink.labelName}
           </UnstyledLink>
