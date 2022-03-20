@@ -115,7 +115,7 @@ export default function Articles({
           </div>
         </section>
         <section className="mt-4" data-fade="1">
-          <div className="flex flex-col gap-4 md:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article, index) => (
                 <UnstyledLink
@@ -125,36 +125,32 @@ export default function Articles({
                 >
                   <div
                     className={clsxm(
-                      "h-42 flex items-center gap-4 p-4 md:h-48",
+                      "h-auto rounded-lg border py-2 shadow-lg sm:h-80 md:h-96",
+                      "dark:border-primary-600 dark:bg-slate-800",
                       "duration-100 ease-in group-hover:scale-105",
-                      "rounded-md group-hover:shadow-lg",
                       "group-hover:shadow-primary-200 dark:group-hover:shadow-primary-600"
                     )}
                   >
                     <NextImage
-                      alt="article-image"
+                      useSkeleton
+                      width={16}
+                      height={9}
+                      className="w-full px-4"
+                      objectFit="contain"
                       src={
                         article.fields.article_image
                           ? article.fields.article_image[0].url
                           : DEFAULT_IMG_ARTICLE
                       }
-                      useSkeleton
-                      width={100}
-                      height={100}
-                      className="w-24 min-w-[6rem] rounded-sm sm:w-32 md:w-44"
-                      objectFit="contain"
+                      alt="article-image"
                     />
-
-                    <div className="block space-y-2 group-hover:underline md:space-y-4">
-                      <h3>{article.fields.title}</h3>
-                      <p>
+                    <div className="flex flex-col space-y-2 px-6 py-4">
+                      <p className="flex items-center gap-2 text-xs md:text-sm">
                         {formatDate(
                           article.fields.date,
                           false,
                           language === "en" ? "en-EN" : "in-IN"
-                        )}
-                      </p>
-                      <p>
+                        )}{" "}
                         <span
                           className={clsxm(
                             "rounded-md py-1 px-2 text-xs md:text-sm",
@@ -164,6 +160,7 @@ export default function Articles({
                           {article.fields.category}
                         </span>
                       </p>
+                      <h3>{article.fields.title}</h3>
                     </div>
                   </div>
                 </UnstyledLink>
