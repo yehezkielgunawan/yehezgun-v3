@@ -125,7 +125,8 @@ export default function Articles({
                 >
                   <div
                     className={clsxm(
-                      "h-auto rounded-lg border py-2 shadow-lg sm:h-80 md:h-96",
+                      "rounded-lg border py-2 shadow-lg",
+                      "h-full w-full",
                       "dark:border-primary-600 dark:bg-slate-800",
                       "duration-100 ease-in group-hover:scale-105",
                       "group-hover:shadow-primary-200 dark:group-hover:shadow-primary-600"
@@ -144,7 +145,7 @@ export default function Articles({
                       }
                       alt="article-image"
                     />
-                    <div className="flex flex-col space-y-2 px-6 py-4">
+                    <div className="flex h-full w-full flex-col space-y-2 px-6 py-4">
                       <p className="flex items-center gap-2 text-xs md:text-sm">
                         {formatDate(
                           article.fields.date,
