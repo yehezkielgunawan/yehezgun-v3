@@ -116,7 +116,10 @@ export default function Home({
                   loading="lazy"
                   decoding="async"
                   alt="Avatar"
-                  className="h-full w-full object-cover brightness-75"
+                  className={clsxm(
+                    "h-full w-full object-cover",
+                    "brightness-75 duration-500 hover:brightness-95"
+                  )}
                 />
                 <h4
                   className={clsxm(
