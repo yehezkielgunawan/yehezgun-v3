@@ -10,22 +10,16 @@ const FooterComponent = () => {
   return (
     <footer
       className={clsxm(
-        "mx-auto max-w-4xl border-t pt-12 pb-32 text-center md:pb-12",
-        "flex flex-wrap-reverse items-center justify-center gap-12 md:justify-between",
-        "px-2 md:px-1"
+        "mx-auto max-w-4xl border-t pt-12 pb-32 md:pb-12",
+        "px-2 md:px-1",
+        "space-y-8 font-primary"
       )}
     >
-      <UnderlineLink
-        href="https://yehezgun.com"
-        className="ml-2 font-primary text-sm md:ml-0 md:text-base"
-      >
-        {new Date().getFullYear()} | Yehezkiel Gunawan
-      </UnderlineLink>
       <div
         className={clsxm(
-          "flex flex-wrap items-center justify-center",
-          "gap-4 font-primary text-sm md:mt-0 md:flex-nowrap",
-          "mx-4 md:mx-0"
+          "md:flex md:flex-wrap md:items-center",
+          "grid grid-cols-2 gap-4",
+          "mx-2 md:m-0"
         )}
       >
         {footerLinks.map((footerLink, index) => (
@@ -38,6 +32,12 @@ const FooterComponent = () => {
           </UnstyledLink>
         ))}
       </div>
+      <UnderlineLink
+        href="https://yehezgun.com"
+        className="ml-2 font-primary text-sm md:ml-0 md:text-base"
+      >
+        {new Date().getFullYear()} | Yehezkiel Gunawan
+      </UnderlineLink>
     </footer>
   );
 };
