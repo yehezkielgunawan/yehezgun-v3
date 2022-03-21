@@ -145,7 +145,7 @@ export default function Articles({
                       }
                       alt="article-image"
                     />
-                    <div className="flex h-full w-full flex-col space-y-2 px-6 py-4">
+                    <div className="flex flex-col space-y-2 px-6 py-4">
                       <p className="flex items-center gap-2 text-xs md:text-sm">
                         {formatDate(
                           article.fields.date,
