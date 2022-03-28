@@ -208,10 +208,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.6.tgz#1e1b6016456c2c942f5b3b02cf620c03c84fb2c2"
   integrity sha512-93rZ/hxYYkOYqrsZpiV+7Rt+qIq5uNgb5s+cRjKGuCrR4Fz/+plw4M9ZjQT0GP/1pJxZTHbrMxI/63Wl3ZqWWA==
 
-"@fontsource/pt-serif@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/pt-serif/-/pt-serif-4.5.2.tgz#475b24f7ff92236657bc47eb3aaa2889d92e92c8"
-  integrity sha512-8nnVehr92S7ubAPrI7QBOeyLBNBnB4EUvPL72EO+k0QNATPjMVGAwA0P2NSb3CZBtT8mBprYxoHsfijTiMl6Pg==
+"@fontsource/pt-serif@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/pt-serif/-/pt-serif-4.5.5.tgz#bfb5ea6573b9719ac7554c2ad3fb09559102c9c1"
+  integrity sha512-jQvgoVLyrufK/a/wkCRRXawlPl9NOGNmAmxPrTtnBf4YgI4ysQPbxQkcgWsF9XyDayDxPmrvfGtWmOJ+Gaa54g==
 
 "@giscus/react@^1.1.2":
   version "1.1.2"
