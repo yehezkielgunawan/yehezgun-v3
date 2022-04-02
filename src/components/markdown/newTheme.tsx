@@ -5,11 +5,11 @@ import { FaCheckCircle, FaCopy } from "react-icons/fa";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
-import clsxm from "@/lib/helpers/clsxm";
-
 import Button from "../buttons/Button";
 import UnderlineLink from "../links/UnderlineLink";
 import UnstyledLink from "../links/UnstyledLink";
+
+import clsxm from "@/lib/helpers/clsxm";
 
 export const newTheme = {
   h1: (props: React.ComponentPropsWithRef<"h1">) => {

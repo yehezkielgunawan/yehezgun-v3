@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import React from "react";
 
+import UnstyledLink from "../links/UnstyledLink";
+
 import { menuList } from "@/constants/MenuList";
 import clsxm from "@/lib/helpers/clsxm";
-
-import UnstyledLink from "../links/UnstyledLink";
 
 const BottomNav = () => {
   const router = useRouter();

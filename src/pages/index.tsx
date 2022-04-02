@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { Tooltip } from "react-tippy";
 
 import ButtonLink from "@/components/buttons/ButtonLink";
@@ -107,19 +105,22 @@ export default function Home({
                   "duration-200 ease-in hover:-translate-y-1"
                 )}
               >
-                <img
+                <NextImage
+                  useSkeleton
+                  alt="featured-project"
                   src={
                     project.fields.image_url
                       ? project.fields.image_url[0].url
                       : DEFAULT_IMG
                   }
-                  loading="lazy"
-                  decoding="async"
-                  alt="Avatar"
+                  width={20}
+                  height={10}
                   className={clsxm(
-                    "h-full w-full object-cover",
-                    "brightness-75 duration-500 hover:brightness-95"
+                    "w-full",
+                    "duration-500 dark:brightness-75 dark:hover:brightness-95",
+                    "brightness-90 hover:brightness-100"
                   )}
+                  priority
                 />
                 <h4
                   className={clsxm(
