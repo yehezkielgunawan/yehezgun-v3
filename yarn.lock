@@ -203,10 +203,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/fira-sans@^4.5.6":
-  version "4.5.6"
-  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.6.tgz#1e1b6016456c2c942f5b3b02cf620c03c84fb2c2"
-  integrity sha512-93rZ/hxYYkOYqrsZpiV+7Rt+qIq5uNgb5s+cRjKGuCrR4Fz/+plw4M9ZjQT0GP/1pJxZTHbrMxI/63Wl3ZqWWA==
+"@fontsource/fira-sans@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.7.tgz#73ebc6a12c2c9f41f5924f213619fb15a1838d29"
+  integrity sha512-tURGr1HkN9T+qCcGzkrv7aVxc9p+/PRKDYhTOY3dZ9+fSKhX5gflmppNCjgFsdJ8s7jz/sqT6rmwyBmI2AJm4g==
 
 "@fontsource/pt-serif@^4.5.2":
   version "4.5.2"
