@@ -1,5 +1,4 @@
 /* eslint-disable react/no-children-prop */
-/* eslint-disable @next/next/no-img-element */
 import { Giscus, GiscusProps } from "@giscus/react";
 import React, { useState } from "react";
 import { BsTranslate } from "react-icons/bs";
