@@ -17,7 +17,6 @@ import MetaHead from "@/components/layouts/MetaHead";
 import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import NextImage from "@/components/NextImage";
-import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
@@ -86,11 +85,7 @@ export default function Post({
         <section className="space-y-2" data-fade="0">
           <NextImage
             alt="post-image"
-            src={
-              postData.fields.article_image
-                ? postData.fields.article_image[0].url
-                : DEFAULT_IMG_ARTICLE
-            }
+            src={postData.fields.article_image[0].url}
             width={72}
             height={36}
             className="w-full rounded-sm"

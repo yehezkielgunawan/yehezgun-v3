@@ -70,7 +70,7 @@ export default function AboutMe({
               src="/yehez-profile.png"
               width={1600}
               height={1000}
-              priority={true}
+              priority
               imgClassName="rounded-md"
             />
           </div>
