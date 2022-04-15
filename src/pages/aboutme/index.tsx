@@ -92,7 +92,7 @@ export default function AboutMe({
           </div>
           <div className="flex items-center gap-3">
             <ButtonLink
-              href="https://ko-fi.com/kaz200"
+              href="https://ko-fi.com/yehezgun"
               variant="outline"
               className="border-2 text-primary-700"
             >

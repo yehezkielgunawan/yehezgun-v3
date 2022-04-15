@@ -3,6 +3,8 @@ import { Giscus, GiscusProps } from "@giscus/react";
 import React, { useState } from "react";
 import { BsTranslate } from "react-icons/bs";
 import { FaCheck, FaCopy, FaDev, FaTwitter } from "react-icons/fa";
+import { GiPayMoney } from "react-icons/gi";
+import { SiKofi } from "react-icons/si";
 import ReactMarkdown from "react-markdown";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeRaw from "rehype-raw";
@@ -185,7 +187,7 @@ export default function Post({
             rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
           />
         </article>
-        <section data-fade="2">
+        <section data-fade="2" className="space-y-4">
           <ArrowLink
             as={ButtonLink}
             direction="left"
@@ -195,6 +197,22 @@ export default function Post({
           >
             Back To Articles Page
           </ArrowLink>
+          <div className="flex items-center justify-between gap-2">
+            <ButtonLink
+              href="https://ko-fi.com/yehezgun"
+              variant="outline"
+              className="border-2 text-primary-700"
+            >
+              <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
+            </ButtonLink>
+            <ButtonLink
+              href="https://saweria.co/yehezgun"
+              variant="outline"
+              className="border-2 text-primary-700"
+            >
+              <GiPayMoney size={20} className="mr-2" /> Support me on Saweria
+            </ButtonLink>
+          </div>
           <Giscus
             repo="yehezkielgunawan/yehezgun-v3"
             repoId="R_kgDOG2uTxA"
