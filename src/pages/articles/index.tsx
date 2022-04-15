@@ -8,7 +8,6 @@ import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
-import { DEFAULT_IMG_ARTICLE } from "@/constants/baseConstants";
 import { categoryList } from "@/constants/categoryList";
 import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
@@ -138,11 +137,7 @@ export default function Articles({
                       height={9}
                       className="w-full px-4"
                       objectFit="contain"
-                      src={
-                        article.fields.article_image
-                          ? article.fields.article_image[0].url
-                          : DEFAULT_IMG_ARTICLE
-                      }
+                      src={article.fields.article_image[0].url}
                       alt="article-image"
                     />
                     <div className="flex flex-col space-y-2 px-6 py-4">

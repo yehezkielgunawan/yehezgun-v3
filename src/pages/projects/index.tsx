@@ -4,7 +4,6 @@ import React from "react";
 import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import ProjectCard from "@/components/ui/ProjectCard";
-import { DEFAULT_IMG } from "@/constants/baseConstants";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
 import { getAllProjectsTable } from "@/lib/services/fetcher";
@@ -61,11 +60,7 @@ export default function Projects({
                   key={index}
                   projectTitle={project.fields.project_title}
                   projectDesc={project.fields.description}
-                  projectImg={
-                    project.fields.image_url
-                      ? project.fields.image_url[1].url
-                      : DEFAULT_IMG
-                  }
+                  projectImg={project.fields.image_url[1].url}
                   madeUsing={project.fields.made_using}
                   url={project.fields.project_url}
                 />
@@ -86,11 +81,7 @@ export default function Projects({
                   url={project.fields.project_url}
                   projectTitle={project.fields.project_title}
                   projectDesc={project.fields.description}
-                  projectImg={
-                    project.fields.image_url
-                      ? project.fields.image_url[1].url
-                      : DEFAULT_IMG
-                  }
+                  projectImg={project.fields.image_url[1].url}
                   madeUsing={project.fields.made_using}
                 />
               ))}

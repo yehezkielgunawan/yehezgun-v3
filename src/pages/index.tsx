@@ -4,7 +4,6 @@ import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
-import { DEFAULT_IMG } from "@/constants/baseConstants";
 import { techStackList } from "@/constants/techStacks";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
@@ -108,11 +107,7 @@ export default function Home({
                 <NextImage
                   useSkeleton
                   alt="featured-project"
-                  src={
-                    project.fields.image_url
-                      ? project.fields.image_url[0].url
-                      : DEFAULT_IMG
-                  }
+                  src={project.fields.image_url[0].url}
                   width={20}
                   height={10}
                   className={clsxm(

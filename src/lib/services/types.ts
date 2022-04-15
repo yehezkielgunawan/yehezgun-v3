@@ -5,7 +5,7 @@ export type SingleRes<ResType> = {
 
 export type SingleProject = {
   project_title: string;
-  image_url?: Array<SingleProjectImg>;
+  image_url: Array<SingleProjectImg>;
   project_url: string;
   made_using: Array<SingleProjectImg>;
   description: string;
@@ -55,7 +55,7 @@ export type SingleArticle = {
   title: string;
   slug: string;
   date: string;
-  article_image?: Array<SingleProjectImg>;
+  article_image: Array<SingleProjectImg>;
   lang: string;
   content: string;
   alternative_link?: string;

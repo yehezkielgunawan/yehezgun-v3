@@ -1,6 +1,6 @@
 # YehezGun v3
 
-![yehezgun-v3](https://socialify.git.ci/yehezkielgunawan/yehezgun-v3/image?description=1&descriptionEditable=YehezGun%20site%20v3.%20Built%20using%20Next.js%20%2B%20Typescript%20%2B%20Tailwind%20CSS&font=Inter&logo=https%3A%2F%2Fres.cloudinary.com%2Fyehez%2Fimage%2Fupload%2Fv1636202181%2Fpeep_amkhuu.svg&name=1&owner=1&pattern=Brick%20Wall&theme=Dark)
+![yehezgun-v3](https://socialify.git.ci/yehezkielgunawan/yehezgun-v3/image?description=1&logo=https%3A%2F%2Fres.cloudinary.com%2Fyehez%2Fimage%2Fupload%2Fv1646486254%2Fyehez_avatar_yvlxbo.svg&owner=1&theme=Dark)
 
 [![forthebadge](https://res.cloudinary.com/yehez/image/upload/v1635325228/made-by-typescript_mz1tue.svg)](https://forthebadge.com)
 
