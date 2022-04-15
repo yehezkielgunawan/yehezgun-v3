@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import Button from "../buttons/Button";
@@ -12,11 +12,20 @@ import clsxm from "@/lib/helpers/clsxm";
 
 const HeaderComponent = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState<boolean>(false);
   const router = useRouter();
 
   const handleChangeTheme = () => {
     return setTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <header className="fixed top-0 z-50 w-full bg-white font-primary opacity-90 dark:bg-primary-700">
