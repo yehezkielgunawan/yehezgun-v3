@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.6...v0.0.7) (2022-04-21)
+
+### Bug Fixes
+
+- **aboutme:** :speech_balloon: fix ko-fi link and add it in slug ([0ceace3](https://github.com/yehezkielgunawan/yehezgun-v3/commit/0ceace3291e576621747dae737176228ac553136))
+- **Headercomponent:** :bug: fix hydration issue on header component ([1e31b29](https://github.com/yehezkielgunawan/yehezgun-v3/commit/1e31b292858b8b77b7e6926d01dbed09a41eac66))
+
 ### [0.0.6](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.5...v0.0.6) (2022-04-02)
 
 ### [0.0.5](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.4...v0.0.5) (2022-03-21)
