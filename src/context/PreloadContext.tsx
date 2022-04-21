@@ -18,7 +18,7 @@ export function PreloadProvider({ children }: { children: React.ReactNode }) {
       <div
         className={clsxm(
           "fixed inset-0 flex items-center justify-center",
-          "bg-white transition-opacity dark:bg-dark",
+          "bg-white transition-opacity dark:bg-errieblack-500",
           isPreLoaded && "pointer-events-none opacity-0"
         )}
       />

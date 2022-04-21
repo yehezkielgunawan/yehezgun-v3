@@ -27,10 +27,11 @@ const ProjectCard = ({
     <UnstyledLink href={url} className="group">
       <div
         className={clsxm(
-          "my-4 rounded-lg border-2 border-primary-200 py-4 px-6 dark:border-primary-400",
+          "my-4 rounded-lg border-2 border-lightsteel-300 py-4 px-6 dark:border-lightsteel-500",
           "duration-300 ease-in group-hover:-translate-y-1",
-          "group-hover:border-zinc-300",
-          "group-hover:ring group-hover:ring-zinc-300"
+          "group-hover:border-lightsteel-300",
+          "group-hover:ring group-hover:ring-lightsteel-300",
+          "bg-white dark:bg-charcoal-500"
         )}
       >
         <div className="flex items-center justify-between group-hover:underline">
