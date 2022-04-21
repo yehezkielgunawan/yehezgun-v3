@@ -1,15 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
-function withOpacityValue(variable) {
-  return ({ opacityValue }) => {
-    if (opacityValue === undefined) {
-      return `rgb(var(${variable}))`;
-    }
-    return `rgb(var(${variable}) / ${opacityValue})`;
-  };
-}
-
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
@@ -20,20 +11,66 @@ module.exports = {
         secondary: ["PT Serif", ...fontFamily.sans],
       },
       colors: {
-        primary: {
-          // Customize it on globals.css :root
-          50: withOpacityValue("--tw-color-primary-50"),
-          100: withOpacityValue("--tw-color-primary-100"),
-          200: withOpacityValue("--tw-color-primary-200"),
-          300: withOpacityValue("--tw-color-primary-300"),
-          400: withOpacityValue("--tw-color-primary-400"),
-          500: withOpacityValue("--tw-color-primary-500"),
-          600: withOpacityValue("--tw-color-primary-600"),
-          700: withOpacityValue("--tw-color-primary-700"),
-          800: withOpacityValue("--tw-color-primary-800"),
-          900: withOpacityValue("--tw-color-primary-900"),
+        errieblack: {
+          50: "#E7E7E9",
+          100: "#CFCFD4",
+          200: "#9E9EA8",
+          300: "#71717E",
+          400: "#46464E",
+          500: "#1B1B1E",
+          600: "#161618",
+          700: "#111113",
+          800: "#0A0A0B",
+          900: "#050505",
         },
-        dark: "#1A202C",
+        charcoal: {
+          50: "#EAECF1",
+          100: "#D1D6E0",
+          200: "#A7AFC3",
+          300: "#7986A4",
+          400: "#55617D",
+          500: "#373F51",
+          600: "#2B3140",
+          700: "#212631",
+          800: "#171A21",
+          900: "#0A0C0F",
+        },
+        primary: {
+          50: "#EEF6F7",
+          100: "#DCECEF",
+          200: "#BDDBE0",
+          300: "#9BC8D0",
+          400: "#78B6BF",
+          500: "#58A4B0",
+          600: "#43848E",
+          700: "#33646B",
+          800: "#224449",
+          900: "#102023",
+        },
+        lightsteel: {
+          50: "#F5F7FA",
+          100: "#EFF2F6",
+          200: "#DEE5ED",
+          300: "#CAD6E2",
+          400: "#BAC9D9",
+          500: "#A9BCD0",
+          600: "#7895B5",
+          700: "#4F6F91",
+          800: "#364C63",
+          900: "#1B2631",
+        },
+        gainsboro: {
+          50: "#FCFCFD",
+          100: "#F6F7F8",
+          200: "#F0F2F4",
+          300: "#E8E9EE",
+          400: "#DFE1E7",
+          500: "#D8DBE2",
+          600: "#A4ABBC",
+          700: "#737D97",
+          800: "#4C5466",
+          900: "#252932",
+        },
       },
     },
   },

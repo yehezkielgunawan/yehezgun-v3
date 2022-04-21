@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 /* https://play.tailwindcss.com/NVUHzqMBl5?file=css */
-:root {
-  /* #region  /**=========== Primary Color =========== */
-  /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
-  --tw-color-primary-50: 249 250 251;
-  --tw-color-primary-100: 243 244 246;
-  --tw-color-primary-200: 229 231 235;
-  --tw-color-primary-300: 209 213 219;
-  --tw-color-primary-400: 156 163 175;
-  --tw-color-primary-500: 107 114 128;
-  --tw-color-primary-600: 75 85 99;
-  --tw-color-primary-700: 55 65 81;
-  --tw-color-primary-800: 31 41 55;
-  --tw-color-primary-900: 17 24 39;
-  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f9fafb */
-  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #f3f4f6 */
-  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #e5e7eb */
-  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #d1d5db */
-  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #9ca3af */
-  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #6b7280 */
-  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #4b5563 */
-  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #374151 */
-  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #1f2937 */
-  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #111827 */
-  /* #endregion  /**======== Primary Color =========== */
-}
 
 @layer base {
   .cursor-newtab {
@@ -51,7 +26,8 @@
   }
 
   body {
-    @apply font-secondary text-sm md:text-base;
+    @apply font-secondary text-sm text-errieblack-600 dark:text-errieblack-50 md:text-base;
+    @apply scrollbar bg-charcoal-50 dark:bg-charcoal-600;
   }
 
   .layout-container {
@@ -59,11 +35,10 @@
   }
 
   .link-underline {
-    color: inherit;
     @apply underline decoration-dotted underline-offset-2;
     @apply transition-colors duration-700;
-    @apply hover:decoration-slate-400 hover:decoration-solid hover:underline-offset-4;
-    @apply dark:hover:decoration-zinc-400;
+    @apply hover:decoration-primary-500 hover:decoration-solid hover:underline-offset-4;
+    @apply dark:hover:decoration-primary-400;
   }
 
   [data-fade] {
@@ -90,7 +65,7 @@
 
   .scrollbar::-webkit-scrollbar-track {
     border-radius: 100vh;
-    @apply bg-primary-200 dark:bg-primary-500;
+    @apply bg-gainsboro-200 dark:bg-gainsboro-700;
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
