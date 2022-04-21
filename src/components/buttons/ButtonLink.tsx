@@ -37,9 +37,9 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
               "disabled:bg-primary-400 disabled:hover:bg-primary-400",
             ],
             variant === "outline" && [
-              "text-primary-500 dark:text-primary-200",
-              "border border-primary-500",
-              "hover:bg-primary-200 hover:underline active:bg-primary-100 disabled:bg-primary-100 dark:hover:bg-primary-500",
+              "text-primary-600 dark:text-primary-400",
+              "border border-primary-500 dark:hover:bg-primary-700",
+              "hover:bg-primary-200 hover:underline active:bg-primary-100 disabled:bg-primary-100",
             ],
             variant === "ghost" && [
               "text-black dark:text-white",
@@ -47,15 +47,14 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
               "hover:bg-primary-200 active:bg-primary-100 disabled:bg-primary-100 dark:hover:bg-zinc-500",
             ],
             variant === "light" && [
-              "bg-white text-dark ",
+              "bg-white text-errieblack-500 ",
               "border border-gray-300",
-              "hover:bg-gray-100 hover:text-dark",
-              "active:bg-white/80 disabled:bg-gray-200",
+              "hover:bg-charcoal-100 hover:text-errieblack-500",
+              "active:bg-white/80 disabled:bg-charcoal-200",
             ],
             variant === "dark" && [
-              "bg-gray-900 text-white",
-              "border border-gray-600",
-              "hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700",
+              "bg-errieblack-500 text-white",
+              "hover:bg-charcoal-500 active:bg-charcoal-700 disabled:bg-charcoal-700",
             ],
           ],
           //#endregion  //*======== Variants ===========

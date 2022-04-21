@@ -58,7 +58,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               "hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100",
             ],
             variant === "light" && [
-              "bg-white text-dark ",
+              "text-dark bg-white ",
               "border border-gray-300",
               "hover:text-dark",
               "active:bg-white/80 disabled:bg-gray-200",
