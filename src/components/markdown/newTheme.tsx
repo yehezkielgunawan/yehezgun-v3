@@ -55,7 +55,7 @@ export const newTheme = {
     return (
       <UnderlineLink
         href={String(props.href)}
-        className="text-zinc-700 dark:text-zinc-300"
+        className="text-errieblack-300 dark:text-errieblack-100"
       >
         {props.children}
       </UnderlineLink>
@@ -79,9 +79,9 @@ export const newTheme = {
     return (
       <blockquote
         className={clsxm(
-          "rounded-md bg-cyan-200 py-1 px-2 dark:bg-cyan-800",
+          "rounded-md bg-lightsteel-200 py-1 px-2 dark:bg-lightsteel-800",
           "text-black dark:text-white",
-          "border-l-8 border-blue-500 dark:border-blue-300",
+          "border-l-8 border-primary-400 dark:border-primary-300",
           "shadow-md dark:shadow-gray-500",
           "my-6"
         )}

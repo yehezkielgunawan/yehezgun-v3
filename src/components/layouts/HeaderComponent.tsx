@@ -28,8 +28,8 @@ const HeaderComponent = () => {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white font-primary opacity-90 dark:bg-primary-700">
-      <div className="h-1.5 bg-gradient-to-r from-primary-500 via-slate-500 to-zinc-500"></div>
+    <header className="fixed top-0 z-50 w-full bg-gainsboro-400 font-primary opacity-90 backdrop-blur-sm dark:bg-gainsboro-800">
+      <div className="h-1.5 bg-gradient-to-r from-lightsteel-600 via-charcoal-300 to-errieblack-300"></div>
       <nav
         className={clsx(
           "layout flex items-center justify-between",
@@ -54,7 +54,7 @@ const HeaderComponent = () => {
           ))}
           <Button
             className={clsxm(
-              "bg-primary-200 dark:bg-slate-600",
+              "bg-errieblack-100 dark:bg-errieblack-300",
               "hover:bg-gray-500 dark:hover:bg-gray-400",
               "ml-2 p-2 text-black dark:text-white",
               "rounded-full border-none"

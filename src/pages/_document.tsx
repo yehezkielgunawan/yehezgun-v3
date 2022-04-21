@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
             src={UMAMI_WEB_SRC}
           ></script>
         </Head>
-        <body className="scrollbar dark:bg-dark">
+        <body>
           <Main />
           <NextScript />
         </body>
