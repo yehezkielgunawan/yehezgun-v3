@@ -90,18 +90,10 @@ export default function AboutMe({
             ))}
           </div>
           <div className="flex items-center gap-3">
-            <ButtonLink
-              href="https://ko-fi.com/yehezgun"
-              variant="outline"
-              className="border-2 text-primary-700"
-            >
+            <ButtonLink href="https://ko-fi.com/yehezgun" variant="outline">
               <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
             </ButtonLink>
-            <ButtonLink
-              href="https://saweria.co/yehezgun"
-              variant="outline"
-              className="border-2 text-primary-700"
-            >
+            <ButtonLink href="https://saweria.co/yehezgun" variant="outline">
               <GiPayMoney size={20} className="mr-2" /> Support me on Saweria
             </ButtonLink>
           </div>
@@ -116,7 +108,7 @@ export default function AboutMe({
                   key={index}
                   className={clsxm(
                     "space-y-3 rounded-md",
-                    "border border-primary-500 p-3 dark:border-primary-300"
+                    "border border-lightsteel-800 p-3 dark:border-lightsteel-300"
                   )}
                 >
                   <p className="flex items-center gap-2 font-bold">

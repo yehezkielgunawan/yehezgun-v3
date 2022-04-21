@@ -42,10 +42,7 @@ export default function Home({
                 <ButtonLink
                   href="/articles"
                   variant="outline"
-                  className={clsxm(
-                    "border-4 border-double border-zinc-400",
-                    "hover:dark:bg-primary-700"
-                  )}
+                  className={clsxm("border-4 border-double")}
                 >
                   Read The Articles
                 </ButtonLink>
@@ -53,10 +50,7 @@ export default function Home({
                 <ButtonLink
                   href="/aboutme"
                   variant="outline"
-                  className={clsxm(
-                    "border-dashed",
-                    "hover:ring-1 hover:ring-primary-500 hover:dark:bg-primary-700 hover:dark:ring-primary-200"
-                  )}
+                  className={clsxm("border-dashed", "hover:ring-1")}
                 >
                   Learn About Me
                 </ButtonLink>
@@ -68,7 +62,7 @@ export default function Home({
               objectFit="contain"
               width={240}
               height={240}
-              className="hidden rounded-full bg-primary-300 dark:bg-primary-500 sm:table-cell"
+              className="hidden rounded-full bg-primary-200 dark:bg-primary-600 sm:table-cell"
               priority={true}
             />
           </div>
@@ -119,7 +113,7 @@ export default function Home({
                 <h4
                   className={clsxm(
                     "absolute inset-x-0 bottom-0 w-full",
-                    "bg-primary-800 bg-opacity-75 py-2",
+                    "bg-gainsboro-800 bg-opacity-75 py-2",
                     "text-center text-base text-white"
                   )}
                 >

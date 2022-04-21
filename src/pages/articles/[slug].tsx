@@ -119,7 +119,6 @@ export default function Post({
                   <ButtonLink
                     href={postData.fields.alternative_link}
                     variant="dark"
-                    className="dark:border-primary-700"
                   >
                     <FaDev size={20} className="mr-1" /> Read in{" "}
                     {postData.fields.lang === "en" ? "Dev.to" : "Diskusi.tech"}
@@ -195,14 +194,14 @@ export default function Post({
             <ButtonLink
               href="https://ko-fi.com/yehezgun"
               variant="outline"
-              className="border-2 text-primary-700"
+              className="border-2"
             >
               <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
             </ButtonLink>
             <ButtonLink
               href="https://saweria.co/yehezgun"
               variant="outline"
-              className="border-2 text-primary-700"
+              className="border-2"
             >
               <GiPayMoney size={20} className="mr-2" /> Support me on Saweria
             </ButtonLink>

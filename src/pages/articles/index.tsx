@@ -100,10 +100,11 @@ export default function Articles({
               <p
                 key={index}
                 className={clsxm(
-                  "rounded-md border border-primary-400 py-1 px-2",
+                  "rounded-md border border-lightsteel-400 py-1 px-2",
                   "cursor-pointer",
-                  "hover:bg-primary-200 dark:hover:bg-primary-500",
-                  categoryState === category && "bg-slate-200 dark:bg-slate-500"
+                  "hover:bg-lightsteel-200 dark:hover:bg-lightsteel-600",
+                  categoryState === category &&
+                    "bg-lightsteel-200 dark:bg-lightsteel-700"
                 )}
                 onClick={() => handleCategory(category)}
               >
@@ -125,9 +126,9 @@ export default function Articles({
                     className={clsxm(
                       "rounded-lg border py-2 shadow-lg",
                       "h-full w-full",
-                      "dark:border-primary-600 dark:bg-slate-800",
+                      "dark:border-lightsteel-600 dark:bg-charcoal-500",
                       "duration-100 ease-in group-hover:scale-105",
-                      "group-hover:shadow-primary-200 dark:group-hover:shadow-primary-600"
+                      "group-hover:shadow-errieblack-100 dark:group-hover:shadow-lightsteel-500"
                     )}
                   >
                     <NextImage
