@@ -85,7 +85,7 @@ export default function Home({
         </section>
         <section className="space-y-3 pt-10" data-fade="2">
           <h3 className="py-2">Featured Projects</h3>
-          <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:flex-nowrap">
+          <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
             {featuredProjects.map((project, index) => (
               <UnstyledLink
                 key={index}
