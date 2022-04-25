@@ -31,7 +31,7 @@ const ProjectCard = ({
           "duration-300 ease-in group-hover:-translate-y-1",
           "group-hover:border-lightsteel-300",
           "group-hover:ring group-hover:ring-lightsteel-300",
-          "bg-white dark:bg-charcoal-500"
+          "bg-gainsboro-100 dark:bg-charcoal-500"
         )}
       >
         <div className="flex items-center justify-between group-hover:underline">

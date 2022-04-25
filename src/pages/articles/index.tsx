@@ -101,7 +101,7 @@ export default function Articles({
                 key={index}
                 className={clsxm(
                   "rounded-md border border-lightsteel-400 py-1 px-2",
-                  "cursor-pointer",
+                  "cursor-pointer bg-gainsboro-300 dark:bg-gainsboro-800",
                   "hover:bg-lightsteel-200 dark:hover:bg-lightsteel-600",
                   categoryState === category &&
                     "bg-lightsteel-200 dark:bg-lightsteel-700"
@@ -126,7 +126,7 @@ export default function Articles({
                     className={clsxm(
                       "rounded-lg border py-2 shadow-lg",
                       "h-full w-full",
-                      "dark:border-lightsteel-600 dark:bg-charcoal-500",
+                      "border-lightsteel-300 bg-gainsboro-100 dark:border-lightsteel-600 dark:bg-charcoal-500",
                       "duration-100 ease-in group-hover:scale-105",
                       "group-hover:shadow-errieblack-100 dark:group-hover:shadow-lightsteel-500"
                     )}
