@@ -31,12 +31,14 @@ const UnstyledSelect = React.forwardRef<HTMLSelectElement, UnstyledSelectProps>(
   ) => {
     if (labelName) {
       return (
-        <label className={clsxm("block", wrapperClassName)}>
-          <span className="text-gray-700 dark:text-gray-100">{labelName}</span>
+        <div className={clsxm("block", wrapperClassName)}>
+          <label className="text-gray-700 dark:text-gray-100">
+            {labelName}
+          </label>
           <select
             ref={ref}
             className={clsxm(
-              "mt-1 block w-full dark:bg-gainsboro-800",
+              "mt-1 block w-full bg-charcoal-50 dark:bg-charcoal-500",
               className
             )}
             {...rest}
@@ -55,7 +57,7 @@ const UnstyledSelect = React.forwardRef<HTMLSelectElement, UnstyledSelectProps>(
           {helperText && (
             <span className="text-sm text-zinc-400">{helperText}</span>
           )}
-        </label>
+        </div>
       );
     }
     return (
