@@ -14,14 +14,14 @@ import clsxm from "@/lib/helpers/clsxm";
 export const newTheme = {
   h1: (props: React.ComponentPropsWithRef<"h1">) => {
     return (
-      <h1 id={props.id} className="mt-8 mb-4 scroll-mt-16 hover:underline">
+      <h1 id={props.id} className="mt-16 mb-4 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h1>
     );
   },
   h2: (props: React.ComponentPropsWithRef<"h2">) => {
     return (
-      <h2 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
+      <h2 id={props.id} className="mb-4 mt-12 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h2>
     );
