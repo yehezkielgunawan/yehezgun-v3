@@ -6,7 +6,6 @@ import UnstyledSelect, {
 import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
-import NextImage from "@/components/NextImage";
 import { categoryList } from "@/constants/categoryList";
 import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
@@ -130,15 +129,15 @@ export default function Articles({
                       "group-hover:shadow-errieblack-100 dark:group-hover:shadow-lightsteel-500"
                     )}
                   >
-                    <NextImage
-                      useSkeleton
-                      width={16}
-                      height={9}
-                      className="w-full px-4"
-                      objectFit="contain"
-                      src={article.fields.article_image[0].url}
-                      alt="article-image"
-                    />
+                    <figure className="flex w-full items-center justify-center px-4">
+                      <img
+                        className="h-72 w-64 object-contain md:w-80"
+                        src={article.fields.article_image[0].url}
+                        alt="article-image"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </figure>
                     <div className="flex flex-col space-y-2 px-6 py-4">
                       <p className="flex items-center gap-2 text-xs md:text-sm">
                         {formatDate(

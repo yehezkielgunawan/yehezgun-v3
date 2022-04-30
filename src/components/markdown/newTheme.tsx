@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { FaCheckCircle, FaCopy } from "react-icons/fa";
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -55,7 +54,7 @@ export const newTheme = {
     return (
       <UnderlineLink
         href={String(props.href)}
-        className="text-errieblack-300 dark:text-errieblack-100"
+        className="text-errieblack-400 dark:text-errieblack-100"
       >
         {props.children}
       </UnderlineLink>

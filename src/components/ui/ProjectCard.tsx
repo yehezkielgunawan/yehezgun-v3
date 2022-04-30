@@ -1,9 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 import UnstyledLink from "../links/UnstyledLink";
-import NextImage from "../NextImage";
 
 import clsxm from "@/lib/helpers/clsxm";
 import { SingleProjectImg } from "@/lib/services/types";
@@ -31,7 +29,9 @@ const ProjectCard = ({
           "duration-300 ease-in group-hover:-translate-y-1",
           "group-hover:border-lightsteel-300",
           "group-hover:ring group-hover:ring-lightsteel-300",
-          "bg-gainsboro-100 dark:bg-charcoal-500"
+          "bg-gainsboro-100 dark:bg-charcoal-500",
+          "h-full",
+          "flex flex-col justify-between"
         )}
       >
         <div className="flex items-center justify-between group-hover:underline">
@@ -40,30 +40,25 @@ const ProjectCard = ({
         </div>
         <div className="flex items-center justify-between">
           <p className="pr-4 group-hover:underline">{projectDesc}</p>
-          <NextImage
+          <img
             alt="image-project"
             src={projectImg}
-            width={32}
-            height={32}
-            className={clsxm(
-              "w-32 min-w-[6rem] max-w-[6rem] md:w-40",
-              "md:min-w-[8rem] md:max-w-[8rem]"
-            )}
-            objectFit="contain"
+            className={clsxm("w-28")}
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="flex gap-3">
           {madeUsing.map((tool, index) => (
-            <NextImage
-              alt="icon-tool"
-              key={index}
-              src={tool.url}
-              width={24}
-              height={24}
-              className="w-10 md:w-12"
-              objectFit="contain"
-              imgClassName="rounded-sm"
-            />
+            <figure key={index} className="flex w-10 items-center md:w-12">
+              <img
+                alt="icon-tool"
+                src={tool.url}
+                className="rounded-sm"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           ))}
         </div>
       </div>

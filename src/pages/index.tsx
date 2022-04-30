@@ -97,18 +97,16 @@ export default function Home({
                   "duration-200 ease-in hover:-translate-y-1"
                 )}
               >
-                <NextImage
-                  useSkeleton
+                <img
                   alt="featured-project"
                   src={project.fields.image_url[0].url}
-                  width={20}
-                  height={10}
                   className={clsxm(
                     "w-full",
                     "duration-500 dark:brightness-75 dark:hover:brightness-95",
                     "brightness-90 hover:brightness-100"
                   )}
-                  priority
+                  loading="lazy"
+                  decoding="async"
                 />
                 <h4
                   className={clsxm(
