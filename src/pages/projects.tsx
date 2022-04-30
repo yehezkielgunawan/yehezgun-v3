@@ -48,7 +48,7 @@ export default function Projects({
         </section>
         <section className="mt-8" data-fade="1">
           <h3>Featured Projects</h3>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {projectList
               .filter(
                 (project: SingleRes<SingleProject>) =>
@@ -68,7 +68,7 @@ export default function Projects({
         </section>
         <section className="mt-8" data-fade="2">
           <h3>Other Projects</h3>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {projectList
               .filter(
                 (project: SingleRes<SingleProject>) =>
