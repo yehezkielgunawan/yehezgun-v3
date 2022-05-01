@@ -5,12 +5,10 @@ import UnstyledSelect, {
 } from "@/components/forms/UnstyledSelect";
 import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
-import UnstyledLink from "@/components/links/UnstyledLink";
+import ArticleCard from "@/components/ui/ArticleCard";
 import { categoryList } from "@/constants/categoryList";
 import useLoaded from "@/hooks/useLoaded";
-import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
-import { formatDate } from "@/lib/helpers/formatDate";
 import { getArticleList } from "@/lib/services/fetcher";
 import {
   Articles as ArticlesType,
@@ -25,6 +23,7 @@ export async function getStaticProps() {
     props: {
       articleList,
     },
+    revalidate: 120,
   };
 }
 
@@ -100,9 +99,9 @@ export default function Articles({
                 className={clsxm(
                   "rounded-md border border-lightsteel-400 py-1 px-2",
                   "cursor-pointer bg-gainsboro-300 dark:bg-gainsboro-800",
-                  "hover:bg-lightsteel-200 dark:hover:bg-lightsteel-600",
+                  "hover:bg-lightsteel-300 dark:hover:bg-lightsteel-600",
                   categoryState === category &&
-                    "bg-lightsteel-200 dark:bg-lightsteel-700"
+                    "bg-lightsteel-300 dark:bg-lightsteel-700"
                 )}
                 onClick={() => handleCategory(category)}
               >
@@ -115,49 +114,15 @@ export default function Articles({
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article, index) => (
-                <UnstyledLink
+                <ArticleCard
                   key={index}
-                  className="group"
-                  href={`/articles/${article.fields.slug}`}
-                >
-                  <div
-                    className={clsxm(
-                      "rounded-lg border py-2 shadow-lg",
-                      "h-full w-full",
-                      "border-lightsteel-300 bg-gainsboro-100 dark:border-lightsteel-600 dark:bg-charcoal-500",
-                      "duration-100 ease-in group-hover:scale-105",
-                      "group-hover:shadow-errieblack-100 dark:group-hover:shadow-lightsteel-500"
-                    )}
-                  >
-                    <figure className="flex w-full items-center justify-center px-4">
-                      <img
-                        className="h-72 w-64 object-contain md:w-80"
-                        src={article.fields.article_image[0].url}
-                        alt="article-image"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </figure>
-                    <div className="flex flex-col space-y-2 px-6 py-4">
-                      <p className="flex items-center gap-2 text-xs md:text-sm">
-                        {formatDate(
-                          article.fields.date,
-                          false,
-                          language === "en" ? "en-EN" : "in-IN"
-                        )}{" "}
-                        <span
-                          className={clsxm(
-                            "rounded-md py-1 px-2 text-xs md:text-sm",
-                            categoryColorList[article.fields.category]
-                          )}
-                        >
-                          {article.fields.category}
-                        </span>
-                      </p>
-                      <h3>{article.fields.title}</h3>
-                    </div>
-                  </div>
-                </UnstyledLink>
+                  slug={article.fields.slug}
+                  imageUrl={article.fields.article_image[0].url}
+                  title={article.fields.title}
+                  category={article.fields.category}
+                  publishedDate={article.fields.date}
+                  lang={article.fields.lang}
+                />
               ))
             ) : (
               <p>Oops no article list in this category.</p>

@@ -17,6 +17,7 @@ export async function getStaticProps() {
     props: {
       featuredProjects,
     },
+    revalidate: 120,
   };
 }
 
