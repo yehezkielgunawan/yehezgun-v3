@@ -45,6 +45,7 @@ export default function NextImage({
         alt={alt}
         onLoadingComplete={() => setStatus("complete")}
         layout="responsive"
+        unoptimized
         {...rest}
       />
     </figure>
