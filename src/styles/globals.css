@@ -36,9 +36,8 @@
 
   .link-underline {
     @apply underline decoration-dotted underline-offset-2;
-    @apply transition-colors duration-700;
+    @apply transition duration-700 ease-in;
     @apply hover:decoration-primary-500 hover:decoration-solid hover:underline-offset-4;
-    @apply dark:hover:decoration-primary-400;
   }
 
   [data-fade] {
