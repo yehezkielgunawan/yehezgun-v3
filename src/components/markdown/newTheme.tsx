@@ -102,7 +102,7 @@ export const newTheme = {
 
     if (!language) {
       return (
-        <code className="rounded bg-slate-200 p-0.5 dark:bg-slate-600">
+        <code className="rounded bg-charcoal-100 p-0.5 dark:bg-errieblack-400">
           {props.children}
         </code>
       );
@@ -146,7 +146,7 @@ export const newTheme = {
           <p
             className={clsxm(
               "absolute top-0 -translate-y-1/3",
-              "bg-slate-200 p-0.5 dark:bg-slate-600",
+              "bg-charcoal-100 p-0.5 dark:bg-errieblack-400",
               "rounded-md"
             )}
           >
