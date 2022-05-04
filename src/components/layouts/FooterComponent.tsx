@@ -18,7 +18,7 @@ const FooterComponent = () => {
       <div
         className={clsxm(
           "md:flex md:flex-wrap md:items-center",
-          "grid grid-cols-2 gap-4",
+          "grid grid-cols-2 gap-2",
           "mx-2 md:m-0"
         )}
       >
@@ -26,7 +26,10 @@ const FooterComponent = () => {
           <UnstyledLink
             key={index}
             href={footerLink.url}
-            className="text-sm font-semibold hover:underline md:text-base"
+            className={clsxm(
+              "text-sm font-semibold hover:underline md:text-base",
+              "p-1 hover:rounded-md hover:bg-lightsteel-400 dark:hover:bg-lightsteel-800"
+            )}
           >
             {footerLink.labelName}
           </UnstyledLink>

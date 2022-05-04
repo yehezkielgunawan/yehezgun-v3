@@ -39,13 +39,14 @@ const HeaderComponent = () => {
         <UnstyledLink href="/" openNewTab={false} className="font-bold">
           <h5>yehezgun.com</h5>
         </UnstyledLink>
-        <div className="flex items-center justify-end gap-3">
+        <div className="flex items-center justify-end gap-2">
           {menuList.map((menu, index) => (
             <UnstyledLink
               href={menu.route}
               key={index}
               className={clsxm(
                 "hidden font-semibold hover:underline sm:inline-flex",
+                "p-1 hover:rounded-md hover:bg-primary-400 dark:hover:bg-primary-600",
                 router.pathname === menu.route && "font-black underline"
               )}
             >
