@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.8...v0.0.9) (2022-05-04)
+
+### Features
+
+- **ArticleCard.tsx:** :art: create seperate component for article card ([30b7eaa](https://github.com/yehezkielgunawan/yehezgun-v3/commit/30b7eaa6f2b7f26342b3b72b45ecef90da5f19f2))
+
+### Bug Fixes
+
+- **ProjectCard & article page:** :lipstick: adjust base bg color ([30ebd7e](https://github.com/yehezkielgunawan/yehezgun-v3/commit/30ebd7e9b26443663be8799a62ff7e15c11e697a))
+
 ### [0.0.8](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.7...v0.0.8) (2022-04-22)
 
 ### [0.0.7](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.6...v0.0.7) (2022-04-21)
