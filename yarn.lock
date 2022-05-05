@@ -4514,10 +4514,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwind-merge@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.2.0.tgz#6e425cf4e379e3620285b99ccab96abb11befdf2"
-  integrity sha512-XIY4LRLOdOYX6dN+tHlb3K6YE+uxxz9hqDciByQT6dlO4+clDGO6Rl0a4atNdxLpbDIZQFBSxS4r/4/xOKRKkA==
+tailwind-merge@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.2.1.tgz#a9a10f7ac54cb79cfa14268f1fecbb0248e08acc"
+  integrity sha512-kWfy/u91XoE408Kb42HQd1krdiZjw2sbSWjE1C/lXXXsbK+6dhTpnd37DHrwNP6ofKj5/HKXlY/jTjPYgPxSsw==
   dependencies:
     hashlru "^2.3.0"
 
