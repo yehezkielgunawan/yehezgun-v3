@@ -30,8 +30,8 @@ const ArticleCard = ({
           "rounded-lg border py-2 shadow-lg",
           "h-full w-full",
           "border-lightsteel-300 bg-gainsboro-100 dark:border-lightsteel-600 dark:bg-charcoal-500",
-          "duration-100 ease-in group-hover:scale-105",
-          "group-hover:shadow-errieblack-100 dark:group-hover:shadow-lightsteel-500"
+          "transition duration-100 ease-in hover:scale-105",
+          "hover:shadow-errieblack-200 dark:hover:shadow-lightsteel-400"
         )}
       >
         <figure className="flex w-full items-center justify-center px-4">

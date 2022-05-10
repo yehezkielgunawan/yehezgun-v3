@@ -58,7 +58,8 @@ const HeaderComponent = () => {
               "bg-errieblack-100 dark:bg-errieblack-300",
               "hover:bg-gray-500 dark:hover:bg-gray-400",
               "ml-2 p-2 text-black dark:text-white",
-              "rounded-full border-none"
+              "rounded-full border-none",
+              "hover:rotate-45"
             )}
             onClick={() => handleChangeTheme()}
           >
