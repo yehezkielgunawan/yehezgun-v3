@@ -31,9 +31,8 @@ const defaultSEOConfig = {
       href: "/yehez_avatar.svg",
     },
     {
-      rel: "apple-touch-icon",
-      href: "/yehez_avatar.svg",
-      sizes: "76x76",
+      rel: "manifest",
+      href: "/manifest.json",
     },
   ],
 };
