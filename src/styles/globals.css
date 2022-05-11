@@ -4,6 +4,10 @@
 /* https://play.tailwindcss.com/NVUHzqMBl5?file=css */
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   .cursor-newtab {
     cursor: url("/newtab-cursor.png") 10 10, pointer;
   }
