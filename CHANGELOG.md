@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.9...v0.0.10) (2022-05-21)
+
+### Features
+
+- **resume page:** :sparkles: add resume page ([60dd71f](https://github.com/yehezkielgunawan/yehezgun-v3/commit/60dd71f7952cf921b85312948f56145ccdeff220))
+
+### Bug Fixes
+
+- **preloadContext.tsx:** :lipstick: fix color in preload provider to solve flashing issue ([14a0822](https://github.com/yehezkielgunawan/yehezgun-v3/commit/14a0822b39787cd8a2a926d8b6d74ef226a1aa7f))
+
 ### [0.0.9](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.8...v0.0.9) (2022-05-04)
 
 ### Features
