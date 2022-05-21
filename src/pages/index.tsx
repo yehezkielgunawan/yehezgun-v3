@@ -55,6 +55,14 @@ export default function Home({
                 >
                   Learn About Me
                 </ButtonLink>
+                <ButtonLink
+                  href="/resume"
+                  openNewTab={true}
+                  variant="outline"
+                  className={clsxm("border-2 border-dotted", "hover:ring-1")}
+                >
+                  Resume
+                </ButtonLink>
               </div>
             </div>
             <NextImage
