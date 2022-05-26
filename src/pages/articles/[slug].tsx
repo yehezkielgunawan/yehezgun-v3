@@ -1,6 +1,7 @@
 /* eslint-disable react/no-children-prop */
 import { Giscus, GiscusProps } from "@giscus/react";
-import React, { useState } from "react";
+import { useTheme } from "next-themes";
+import React, { useEffect, useState } from "react";
 import { BsTranslate } from "react-icons/bs";
 import { FaCheck, FaCopy, FaDev, FaTwitter } from "react-icons/fa";
 import { GiPayMoney } from "react-icons/gi";
@@ -61,6 +62,7 @@ export default function Post({
   postData: SingleRes<SingleArticle>;
 }) {
   const [isCopied, setIsCopied] = useState<boolean>(false);
+  const { theme } = useTheme();
   const handleCopyLink = () => {
     setIsCopied(true);
     navigator.clipboard.writeText(window.location.href);
@@ -68,10 +70,18 @@ export default function Post({
       setIsCopied(false);
     }, 5000);
   };
-  const giscusTheme: GiscusProps["theme"] = "dark_dimmed";
+  const [giscusTheme, setGiscusTheme] =
+    useState<GiscusProps["theme"]>("dark_dimmed");
   const isLoaded = useLoaded();
   const twitterCaption = `${postData.fields.title} by @YehezGun`;
   const twitterUrl = typeof window !== "undefined" ? window.location.href : "";
+
+  useEffect(() => {
+    if (theme === "light") {
+      return setGiscusTheme("light_high_contrast");
+    }
+    return setGiscusTheme("dark_dimmed");
+  }, [theme]);
 
   return (
     <Layout>
