@@ -54,7 +54,11 @@ export const newTheme = {
     return (
       <UnderlineLink
         href={String(props.href)}
-        className="text-errieblack-400 dark:text-errieblack-100"
+        className={clsxm(
+          props.href?.startsWith("/") || props.href?.startsWith("#")
+            ? "text-errieblack-400 dark:text-errieblack-100"
+            : "text-primary-700 dark:text-primary-300"
+        )}
       >
         {props.children}
       </UnderlineLink>
