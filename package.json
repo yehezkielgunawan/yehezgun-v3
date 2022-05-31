@@ -41,7 +41,7 @@
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.11",
     "@types/react-syntax-highlighter": "^13.5.2",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.7",
     "eslint": "^8.12.0",
     "eslint-config-next": "^12.1.4",
     "eslint-config-yehezgun": "^1.2.3",
