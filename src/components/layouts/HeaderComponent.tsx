@@ -23,10 +23,6 @@ const HeaderComponent = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <header className="fixed top-0 z-50 w-full bg-gainsboro-400 font-primary opacity-90 backdrop-blur-sm dark:bg-gainsboro-800">
       <div className="h-1.5 bg-gradient-to-r from-lightsteel-600 via-charcoal-300 to-errieblack-300"></div>
@@ -53,18 +49,27 @@ const HeaderComponent = () => {
               {menu.menu_name}
             </UnstyledLink>
           ))}
-          <Button
-            className={clsxm(
-              "bg-errieblack-100 dark:bg-errieblack-300",
-              "hover:bg-gray-500 dark:hover:bg-gray-400",
-              "ml-2 p-2 text-black dark:text-white",
-              "rounded-full border-none",
-              "hover:rotate-45"
-            )}
-            onClick={() => handleChangeTheme()}
-          >
-            {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
-          </Button>
+          {mounted ? (
+            <Button
+              className={clsxm(
+                "bg-errieblack-100 dark:bg-errieblack-300",
+                "hover:bg-gray-500 dark:hover:bg-gray-400",
+                "ml-2 p-2 text-black dark:text-white",
+                "rounded-full border-none",
+                "hover:rotate-45"
+              )}
+              onClick={() => handleChangeTheme()}
+            >
+              {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
+            </Button>
+          ) : (
+            <div
+              className={clsxm(
+                "ml-2 h-9 w-9 animate-pulse rounded-full",
+                "bg-errieblack-100 dark:bg-errieblack-300"
+              )}
+            ></div>
+          )}
         </div>
       </nav>
     </header>
