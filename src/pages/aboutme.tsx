@@ -98,7 +98,7 @@ export default function AboutMe({
               <GiPayMoney size={20} className="mr-2" /> Support me on Saweria
             </ButtonLink>
           </div>
-          <hr className="my-4" />
+          <hr className="my-4 border-t border-charcoal-200 dark:border-charcoal-100" />
         </section>
         <section className="my-6" data-fade="1">
           <div className="block">

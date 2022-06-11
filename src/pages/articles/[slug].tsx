@@ -180,7 +180,7 @@ export default function Post({
             </div>
           </div>
         </section>
-        <hr className="my-4" />
+        <hr className="my-4 border-t border-charcoal-200 dark:border-charcoal-100" />
         <article className="my-2 block" data-fade="1">
           <ReactMarkdown
             components={newTheme}
