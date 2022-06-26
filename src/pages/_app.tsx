@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import "@fontsource/fira-sans";
 import "@fontsource/pt-serif";
-import "react-tippy/dist/tippy.css";
+import "tippy.js/dist/tippy.css";
 
 import defaultSEOConfig from "../../next-seo.config";
 

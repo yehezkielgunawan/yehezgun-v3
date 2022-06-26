@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import Tippy from "@tippyjs/react";
 import React from "react";
 import { BsBriefcase, BsBuilding } from "react-icons/bs";
 import { GiJourney, GiPayMoney } from "react-icons/gi";
 import { SiKofi } from "react-icons/si";
-import { Tooltip } from "react-tippy";
 
 import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
@@ -76,18 +76,11 @@ export default function AboutMe({
           </div>
           <div className="my-4 flex items-center gap-3">
             {contactList.map((contact, index) => (
-              <Tooltip
-                key={index}
-                interactive
-                trigger="mouseenter"
-                position="top"
-                arrow={true}
-                title={contact.name}
-              >
+              <Tippy key={index} interactive delay={100} content={contact.name}>
                 <UnstyledLink href={contact.link_route}>
                   <contact.icon size={32} className="hover:text-primary-500" />
                 </UnstyledLink>
-              </Tooltip>
+              </Tippy>
             ))}
           </div>
           <div className="flex items-center gap-3">

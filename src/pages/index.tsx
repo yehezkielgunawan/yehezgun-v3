@@ -1,4 +1,4 @@
-import { Tooltip } from "react-tippy";
+import Tippy from "@tippyjs/react";
 
 import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
@@ -79,15 +79,16 @@ export default function Home({
             <h3>Current Favorite Tech Stacks</h3>
             <div className="flex flex-wrap items-center gap-4">
               {techStackList.map((techStack, index) => (
-                <Tooltip
+                <Tippy
                   key={index}
                   interactive
-                  trigger="mouseenter"
-                  position="top"
-                  html={<div>{techStack.description}</div>}
+                  delay={100}
+                  content={<>{techStack.description}</>}
                 >
-                  <techStack.icon className="text-4xl" />
-                </Tooltip>
+                  <button>
+                    <techStack.icon className="text-4xl" />
+                  </button>
+                </Tippy>
               ))}
             </div>
           </div>
