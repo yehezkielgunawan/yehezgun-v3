@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.10...v0.0.11) (2022-06-26)
+
+### Features
+
+- **aboutme and home page:** :sparkles: use tippy js to display tooltip ([52f9bc5](https://github.com/yehezkielgunawan/yehezgun-v3/commit/52f9bc5a3c34c0b11783c4e070b2c89946e01e66))
+
+### Bug Fixes
+
+- **HeaderComponent:** :bug: adjust mounted logic for next-themes ([0620eeb](https://github.com/yehezkielgunawan/yehezgun-v3/commit/0620eeb1ab49092e28e15dfa387e5d4328dba3c8))
+- **home page:** :bug: add flex wrap for Hero Button Links ([1ba32c5](https://github.com/yehezkielgunawan/yehezgun-v3/commit/1ba32c5c08c7e0d0ac286a29d83997f1020b1838))
+- **resume.tsx:** :bug: use iframe instead of embed (not supported on mobile browser) ([24d2094](https://github.com/yehezkielgunawan/yehezgun-v3/commit/24d2094d6998e9f9523e0256ac5b291ef365e1c4))
+
 ### [0.0.10](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.9...v0.0.10) (2022-05-21)
 
 ### Features
