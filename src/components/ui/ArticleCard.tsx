@@ -1,10 +1,10 @@
 import React from "react";
 
-import UnstyledLink from "../links/UnstyledLink";
-
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
+
+import UnstyledLink from "../links/UnstyledLink";
 
 type ArticleCardProps = {
   slug: string;

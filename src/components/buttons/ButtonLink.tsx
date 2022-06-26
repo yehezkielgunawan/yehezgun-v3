@@ -1,8 +1,8 @@
 import React from "react";
 
-import UnstyledLink, { UnstyledLinkProps } from "../links/UnstyledLink";
-
 import clsxm from "@/lib/helpers/clsxm";
+
+import UnstyledLink, { UnstyledLinkProps } from "../links/UnstyledLink";
 
 enum ButtonVariant {
   "primary",

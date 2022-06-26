@@ -1,10 +1,10 @@
 import React from "react";
 
-import UnderlineLink from "../links/UnderlineLink";
-import UnstyledLink from "../links/UnstyledLink";
-
 import { footerLinks } from "@/constants/footerLink";
 import clsxm from "@/lib/helpers/clsxm";
+
+import UnderlineLink from "../links/UnderlineLink";
+import UnstyledLink from "../links/UnstyledLink";
 
 const FooterComponent = () => {
   return (

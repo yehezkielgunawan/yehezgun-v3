@@ -4,11 +4,11 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-import Button from "../buttons/Button";
-import UnstyledLink from "../links/UnstyledLink";
-
 import { menuList } from "@/constants/MenuList";
 import clsxm from "@/lib/helpers/clsxm";
+
+import Button from "../buttons/Button";
+import UnstyledLink from "../links/UnstyledLink";
 
 const HeaderComponent = () => {
   const { theme, setTheme } = useTheme();

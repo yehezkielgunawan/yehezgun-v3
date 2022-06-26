@@ -1,10 +1,10 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-import UnstyledLink from "../links/UnstyledLink";
-
 import clsxm from "@/lib/helpers/clsxm";
 import { SingleProjectImg } from "@/lib/services/types";
+
+import UnstyledLink from "../links/UnstyledLink";
 
 type ProjectCardProps = {
   url: string;
