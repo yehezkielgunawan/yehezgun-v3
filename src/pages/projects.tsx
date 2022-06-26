@@ -67,7 +67,7 @@ export default function Projects({
               ))}
           </div>
         </section>
-        <section className="mt-8" data-fade="2">
+        <section className="mt-16" data-fade="2">
           <h3>Other Projects</h3>
           <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {projectList
@@ -75,14 +75,14 @@ export default function Projects({
                 (project: SingleRes<SingleProject>) =>
                   !project.fields.is_featured
               )
-              .map((project, index) => (
+              .map((singleProject, index) => (
                 <ProjectCard
                   key={index}
-                  url={project.fields.project_url}
-                  projectTitle={project.fields.project_title}
-                  projectDesc={project.fields.description}
-                  projectImg={project.fields.image_url[1].url}
-                  madeUsing={project.fields.made_using}
+                  projectTitle={singleProject.fields.project_title}
+                  projectDesc={singleProject.fields.description}
+                  projectImg={singleProject.fields.image_url[1].url}
+                  madeUsing={singleProject.fields.made_using}
+                  url={singleProject.fields.project_url}
                 />
               ))}
           </div>
