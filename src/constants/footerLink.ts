@@ -24,4 +24,8 @@ export const footerLinks: Array<FooterLinkProps> = [
     url: "https://poly.work/yehezgun",
     labelName: "Polywork",
   },
+  {
+    url: "https://yehezkielgunawan.showwcase.com/",
+    labelName: "Showwcase",
+  },
 ];
