@@ -17,7 +17,7 @@ const FooterComponent = () => {
     >
       <div
         className={clsxm(
-          "md:flex md:flex-wrap md:items-center",
+          "sm:flex sm:flex-wrap sm:items-center",
           "grid grid-cols-2 gap-2",
           "mx-2 md:m-0"
         )}
