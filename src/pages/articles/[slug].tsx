@@ -98,7 +98,8 @@ export default function Post({
             <img
               alt="post-image"
               src={postData.fields.article_image[0].url}
-              className="rounded-sm object-contain"
+              className="rounded-sm object-cover"
+              width="100%"
               loading="lazy"
               decoding="async"
             />
@@ -150,17 +151,18 @@ export default function Post({
                 className={clsxm(
                   "rounded-lg border border-teal-600",
                   "font-bold text-teal-600 dark:text-teal-300",
-                  "hover:bg-teal-100 dark:hover:bg-teal-700"
+                  "hover:bg-teal-100 dark:hover:bg-teal-700",
+                  "gap-2"
                 )}
                 onClick={() => handleCopyLink()}
               >
                 {!isCopied ? (
                   <>
-                    <FaCopy size={20} className="mr-2" /> Copy Article Link
+                    <FaCopy size={20} /> Copy Article Link
                   </>
                 ) : (
                   <>
-                    <FaCheck size={20} className="mr-2" /> Copied{" "}
+                    <FaCheck size={20} /> Copied{" "}
                   </>
                 )}
               </Button>
@@ -172,10 +174,11 @@ export default function Post({
                 className={clsxm(
                   "rounded-lg border border-sky-600",
                   "font-bold text-sky-600 dark:text-sky-300",
-                  "hover:bg-sky-100 dark:hover:bg-sky-700"
+                  "hover:bg-sky-100 dark:hover:bg-sky-700",
+                  "gap-2"
                 )}
               >
-                <FaTwitter size={20} className="mr-2" /> Share on Twitter
+                <FaTwitter size={20} /> Share on Twitter
               </ButtonLink>
             </div>
           </div>
