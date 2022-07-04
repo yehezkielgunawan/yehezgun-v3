@@ -83,6 +83,7 @@ export default function Home({
                   key={index}
                   interactive
                   delay={100}
+                  arrow
                   content={<>{techStack.description}</>}
                 >
                   <button>
