@@ -1,5 +1,6 @@
 import Tippy from "@tippyjs/react";
 
+import BaseImage from "@/components/BaseImage";
 import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
 import UnstyledLink from "@/components/links/UnstyledLink";
@@ -108,7 +109,7 @@ export default function Home({
                   "duration-200 ease-in hover:-translate-y-1"
                 )}
               >
-                <img
+                <BaseImage
                   alt="featured-project"
                   src={project.fields.image_url[0].url}
                   className={clsxm(
@@ -116,8 +117,6 @@ export default function Home({
                     "duration-500 dark:brightness-75 dark:hover:brightness-95",
                     "brightness-90 hover:brightness-100"
                   )}
-                  loading="lazy"
-                  decoding="async"
                 />
                 <h4
                   className={clsxm(

@@ -67,13 +67,11 @@ export default function AboutMe({
               </p>
             </div>
             <NextImage
-              useSkeleton
               alt="my-profile"
               src="/yehez-profile.png"
               className="w-full object-cover md:w-3/4"
               width={1600}
               height={1000}
-              priority
               imgClassName="rounded-md"
             />
           </div>

@@ -4,6 +4,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import clsxm from "@/lib/helpers/clsxm";
 import { SingleProjectImg } from "@/lib/services/types";
 
+import BaseImage from "../BaseImage";
 import UnstyledLink from "../links/UnstyledLink";
 
 type ProjectCardProps = {
@@ -40,23 +41,15 @@ const ProjectCard = ({
         </div>
         <div className="flex items-center justify-between">
           <p className="pr-4 group-hover:underline">{projectDesc}</p>
-          <img
-            alt="image-project"
-            src={projectImg}
-            className={clsxm("w-28")}
-            loading="lazy"
-            decoding="async"
-          />
+          <BaseImage alt="image-project" src={projectImg} width="28%" />
         </div>
         <div className="flex gap-3">
           {madeUsing.map((tool, index) => (
             <figure key={index} className="flex w-10 items-center md:w-12">
-              <img
+              <BaseImage
                 alt="icon-tool"
                 src={tool.url}
                 className="rounded-sm"
-                loading="lazy"
-                decoding="async"
               />
             </figure>
           ))}

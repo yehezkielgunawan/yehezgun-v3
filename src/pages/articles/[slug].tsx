@@ -13,6 +13,7 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 
+import BaseImage from "@/components/BaseImage";
 import Button from "@/components/buttons/Button";
 import ButtonLink from "@/components/buttons/ButtonLink";
 import Layout from "@/components/layouts/Layout";
@@ -95,13 +96,11 @@ export default function Post({
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-2" data-fade="0">
           <figure className="flex w-full justify-center">
-            <img
+            <BaseImage
               alt="post-image"
               src={postData.fields.article_image[0].url}
               className="rounded-sm object-cover"
               width="100%"
-              loading="lazy"
-              decoding="async"
             />
           </figure>
           <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
