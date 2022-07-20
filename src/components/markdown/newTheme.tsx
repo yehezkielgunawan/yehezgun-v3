@@ -6,6 +6,7 @@ import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 import clsxm from "@/lib/helpers/clsxm";
 
+import BaseImage from "../BaseImage";
 import Button from "../buttons/Button";
 import UnderlineLink from "../links/UnderlineLink";
 import UnstyledLink from "../links/UnstyledLink";
@@ -66,7 +67,7 @@ export const newTheme = {
   },
   img: (props: React.ComponentPropsWithRef<"img">) => (
     <figure className="flex w-full items-center justify-center">
-      <img
+      <BaseImage
         alt="article-image"
         loading="lazy"
         decoding="async"

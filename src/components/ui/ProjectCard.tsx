@@ -41,7 +41,7 @@ const ProjectCard = ({
         </div>
         <div className="flex items-center justify-between">
           <p className="pr-4 group-hover:underline">{projectDesc}</p>
-          <BaseImage alt="image-project" src={projectImg} width="28%" />
+          <BaseImage alt="image-project" src={projectImg} className="w-24" />
         </div>
         <div className="flex gap-3">
           {madeUsing.map((tool, index) => (

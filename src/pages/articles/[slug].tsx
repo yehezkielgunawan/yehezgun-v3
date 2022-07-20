@@ -99,8 +99,7 @@ export default function Post({
             <BaseImage
               alt="post-image"
               src={postData.fields.article_image[0].url}
-              className="rounded-sm object-cover"
-              width="100%"
+              className="w-full rounded-sm object-cover"
             />
           </figure>
           <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">

@@ -4,6 +4,7 @@ import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
 
+import BaseImage from "../BaseImage";
 import UnstyledLink from "../links/UnstyledLink";
 
 type ArticleCardProps = {
@@ -35,12 +36,10 @@ const ArticleCard = ({
         )}
       >
         <figure className="flex w-full items-center justify-center px-4">
-          <img
+          <BaseImage
             className="h-72 w-80 object-contain md:w-96"
             src={imageUrl}
             alt="article-image"
-            loading="lazy"
-            decoding="async"
           />
         </figure>
         <div className="flex flex-col space-y-2 px-6 py-4">
