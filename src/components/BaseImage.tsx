@@ -12,13 +12,13 @@ const BaseImage = React.forwardRef<HTMLImageElement, BaseImageProps>(
     return (
       <img
         ref={ref}
-        src={clsxm(
+        className={clsxm(
           className,
           "transition duration-500",
           status ? "scale-100 blur-0" : "scale-120 blur-2xl"
         )}
         alt={rest.alt}
-        onLoadedData={() => setStatus(true)}
+        onLoad={() => setStatus(true)}
         loading="lazy"
         decoding="async"
         {...rest}
