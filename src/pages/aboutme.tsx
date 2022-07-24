@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Tippy from "@tippyjs/react";
 import React from "react";
-import { BsBriefcase, BsBuilding } from "react-icons/bs";
-import { GiJourney, GiPayMoney } from "react-icons/gi";
+import { GiPayMoney } from "react-icons/gi";
 import { SiKofi } from "react-icons/si";
 
 import ButtonLink from "@/components/buttons/ButtonLink";
@@ -10,6 +9,7 @@ import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
+import ExperienceCard from "@/components/ui/ExperienceCard";
 import { contactList } from "@/constants/contactList";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
@@ -118,23 +118,12 @@ export default function AboutMe({
             <h1 className="my-4">Work Experience</h1>
             <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
               {experienceList.map((experience, index) => (
-                <div
+                <ExperienceCard
                   key={index}
-                  className={clsxm(
-                    "space-y-3 rounded-md",
-                    "border border-lightsteel-800 p-3 dark:border-lightsteel-300"
-                  )}
-                >
-                  <p className="flex items-center gap-2 font-bold">
-                    <BsBriefcase size={20} /> {experience.fields.name}
-                  </p>
-                  <p className="flex items-center gap-2 text-sm">
-                    <BsBuilding size={20} /> {experience.fields.company_name}
-                  </p>
-                  <p className="flex items-center gap-2 font-bold italic">
-                    <GiJourney size={20} /> {experience.fields.duration}
-                  </p>
-                </div>
+                  experienceName={experience.fields.name}
+                  companyName={experience.fields.company_name}
+                  duration={experience.fields.duration}
+                />
               ))}
             </div>
           </div>
