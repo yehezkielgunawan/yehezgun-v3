@@ -4,5 +4,7 @@ export default function yehezOgImage(text: string, isArticle: boolean): string {
       text
     )}&theme=dark`;
   }
-  return `https://og.yehezgun.com/api/simple?templateTitle=${text}%20%7C%20YehezGun&theme=dark`;
+  return `https://og.yehezgun.com/api/simple?siteName=yehezgun.com&templateTitle=${encodeURIComponent(
+    text
+  )}%20%7C%20YehezGun&theme=dark`;
 }
