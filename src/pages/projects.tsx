@@ -33,12 +33,7 @@ export default function Projects({
 
   return (
     <Layout>
-      <MetaHead
-        pageTitle="Projects"
-        pageDesc="This is my personal and public projects that I've done before."
-        route="projects"
-        isArticle={false}
-      />
+      <MetaHead pageTitle="Projects" route="projects" isArticle={false} />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-2" data-fade="0">
           <h1>Projects</h1>

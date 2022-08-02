@@ -70,12 +70,7 @@ export default function Articles({
 
   return (
     <Layout>
-      <MetaHead
-        pageTitle="Articles"
-        pageDesc="Just some random thoughts."
-        route="articles"
-        isArticle={false}
-      />
+      <MetaHead pageTitle="Articles" route="articles" isArticle={false} />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-3" data-fade="0">
           <h1>Articles</h1>

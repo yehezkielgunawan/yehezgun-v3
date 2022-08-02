@@ -35,12 +35,7 @@ export default function AboutMe({
   const isLoaded = useLoaded();
   return (
     <Layout>
-      <MetaHead
-        pageTitle="About Me"
-        pageDesc="A little description about me."
-        route="aboutme"
-        isArticle={false}
-      />
+      <MetaHead pageTitle="About Me" route="aboutme" isArticle={false} />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="my-4" data-fade="0">
           <h1>Yo, hello there!</h1>
