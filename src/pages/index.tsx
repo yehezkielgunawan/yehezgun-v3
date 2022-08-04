@@ -34,7 +34,20 @@ export default function Home({
         <section className="space-y-3">
           <div className="my-8 flex items-center justify-between" data-fade="0">
             <div className="block space-y-1">
-              <h1 className="mb-3">Hi, I&apos;m Yehezkiel Gunawan.</h1>
+              <h1 className="mb-3">
+                Hi, I&apos;m{" "}
+                <span
+                  className={clsxm(
+                    "rounded-md p-1",
+                    "bg-gainsboro-600 dark:bg-lightsteel-700",
+                    "ease-in hover:p-2 hover:transition-all hover:duration-300",
+                    "bg-gradient-to-r hover:from-errieblack-200 hover:to-primary-500",
+                    "dark:hover:from-lightsteel-800 dark:hover:to-errieblack-400"
+                  )}
+                >
+                  Yehezkiel Gunawan
+                </span>
+              </h1>
               <p>Currently work as a frontend engineer.</p>
               <p>
                 You&apos;ve found my personal slice of the internet. Take a look
