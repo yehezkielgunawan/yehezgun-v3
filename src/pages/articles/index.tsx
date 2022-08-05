@@ -84,7 +84,7 @@ export default function Articles({
             wrapperClassName="flex items-center gap-3 my-4"
             labelName="Choose Language"
             defaultValue={language}
-            className="w-6/12 rounded-lg md:w-36"
+            className="w-6/12 rounded-lg bg-lightsteel-200 dark:bg-gainsboro-800 md:w-36"
             onChange={filterByLanguage}
           />
           <div className="my-4 flex flex-wrap items-center gap-3">

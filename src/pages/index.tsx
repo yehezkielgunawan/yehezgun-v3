@@ -40,7 +40,7 @@ export default function Home({
                   className={clsxm(
                     "rounded-md p-1",
                     "bg-gainsboro-600 dark:bg-lightsteel-700",
-                    "ease-in hover:p-2 hover:transition-all hover:duration-300",
+                    "transition-all duration-300 ease-in hover:p-2",
                     "bg-gradient-to-r hover:from-errieblack-200 hover:to-primary-500",
                     "dark:hover:from-lightsteel-800 dark:hover:to-errieblack-400"
                   )}
