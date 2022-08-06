@@ -53,7 +53,7 @@ export default function Home({
                 You&apos;ve found my personal slice of the internet. Take a look
                 and enjoy.
               </p>
-              <div className="flex flex-wrap gap-4 pt-6 font-primary">
+              <div className="flex flex-wrap gap-4 pt-6">
                 <ButtonLink
                   href="/articles"
                   variant="outline"
