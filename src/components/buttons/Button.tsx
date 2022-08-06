@@ -35,9 +35,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type="button"
         disabled={disabled}
         className={clsxm(
-          "inline-flex items-center rounded px-4 py-2 font-semibold",
+          "inline-flex items-center rounded-md px-4 py-2 font-semibold",
           "focus:outline-none focus-visible:ring focus-visible:ring-primary-500",
-          "shadow-sm",
+          "font-primary shadow-sm",
           "transition duration-200 ease-in",
           [
             variant === "primary" && [
@@ -50,7 +50,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             variant === "outline" && [
               "text-primary-500 dark:text-primary-300",
               "border border-primary-500",
-              "hover:bg-primary-100 active:bg-primary-100 disabled:bg-primary-100 dark:hover:bg-primary-600",
+              "hover:bg-primary-200 active:bg-primary-100 disabled:bg-primary-100 dark:hover:bg-primary-600",
+              "hover:border-primary-200 dark:hover:border-primary-700",
             ],
             variant === "ghost" && [
               "text-primary-500",
@@ -58,15 +59,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               "hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100",
             ],
             variant === "light" && [
-              "text-dark bg-white ",
+              "bg-white text-black",
               "border border-gray-300",
-              "hover:text-dark",
+              "hover:bg-charcoal-100",
               "active:bg-white/80 disabled:bg-gray-200",
             ],
             variant === "dark" && [
               "bg-gray-900 text-white",
               "border border-gray-600",
               "active:bg-gray-700 disabled:bg-gray-700",
+              "hover:bg-charcoal-500",
             ],
           ],
           "disabled:cursor-not-allowed",

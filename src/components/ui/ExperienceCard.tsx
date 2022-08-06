@@ -20,7 +20,7 @@ const ExperienceCard = ({
       className={clsxm(
         "space-y-3 rounded-md",
         "border border-lightsteel-800 p-3 dark:border-lightsteel-300",
-        "transition duration-300 hover:bg-primary-200 dark:hover:bg-primary-700"
+        "transition duration-300 hover:bg-errieblack-200 dark:hover:bg-gainsboro-800"
       )}
     >
       <p className="flex items-center gap-2 font-bold">

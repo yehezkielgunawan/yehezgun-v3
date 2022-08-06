@@ -1,15 +1,15 @@
-/* eslint-disable @next/next/no-img-element */
 import Tippy from "@tippyjs/react";
-import React from "react";
-import { GiPayMoney } from "react-icons/gi";
-import { SiKofi } from "react-icons/si";
+import { useTheme } from "next-themes";
+import React, { useState } from "react";
+import { MdOutlineAttachMoney } from "react-icons/md";
 
-import ButtonLink from "@/components/buttons/ButtonLink";
+import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import ExperienceCard from "@/components/ui/ExperienceCard";
+import FundingModal from "@/components/ui/FundingModal";
 import { contactList } from "@/constants/contactList";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
@@ -33,9 +33,13 @@ export default function AboutMe({
   experienceList: Experiences;
 }) {
   const isLoaded = useLoaded();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { theme } = useTheme();
+
   return (
     <Layout>
       <MetaHead pageTitle="About Me" route="aboutme" isArticle={false} />
+      <FundingModal isOpen={isOpen} handleClose={() => setIsOpen(false)} />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="my-4" data-fade="0">
           <h1>Yo, hello there!</h1>
@@ -70,41 +74,26 @@ export default function AboutMe({
               imgClassName="rounded-md"
             />
           </div>
-          <div className="my-4 flex flex-wrap-reverse items-center justify-between gap-4">
+          <div className="my-4 flex flex-wrap items-center justify-between gap-4">
             <div className="inline-flex items-center gap-3">
               {contactList.map((contact, index) => (
-                <Tippy
-                  key={index}
-                  interactive
-                  delay={100}
-                  content={contact.name}
-                  arrow
-                >
+                <Tippy key={index} delay={100} content={contact.name} arrow>
                   <UnstyledLink href={contact.link_route}>
                     <contact.icon
                       size={32}
-                      className="hover:text-primary-500"
+                      className="hover:text-primary-600"
                     />
                   </UnstyledLink>
                 </Tippy>
               ))}
             </div>
-            <div className="inline-flex items-center gap-3">
-              <ButtonLink
-                className="gap-2"
-                href="https://ko-fi.com/yehezgun"
-                variant="outline"
-              >
-                <SiKofi size={20} /> Support me on Ko-fi
-              </ButtonLink>
-              <ButtonLink
-                className="gap-2"
-                href="https://saweria.co/yehezgun"
-                variant="outline"
-              >
-                <GiPayMoney size={20} /> Support me on Saweria
-              </ButtonLink>
-            </div>
+            <Button
+              variant={theme === "dark" ? "light" : "dark"}
+              className="w-full justify-center gap-2 md:w-auto"
+              onClick={() => setIsOpen(true)}
+            >
+              <MdOutlineAttachMoney size={24} /> Support Me
+            </Button>
           </div>
           <hr className="my-4 border-t border-charcoal-200 dark:border-charcoal-100" />
         </section>
