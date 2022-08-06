@@ -25,7 +25,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         className={clsxm(
           "inline-flex items-center rounded px-4 py-2 font-semibold",
           "focus:outline-none focus-visible:ring focus-visible:ring-primary-500",
-          "shadow-sm",
+          "font-primary shadow-sm",
           "transition-colors duration-75",
           //#region  //*=========== Variants ===========
           [
