@@ -2,13 +2,13 @@
 const defaultSEOConfig = {
   defaultTitle: "Yehezkiel Gunawan | YehezGun",
   description:
-    "Yehezkiel Gunawan's personal site, made using Next.js + Tailwind CSS",
+    "An online portfolio & personal site, made using Next.js + Tailwind CSS",
   canonical: "https://yehezgun.com",
   openGraph: {
     url: "https://yehezgun.com",
-    title: "YehezGun",
+    title: "Yehezkiel Gunawan",
     description:
-      "Yehezkiel Gunawan's personal site, made using Next.js + Tailwind CSS",
+      "An online portfolio & personal site, made using Next.js + Tailwind CSS",
     type: "website",
     images: [
       {
