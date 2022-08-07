@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.0...v0.1.1) (2022-08-07)
+
+### Features
+
+- **aboutme page:** :lipstick: implement the funding modal ([c3dc9b0](https://github.com/yehezkielgunawan/yehezgun-v3/commit/c3dc9b09b4c5a7e1cdd9c9642ade8a09c33ab38e))
+- **ExperienceCard.tsx:** :sparkles: create seperate component for experiences ([b6f1643](https://github.com/yehezkielgunawan/yehezgun-v3/commit/b6f1643fc4309d19edf8e6050d1b3cca4480e99b))
+- **footerLink.tsx:** :sparkles: add showwcase link ([4e977b3](https://github.com/yehezkielgunawan/yehezgun-v3/commit/4e977b3fae8abfd68b1535f87ab9435674626518))
+- **Funding.ts:** :sparkles: create funding list const ([c663f8d](https://github.com/yehezkielgunawan/yehezgun-v3/commit/c663f8dc7ee4644ae601356c318cffe3b5ec9f5d))
+- **FundingModal:** :sparkles: create seperate modal for funding support ([b9e2bbf](https://github.com/yehezkielgunawan/yehezgun-v3/commit/b9e2bbf6c7c6cba7248bf719e01cc6c7588baf6e))
+
+### Bug Fixes
+
+- **yehezOGImage.ts:** :ambulance: fix wording on OG again ([dfa4acf](https://github.com/yehezkielgunawan/yehezgun-v3/commit/dfa4acfd86262575804dff993536d445e3be2c28))
+- **yehezOGImage.ts:** :bug: fix image width on OG ([e3f5639](https://github.com/yehezkielgunawan/yehezgun-v3/commit/e3f5639149c146a6351351d05370e58d6cfae866))
+- **yehezOGImage.ts:** :bug: fix wording on OG ([b465d51](https://github.com/yehezkielgunawan/yehezgun-v3/commit/b465d51e86962b7a10f2837ffb46100f49668ba2))
+
 ## [0.1.0](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.11...v0.1.0) (2022-06-26)
 
 ### [0.0.11](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.0.10...v0.0.11) (2022-06-26)
