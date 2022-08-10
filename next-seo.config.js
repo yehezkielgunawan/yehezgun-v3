@@ -1,6 +1,6 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  defaultTitle: "Yehezkiel Gunawan | YehezGun",
+  defaultTitle: "Yehezkiel Gunawan",
   description:
     "An online portfolio & personal site, made using Next.js + Tailwind CSS",
   canonical: "https://yehezgun.com",

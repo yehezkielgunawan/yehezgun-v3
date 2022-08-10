@@ -22,3 +22,7 @@ But if you also find this template is useful, you also can use it. And of course
 - [Tailwind CSS Official Docs](https://tailwindcss.com/)
 - [Theodorus Clarence's personal site](https://github.com/theodorusclarence/theodorusclarence.com) I used some of his styling and tools that he used as my references.
 - [Agustinus Nathaniel's Site](https://sznm.dev) as my main reference while making this site.
+
+## Thank you for sponsoring me🙏
+
+- [Nathanael Pribady](https://github.com/NathPribady)
