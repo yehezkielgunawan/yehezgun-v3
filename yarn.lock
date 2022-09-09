@@ -218,10 +218,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/fira-sans@^4.5.8":
-  version "4.5.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.8.tgz#1f6a4ee480385f8ffa6e6be3cb270f3e950db602"
-  integrity sha512-b3oQXwVNszC8jL+DJfZ4gvEaBc29eDjL5rRi6oaEm2+Mpl9ORk4gmdGNwkFXzR0SqFhUZscLXFPsopr9tSSPBA==
+"@fontsource/fira-sans@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.9.tgz#b2e8e68c4ff566cc366504d87a75d33723f367d6"
+  integrity sha512-wGh4mUHjjWzMwJMCo3z4GOYe9a2QKgvg1bge0gIg8Je6LKNID+/EFmcXuUDyk1KbUKHpWJIquVM9kFFyJyRY2A==
 
 "@fontsource/pt-serif@^4.5.8":
   version "4.5.9"
