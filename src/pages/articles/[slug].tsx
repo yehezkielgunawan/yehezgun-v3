@@ -3,7 +3,7 @@ import { Giscus, GiscusProps } from "@giscus/react";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import { BsTranslate } from "react-icons/bs";
-import { FaCheck, FaCopy, FaDev, FaTwitter } from "react-icons/fa";
+import { FaCheck, FaCopy, FaTwitter } from "react-icons/fa";
 import { GiPayMoney } from "react-icons/gi";
 import { SiKofi } from "react-icons/si";
 import ReactMarkdown from "react-markdown";
@@ -123,15 +123,6 @@ export default function Post({
                 </p>
               </div>
               <div className="flex gap-2">
-                {postData.fields.alternative_link && (
-                  <ButtonLink
-                    href={postData.fields.alternative_link}
-                    variant="dark"
-                  >
-                    <FaDev size={20} className="mr-1" /> Read in{" "}
-                    {postData.fields.lang === "en" ? "Dev.to" : "Diskusi.tech"}
-                  </ButtonLink>
-                )}
                 {postData.fields.translated_link && (
                   <ButtonLink
                     href={postData.fields.translated_link}
