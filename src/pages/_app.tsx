@@ -6,6 +6,7 @@ import Head from "next/head";
 import "@fontsource/fira-sans";
 import "@fontsource/pt-serif";
 import "tippy.js/dist/tippy.css";
+import NextNProgress from "nextjs-progressbar";
 
 import defaultSEOConfig from "../../next-seo.config";
 
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#3f3f46" />
       </Head>
       <DefaultSeo {...defaultSEOConfig} />
+      <NextNProgress color="#58A4B0" />
       <Component {...pageProps} />
     </ThemeProvider>
   );
