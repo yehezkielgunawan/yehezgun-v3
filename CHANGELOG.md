@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.1...v0.1.2) (2022-10-07)
+
+### Features
+
+- **\_app:** :sparkles: implement n progress lib ([27c8c5f](https://github.com/yehezkielgunawan/yehezgun-v3/commit/27c8c5f189d1c78bcedf60d0892147d3e37d3c1b))
+
 ### [0.1.1](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.0...v0.1.1) (2022-08-07)
 
 ### Features
