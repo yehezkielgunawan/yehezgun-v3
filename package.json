@@ -52,7 +52,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-syntax-highlighter": "^13.5.2",
     "autoprefixer": "10.4.5",
-    "eslint": "^8.23.0",
+    "eslint": "^8.25.0",
     "eslint-config-next": "^12.2.2",
     "eslint-config-yehezgun": "^1.2.3",
     "husky": "^7.0.0",
