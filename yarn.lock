@@ -3322,11 +3322,6 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hashlru@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/hashlru/-/hashlru-2.3.0.tgz#5dc15928b3f6961a2056416bb3a4910216fdfb51"
-  integrity sha512-0cMsjjIC8I+D3M44pOQdsy0OHXGLVz6Z0beRuufhKa0KfaD2wGwAev6jILzXsd3/vpnNQJmWyZtIILqM1N+n5A==
-
 hast-to-hyperscript@^10.0.0:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/hast-to-hyperscript/-/hast-to-hyperscript-10.0.1.tgz#3decd7cb4654bca8883f6fcbd4fb3695628c4296"
@@ -6445,12 +6440,10 @@ symbol-tree@^3.2.4:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
-tailwind-merge@^1.2.1:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.3.0.tgz#fa29557a2e1c6947904143e45884e554f491937d"
-  integrity sha512-M+DC6DO5eypc3/iOt/oTuqUH68Ip+XCu/Afybg9/ATxUX6KMPk4UGU4z4EMx08BMOBL+iOL93+hx3Jxpb9qNGw==
-  dependencies:
-    hashlru "^2.3.0"
+tailwind-merge@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.6.2.tgz#e75ff2fd9901d4f9bad630e7ba2cc65b99441435"
+  integrity sha512-/JbgwDwsI8F4aryXAcQ6tVOZvI/YyZqPqdkG/Dj/8XZq8JDp64XxZCIDbyp7/iOpIfWFkF8swEwjXQEQkAvJNw==
 
 tailwindcss@^3.1.8:
   version "3.1.8"
