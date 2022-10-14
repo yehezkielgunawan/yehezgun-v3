@@ -1,0 +1,37 @@
+name: YehezGun CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  next:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Run Prettier
+        run: yarn format:ci
+
+      - name: Run ESLint
+        run: yarn lint
+
+      - name: Run TypeScript
+        run: yarn typescript:ci
+
+      - name: Run unit tests in CI environment
+        run: yarn test:ci
+
+      - name: Build the application
+        run: yarn build
