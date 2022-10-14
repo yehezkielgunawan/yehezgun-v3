@@ -35,3 +35,8 @@ jobs:
 
       - name: Build the application
         run: yarn build
+        env:
+          AIRTABLE_APIKEY: ${{env.AIRTABLE_APIKEY}}
+          AIRTABLE_BASe: ${{env.AIRTABLE_BASE}}
+          UMAMI_WEB_ID: ${{env.UMAMI_WEB_ID}}
+          UMAMI_SRC: ${{env.UMAMI_SRC}}
