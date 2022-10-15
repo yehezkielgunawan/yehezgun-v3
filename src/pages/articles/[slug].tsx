@@ -200,11 +200,11 @@ export default function Post({
               <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
             </ButtonLink>
             <ButtonLink
-              href="https://saweria.co/yehezgun"
+              href="https://trakteer.id/yehezgun/tip"
               variant="outline"
               className="border-2"
             >
-              <GiPayMoney size={20} className="mr-2" /> Support me on Saweria
+              <GiPayMoney size={20} className="mr-2" /> Support me on Trakteer
             </ButtonLink>
           </div>
           <Giscus

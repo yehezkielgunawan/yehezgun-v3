@@ -49,11 +49,16 @@ export default function Articles({
     return setLanguage(e.target.value);
   };
   const [categoryState, setCategoryState] = useState<string>("All");
+  const [keyword, setKeyword] = useState<string>("");
 
   const isLoaded = useLoaded();
 
   const handleCategory = (categoryName: string) => {
     return setCategoryState(categoryName);
+  };
+
+  const handleSearchKeyword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    return setKeyword(e.target.value);
   };
 
   const filteredArticles = (
@@ -63,10 +68,14 @@ export default function Articles({
           (article: SingleRes<SingleArticleInList>) =>
             article.fields.category === categoryState
         )
-  ).filter(
-    (article: SingleRes<SingleArticleInList>) =>
-      article.fields.lang === language
-  );
+  )
+    .filter(
+      (article: SingleRes<SingleArticleInList>) =>
+        article.fields.lang === language
+    )
+    .filter((article: SingleRes<SingleArticleInList>) =>
+      article.fields.title.toLowerCase().includes(keyword.toLowerCase())
+    );
 
   return (
     <Layout>
@@ -78,34 +87,50 @@ export default function Articles({
             Just some random thoughts. For me, writting can sharpen my
             understanding of something.
           </p>
-
-          <UnstyledSelect
-            optionList={languageOptions}
-            wrapperClassName="flex items-center gap-3 my-4"
-            labelName="Choose Language"
-            defaultValue={language}
-            className="w-6/12 rounded-lg bg-lightsteel-200 dark:bg-gainsboro-800 md:w-36"
-            onChange={filterByLanguage}
-          />
-          <div className="my-4 flex flex-wrap items-center gap-3">
-            {categoryList.map((category, index) => (
-              <p
-                key={index}
-                className={clsxm(
-                  "rounded-md border border-lightsteel-400 py-1 px-2",
-                  "cursor-pointer bg-gainsboro-300 dark:bg-gainsboro-800",
-                  "hover:bg-lightsteel-300 dark:hover:bg-lightsteel-600",
-                  categoryState === category &&
-                    "bg-lightsteel-300 dark:bg-lightsteel-700"
-                )}
-                onClick={() => handleCategory(category)}
-              >
-                {category}
-              </p>
-            ))}
+          <div
+            className={clsxm(
+              "flex flex-wrap items-center justify-between gap-2",
+              "md:flex-nowrap"
+            )}
+          >
+            <UnstyledSelect
+              optionList={languageOptions}
+              wrapperClassName="flex items-center gap-3 w-full md:w-1/2"
+              labelName="Choose Language"
+              defaultValue={language}
+              className="w-6/12 rounded-lg bg-lightsteel-200 dark:bg-gainsboro-800 md:w-36"
+              onChange={filterByLanguage}
+            />
+            <div className="flex flex-wrap items-center gap-3">
+              {categoryList.map((category, index) => (
+                <p
+                  key={index}
+                  className={clsxm(
+                    "rounded-md border border-lightsteel-400 py-1 px-2",
+                    "cursor-pointer bg-gainsboro-300 dark:bg-gainsboro-800",
+                    "hover:bg-lightsteel-300 dark:hover:bg-lightsteel-600",
+                    categoryState === category &&
+                      "bg-lightsteel-300 dark:bg-lightsteel-700"
+                  )}
+                  onClick={() => handleCategory(category)}
+                >
+                  {category}
+                </p>
+              ))}
+            </div>
           </div>
+          <input
+            autoFocus
+            type="text"
+            className={clsxm(
+              "w-full rounded-md",
+              "bg-lightsteel-200 dark:bg-gainsboro-800 placeholder:dark:text-charcoal-200"
+            )}
+            placeholder="Search..."
+            onChange={handleSearchKeyword}
+          />
         </section>
-        <section className="mt-4" data-fade="1">
+        <section className="mt-8" data-fade="1">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article, index) => (

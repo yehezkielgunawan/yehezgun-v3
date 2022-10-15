@@ -15,8 +15,8 @@ export const fundingSources: Array<SingleContact> = [
     link_route: "https://ko-fi.com/yehezgun",
   },
   {
-    name: "Saweria (in IDR only)",
+    name: "Support Via Trakteer (IDR Only)",
     icon: GiPayMoney,
-    link_route: "https://saweria.co/yehezgun",
+    link_route: "https://trakteer.id/yehezgun/tip",
   },
 ];
