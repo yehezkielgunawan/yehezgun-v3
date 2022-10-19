@@ -120,7 +120,6 @@ export default function Articles({
             </div>
           </div>
           <input
-            autoFocus
             type="text"
             className={clsxm(
               "w-full rounded-md",
