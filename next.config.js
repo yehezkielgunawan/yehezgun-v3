@@ -7,5 +7,7 @@ module.exports = {
     UMAMI_SRC: process.env.UMAMI_SRC,
     AIRTABLE_APIKEY: process.env.AIRTABLE_APIKEY,
     AIRTABLE_BASE: process.env.AIRTABLE_BASE,
+    SANITY_DATASET: process.env.SANITY_DATASET,
+    SANITY_PROJECID: process.env.SANITY_PROJECID,
   },
 };
