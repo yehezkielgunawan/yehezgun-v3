@@ -13,11 +13,12 @@ import FundingModal from "@/components/ui/FundingModal";
 import { contactList } from "@/constants/contactList";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
-import { getAllExperiences } from "@/lib/services/fetcher";
-import { Experiences } from "@/lib/services/types";
+import { formatDateMonth } from "@/lib/helpers/formatDate";
+import { getExperienceList } from "@/lib/services/fetcher";
+import { ExperienceType } from "@/lib/services/types";
 
 export async function getStaticProps() {
-  const experienceList = await getAllExperiences();
+  const experienceList = await getExperienceList();
 
   return {
     props: {
@@ -30,7 +31,7 @@ export async function getStaticProps() {
 export default function AboutMe({
   experienceList,
 }: {
-  experienceList: Experiences;
+  experienceList: ExperienceType[];
 }) {
   const isLoaded = useLoaded();
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -104,9 +105,13 @@ export default function AboutMe({
               {experienceList.map((experience, index) => (
                 <ExperienceCard
                   key={index}
-                  experienceName={experience.fields.name}
-                  companyName={experience.fields.company_name}
-                  duration={experience.fields.duration}
+                  experienceName={experience.experience_name}
+                  companyName={experience.company}
+                  duration={`${formatDateMonth(experience.start_date)} - ${
+                    experience.is_currently_here
+                      ? "Now"
+                      : formatDateMonth(experience.end_date)
+                  }`}
                 />
               ))}
             </div>

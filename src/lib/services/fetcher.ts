@@ -2,6 +2,8 @@ import Airtable, { FieldSet, Record, Records } from "airtable";
 
 import { AIRTABLE_BASE, API_KEY } from "constants/baseConstants";
 
+import { getClient } from "./sanity-config";
+
 const base = new Airtable({ apiKey: API_KEY }).base(String(AIRTABLE_BASE));
 
 // maps over the records, calling minifyRecord, giving us required data
@@ -36,13 +38,6 @@ export const getFeaturedProjects = async () => {
   return getMinifiedRecords(records);
 };
 
-export const getAllExperiences = async () => {
-  const records = await base("Experiences")
-    .select({ sort: [{ field: "date_added", direction: "desc" }] })
-    .all();
-  return getMinifiedRecords(records);
-};
-
 export const getArticleList = async () => {
   const records = await base("Blog")
     .select({
@@ -62,4 +57,10 @@ export const getArticlePost = async (slug: string) => {
     .all();
 
   return getMinifiedRecords(records);
+};
+
+export const getExperienceList = async () => {
+  return await getClient(true).fetch(
+    `*[_type == "experiences"] | order(start_date desc) | order(end_date desc)`
+  );
 };

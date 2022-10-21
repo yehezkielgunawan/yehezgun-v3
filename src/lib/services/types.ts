@@ -42,15 +42,6 @@ export type SingleProjectImg = {
 
 export type Projects = Array<SingleRes<SingleProject>>;
 
-export type SingleExperience = {
-  name: string;
-  company_name: string;
-  duration: string;
-  date_added: string;
-};
-
-export type Experiences = Array<SingleRes<SingleExperience>>;
-
 export type SingleArticle = {
   title: string;
   slug: string;
@@ -68,3 +59,19 @@ export type SingleArticleInList = Pick<
 >;
 
 export type Articles = Array<SingleRes<SingleArticleInList>>;
+
+export enum ExperienceField {
+  _createdAt,
+  _id,
+  _rev,
+  _type,
+  _updatedAt,
+  company,
+  end_date,
+  experience_name,
+  start_date,
+}
+
+export type ExperienceType = Record<keyof typeof ExperienceField, "string"> & {
+  is_currently_here: boolean;
+};
