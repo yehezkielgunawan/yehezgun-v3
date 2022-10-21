@@ -42,15 +42,6 @@ export type SingleProjectImg = {
 
 export type Projects = Array<SingleRes<SingleProject>>;
 
-export type SingleExperience = {
-  name: string;
-  company_name: string;
-  duration: string;
-  date_added: string;
-};
-
-export type Experiences = Array<SingleRes<SingleExperience>>;
-
 export type SingleArticle = {
   title: string;
   slug: string;
