@@ -68,3 +68,19 @@ export type SingleArticleInList = Pick<
 >;
 
 export type Articles = Array<SingleRes<SingleArticleInList>>;
+
+export enum ExperienceField {
+  _createdAt,
+  _id,
+  _rev,
+  _type,
+  _updatedAt,
+  company,
+  end_date,
+  experience_name,
+  start_date,
+}
+
+export type ExperienceType = Record<keyof typeof ExperienceField, "string"> & {
+  is_currently_here: boolean;
+};
