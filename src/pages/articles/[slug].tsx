@@ -4,8 +4,7 @@ import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import { BsTranslate } from "react-icons/bs";
 import { FaCheck, FaCopy, FaTwitter } from "react-icons/fa";
-import { GiPayMoney } from "react-icons/gi";
-import { SiKofi } from "react-icons/si";
+import { MdOutlineAttachMoney } from "react-icons/md";
 import ReactMarkdown from "react-markdown";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeRaw from "rehype-raw";
@@ -20,6 +19,7 @@ import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";
 import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
+import FundingModal from "@/components/ui/FundingModal";
 import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
@@ -62,6 +62,7 @@ export default function Post({
 }: {
   postData: SingleRes<SingleArticle>;
 }) {
+  const [isModalOpen, setIsMpdalOpen] = useState<boolean>(false);
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const { theme } = useTheme();
   const handleCopyLink = () => {
@@ -92,7 +93,10 @@ export default function Post({
         route={`articles/${postData.fields.slug}`}
         isArticle={true}
       />
-
+      <FundingModal
+        isOpen={isModalOpen}
+        handleClose={() => setIsMpdalOpen(false)}
+      />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-2" data-fade="0">
           <figure className="flex w-full justify-center">
@@ -132,6 +136,9 @@ export default function Post({
                     {postData.fields.lang === "en" ? "Bahasa" : "English"}
                   </ButtonLink>
                 )}
+                <Button variant="dark" onClick={() => setIsMpdalOpen(true)}>
+                  <MdOutlineAttachMoney size={24} /> Support Me
+                </Button>
               </div>
             </div>
             <div className="flex gap-3 md:flex-col">
@@ -191,22 +198,6 @@ export default function Post({
           >
             Back To Articles Page
           </ArrowLink>
-          <div className="flex items-center justify-between gap-2">
-            <ButtonLink
-              href="https://ko-fi.com/yehezgun"
-              variant="outline"
-              className="border-2"
-            >
-              <SiKofi size={20} className="mr-2" /> Support me on Ko-fi
-            </ButtonLink>
-            <ButtonLink
-              href="https://trakteer.id/yehezgun/tip"
-              variant="outline"
-              className="border-2"
-            >
-              <GiPayMoney size={20} className="mr-2" /> Support me on Trakteer
-            </ButtonLink>
-          </div>
           <Giscus
             repo="yehezkielgunawan/yehezgun-v3"
             repoId="R_kgDOG2uTxA"
