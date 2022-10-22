@@ -2,7 +2,6 @@ import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 import clsxm from "@/lib/helpers/clsxm";
-import { SingleProjectImg } from "@/lib/services/types";
 
 import BaseImage from "../BaseImage";
 import UnstyledLink from "../links/UnstyledLink";
@@ -12,7 +11,7 @@ type ProjectCardProps = {
   projectTitle: string;
   projectDesc: string;
   projectImg: string;
-  madeUsing: Array<SingleProjectImg>;
+  madeUsing: Array<string>;
 };
 
 const ProjectCard = ({
@@ -46,11 +45,7 @@ const ProjectCard = ({
         <div className="flex gap-3">
           {madeUsing.map((tool, index) => (
             <figure key={index} className="flex w-10 items-center md:w-12">
-              <BaseImage
-                alt="icon-tool"
-                src={tool.url}
-                className="rounded-sm"
-              />
+              <BaseImage alt="icon-tool" src={tool} className="rounded-sm" />
             </figure>
           ))}
         </div>

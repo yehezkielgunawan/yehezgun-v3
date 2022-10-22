@@ -6,15 +6,12 @@ import MetaHead from "@/components/layouts/MetaHead";
 import ProjectCard from "@/components/ui/ProjectCard";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
-import { getAllProjectsTable } from "@/lib/services/fetcher";
-import {
-  Projects as ProjectsType,
-  SingleProject,
-  SingleRes,
-} from "@/lib/services/types";
+import { getProjectList } from "@/lib/services/fetcher";
+import { urlFor } from "@/lib/services/sanity-config";
+import { SingleProjectItem } from "@/lib/services/types";
 
 export async function getStaticProps() {
-  const projectList = await getAllProjectsTable();
+  const projectList = await getProjectList();
 
   return {
     props: {
@@ -27,7 +24,7 @@ export async function getStaticProps() {
 export default function Projects({
   projectList,
 }: {
-  projectList: ProjectsType;
+  projectList: SingleProjectItem[];
 }) {
   const isLoaded = useLoaded();
 
@@ -46,18 +43,15 @@ export default function Projects({
           <h3>Featured Projects</h3>
           <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {projectList
-              .filter(
-                (project: SingleRes<SingleProject>) =>
-                  project.fields.is_featured === true
-              )
+              .filter((project) => project.is_featured === true)
               .map((project, index) => (
                 <ProjectCard
                   key={index}
-                  projectTitle={project.fields.project_title}
-                  projectDesc={project.fields.description}
-                  projectImg={project.fields.image_url[1].url}
-                  madeUsing={project.fields.made_using}
-                  url={project.fields.project_url}
+                  projectTitle={project.project_name}
+                  projectDesc={project.project_desc}
+                  projectImg={urlFor(project.project_logo).url()}
+                  madeUsing={project.tech_stacks}
+                  url={project.project_url}
                 />
               ))}
           </div>
@@ -66,18 +60,15 @@ export default function Projects({
           <h3>Other Projects</h3>
           <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {projectList
-              .filter(
-                (project: SingleRes<SingleProject>) =>
-                  !project.fields.is_featured
-              )
+              .filter((project) => !project.is_featured)
               .map((singleProject, index) => (
                 <ProjectCard
                   key={index}
-                  projectTitle={singleProject.fields.project_title}
-                  projectDesc={singleProject.fields.description}
-                  projectImg={singleProject.fields.image_url[1].url}
-                  madeUsing={singleProject.fields.made_using}
-                  url={singleProject.fields.project_url}
+                  projectTitle={singleProject.project_name}
+                  projectDesc={singleProject.project_desc}
+                  projectImg={urlFor(singleProject.project_logo).url()}
+                  madeUsing={singleProject.tech_stacks}
+                  url={singleProject.project_url}
                 />
               ))}
           </div>
