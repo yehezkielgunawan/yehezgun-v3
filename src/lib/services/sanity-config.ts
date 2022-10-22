@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import imageUrlBuilder from "@sanity/image-url";
 import { createClient } from "next-sanity";
+
+import { Project } from "./types";
 
 export const sanityConfig = {
   dataset: "production",
@@ -19,3 +22,9 @@ export const sanityClient = createClient(sanityConfig);
 
 export const getClient = (preview: boolean) =>
   preview ? previewClient : sanityClient;
+
+const builder = imageUrlBuilder(sanityClient);
+
+export const urlFor = (source: Project) => {
+  return builder.image(source);
+};
