@@ -8,11 +8,12 @@ import NextImage from "@/components/NextImage";
 import { techStackList } from "@/constants/techStacks";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
-import { getFeaturedProjects } from "@/lib/services/fetcher";
-import { Projects } from "@/lib/services/types";
+import { getFeaturedProjectList } from "@/lib/services/fetcher";
+import { urlFor } from "@/lib/services/sanity-config";
+import { SingleProjectItem } from "@/lib/services/types";
 
 export async function getStaticProps() {
-  const featuredProjects = await getFeaturedProjects();
+  const featuredProjects = await getFeaturedProjectList();
 
   return {
     props: {
@@ -25,7 +26,7 @@ export async function getStaticProps() {
 export default function Home({
   featuredProjects,
 }: {
-  featuredProjects: Projects;
+  featuredProjects: SingleProjectItem[];
 }) {
   const isLoaded = useLoaded();
   return (
@@ -114,7 +115,7 @@ export default function Home({
             {featuredProjects.map((project, index) => (
               <UnstyledLink
                 key={index}
-                href={project.fields.project_url}
+                href={project.project_url}
                 className={clsxm(
                   "relative w-full overflow-hidden rounded-md",
                   "hover:border-zinc-400 hover:ring hover:ring-zinc-400",
@@ -124,7 +125,7 @@ export default function Home({
               >
                 <BaseImage
                   alt="featured-project"
-                  src={project.fields.image_url[0].url}
+                  src={urlFor(project.project_screenshot).url()}
                   className={clsxm(
                     "w-full",
                     "duration-500 dark:brightness-75 dark:hover:brightness-95",
@@ -138,7 +139,7 @@ export default function Home({
                     "text-center text-base text-white"
                   )}
                 >
-                  {project.fields.project_title}
+                  {project.project_name}
                 </h4>
               </UnstyledLink>
             ))}
