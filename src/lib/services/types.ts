@@ -3,16 +3,6 @@ export type SingleRes<ResType> = {
   fields: ResType;
 };
 
-export type SingleProject = {
-  project_title: string;
-  image_url: Array<SingleProjectImg>;
-  project_url: string;
-  made_using: Array<SingleProjectImg>;
-  description: string;
-  date_added: string;
-  is_featured?: boolean;
-};
-
 export type SingleProjectImg = {
   filename: string;
   height: number;
@@ -39,8 +29,6 @@ export type SingleProjectImg = {
   url: string;
   width: number;
 };
-
-export type Projects = Array<SingleRes<SingleProject>>;
 
 export type SingleArticle = {
   title: string;
@@ -74,4 +62,29 @@ export enum ExperienceField {
 
 export type ExperienceType = Record<keyof typeof ExperienceField, "string"> & {
   is_currently_here: boolean;
+};
+
+export type SingleProjectItem = {
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+  is_featured: boolean;
+  project_desc: string;
+  project_logo: Project;
+  project_name: string;
+  project_screenshot: Project;
+  project_url: string;
+  tech_stacks: string[];
+};
+
+export type Project = {
+  _type: string;
+  asset: ProjectAsset;
+};
+
+export type ProjectAsset = {
+  _ref: string;
+  _type: string;
 };

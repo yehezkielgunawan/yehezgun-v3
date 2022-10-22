@@ -19,25 +19,6 @@ const minifyRecord = (record: Record<FieldSet>) => {
   };
 };
 
-export const getAllProjectsTable = async () => {
-  const records = await base("Projects")
-    .select({
-      sort: [{ field: "date_added", direction: "desc" }],
-    })
-    .all();
-  return getMinifiedRecords(records);
-};
-
-export const getFeaturedProjects = async () => {
-  const records = await base("Projects")
-    .select({
-      fields: ["project_title", "image_url", "project_url"],
-      filterByFormula: `{is_featured} = '1'`,
-    })
-    .all();
-  return getMinifiedRecords(records);
-};
-
 export const getArticleList = async () => {
   const records = await base("Blog")
     .select({
@@ -62,5 +43,15 @@ export const getArticlePost = async (slug: string) => {
 export const getExperienceList = async () => {
   return await getClient(true).fetch(
     `*[_type == "experiences"] | order(start_date desc) | order(end_date desc)`
+  );
+};
+export const getFeaturedProjectList = async () => {
+  return await getClient(true).fetch(
+    `*[_type == "projects" && is_featured == true] | order(_createdAt desc) | order(is_featured desc)`
+  );
+};
+export const getProjectList = async () => {
+  return await getClient(true).fetch(
+    `*[_type == "projects"] | order(_createdAt desc) | order(is_featured desc)`
   );
 };
