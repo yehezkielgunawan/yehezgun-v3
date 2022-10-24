@@ -19,16 +19,6 @@ const minifyRecord = (record: Record<FieldSet>) => {
   };
 };
 
-export const getArticleList = async () => {
-  const records = await base("Blog")
-    .select({
-      sort: [{ field: "date", direction: "desc" }],
-      fields: ["title", "slug", "date", "article_image", "lang", "category"],
-    })
-    .all();
-  return getMinifiedRecords(records);
-};
-
 export const getArticlePost = async (slug: string) => {
   const records = await base("Blog")
     .select({
@@ -50,8 +40,19 @@ export const getFeaturedProjectList = async () => {
     `*[_type == "projects" && is_featured == true] | order(_createdAt desc) | order(is_featured desc)`
   );
 };
+
 export const getProjectList = async () => {
   return await getClient(true).fetch(
     `*[_type == "projects"] | order(_createdAt desc) | order(is_featured desc)`
   );
+};
+
+export const getArticles = async () => {
+  return await getClient(true).fetch(
+    `*[_type == "articles"] | order(_createdAt desc)`
+  );
+};
+
+export const getArticleData = async (slug: string) => {
+  return await getClient(true).fetch(`*[_type == "articles" && slug==${slug}]`);
 };

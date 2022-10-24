@@ -72,19 +72,34 @@ export type SingleProjectItem = {
   _updatedAt: string;
   is_featured: boolean;
   project_desc: string;
-  project_logo: Project;
+  project_logo: SanityImage;
   project_name: string;
-  project_screenshot: Project;
+  project_screenshot: SanityImage;
   project_url: string;
   tech_stacks: string[];
 };
 
-export type Project = {
+export type SanityImage = {
   _type: string;
-  asset: ProjectAsset;
+  asset: AssetType;
 };
 
-export type ProjectAsset = {
+export type AssetType = {
   _ref: string;
   _type: string;
+};
+
+export type Article = {
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+  category: string;
+  content: string;
+  cover: SanityImage;
+  lang: string;
+  slug: string;
+  title: string;
+  translated_url: string;
 };
