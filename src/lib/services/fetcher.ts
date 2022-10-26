@@ -54,5 +54,7 @@ export const getArticles = async () => {
 };
 
 export const getArticleData = async (slug: string) => {
-  return await getClient(true).fetch(`*[_type == "articles" && slug==${slug}]`);
+  return await getClient(true).fetch(
+    `*[_type == "articles" && slug=="${slug}"]`
+  );
 };
