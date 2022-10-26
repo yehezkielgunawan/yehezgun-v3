@@ -9,15 +9,12 @@ import ArticleCard from "@/components/ui/ArticleCard";
 import { categoryList } from "@/constants/categoryList";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
-import { getArticleList } from "@/lib/services/fetcher";
-import {
-  Articles as ArticlesType,
-  SingleArticleInList,
-  SingleRes,
-} from "@/lib/services/types";
+import { getArticles } from "@/lib/services/fetcher";
+import { urlFor } from "@/lib/services/sanity-config";
+import { Article } from "@/lib/services/types";
 
 export async function getStaticProps() {
-  const articleList = await getArticleList();
+  const articleList = await getArticles();
 
   return {
     props: {
@@ -27,23 +24,19 @@ export async function getStaticProps() {
   };
 }
 
-export default function Articles({
-  articleList,
-}: {
-  articleList: ArticlesType;
-}) {
+export default function Articles({ articleList }: { articleList: Article[] }) {
   const languageOptions: Array<SingleOptionList> = [
     {
       labelName: "English",
-      value: "en",
+      value: "english",
     },
     {
       labelName: "Indonesian",
-      value: "idn",
+      value: "indonesia",
     },
   ];
 
-  const [language, setLanguage] = useState<string>("en");
+  const [language, setLanguage] = useState<string>("english");
 
   const filterByLanguage = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     return setLanguage(e.target.value);
@@ -64,17 +57,11 @@ export default function Articles({
   const filteredArticles = (
     categoryState === "All"
       ? articleList
-      : articleList.filter(
-          (article: SingleRes<SingleArticleInList>) =>
-            article.fields.category === categoryState
-        )
+      : articleList.filter((article) => article.category === categoryState)
   )
-    .filter(
-      (article: SingleRes<SingleArticleInList>) =>
-        article.fields.lang === language
-    )
-    .filter((article: SingleRes<SingleArticleInList>) =>
-      article.fields.title.toLowerCase().includes(keyword.toLowerCase())
+    .filter((article) => article.lang === language)
+    .filter((article) =>
+      article.title.toLowerCase().includes(keyword.toLowerCase())
     );
 
   return (
@@ -135,12 +122,12 @@ export default function Articles({
               filteredArticles.map((article, index) => (
                 <ArticleCard
                   key={index}
-                  slug={article.fields.slug}
-                  imageUrl={article.fields.article_image[0].url}
-                  title={article.fields.title}
-                  category={article.fields.category}
-                  publishedDate={article.fields.date}
-                  lang={article.fields.lang}
+                  slug={article.slug}
+                  imageUrl={urlFor(article.cover).url()}
+                  title={article.title}
+                  category={article.category}
+                  publishedDate={article._createdAt}
+                  lang={article.lang}
                 />
               ))
             ) : (
