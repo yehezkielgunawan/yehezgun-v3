@@ -47,7 +47,7 @@ const ArticleCard = ({
             {formatDate(
               publishedDate,
               false,
-              lang === "en" ? "en-EN" : "in-IN"
+              lang === "english" ? "en-EN" : "in-IN"
             )}{" "}
             <span
               className={clsxm(

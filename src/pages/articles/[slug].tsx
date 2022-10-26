@@ -24,15 +24,16 @@ import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
-import { getArticleList, getArticlePost } from "@/lib/services/fetcher";
-import { SingleArticle, SingleRes } from "@/lib/services/types";
+import { getArticleData, getArticles } from "@/lib/services/fetcher";
+import { urlFor } from "@/lib/services/sanity-config";
+import { Article } from "@/lib/services/types";
 
 export async function getStaticProps({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  const postData = await getArticlePost(slug).then((res) => res[0]);
+  const postData = await getArticleData(slug).then((res: Article[]) => res[0]);
 
   return {
     props: {
@@ -43,25 +44,19 @@ export async function getStaticProps({
 }
 
 export async function getStaticPaths() {
-  const table = await getArticleList();
+  const table = await getArticles().then((res: Article[]) => res);
   return {
-    paths: table.map((row) => {
-      return {
-        params: {
-          id: row.id,
-          slug: row.fields.slug,
-        },
-      };
-    }),
+    paths: table.map((row: Article) => ({
+      params: {
+        id: row._id,
+        slug: row.slug,
+      },
+    })),
     fallback: "blocking",
   };
 }
 
-export default function Post({
-  postData,
-}: {
-  postData: SingleRes<SingleArticle>;
-}) {
+export default function Post({ postData }: { postData: Article }) {
   const [isModalOpen, setIsMpdalOpen] = useState<boolean>(false);
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const { theme } = useTheme();
@@ -75,7 +70,7 @@ export default function Post({
   const [giscusTheme, setGiscusTheme] =
     useState<GiscusProps["theme"]>("dark_dimmed");
   const isLoaded = useLoaded();
-  const twitterCaption = `${postData.fields.title} by @YehezGun`;
+  const twitterCaption = `${postData.title} by @YehezGun`;
   const twitterUrl = typeof window !== "undefined" ? window.location.href : "";
 
   useEffect(() => {
@@ -88,9 +83,9 @@ export default function Post({
   return (
     <Layout>
       <MetaHead
-        pageTitle={postData.fields.title}
+        pageTitle={postData.title}
         pageDesc="Yehezkiel Gunawan's Article Post"
-        route={`articles/${postData.fields.slug}`}
+        route={`articles/${postData.slug}`}
         isArticle={true}
       />
       <FundingModal
@@ -102,38 +97,35 @@ export default function Post({
           <figure className="flex w-full justify-center">
             <BaseImage
               alt="post-image"
-              src={postData.fields.article_image[0].url}
+              src={urlFor(postData.cover).url()}
               className="w-full rounded-sm object-cover"
             />
           </figure>
           <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
             <div className="space-y-1">
-              <h3>{postData.fields.title}</h3>
+              <h3>{postData.title}</h3>
               <div className="flex items-center gap-3 pb-4">
                 <p className="text-sm italic">
                   {formatDate(
-                    postData.fields.date,
+                    postData._createdAt,
                     false,
-                    postData.fields.lang === "en" ? "en-EN" : "in-IN"
+                    postData.lang === "english" ? "en-EN" : "in-IN"
                   )}
                 </p>
                 <p
                   className={clsxm(
                     "rounded-md px-2 py-0.5 text-sm",
-                    categoryColorList[postData.fields.category]
+                    categoryColorList[postData.category]
                   )}
                 >
-                  {postData.fields.category}
+                  {postData.category}
                 </p>
               </div>
               <div className="flex gap-2">
-                {postData.fields.translated_link && (
-                  <ButtonLink
-                    href={postData.fields.translated_link}
-                    variant="light"
-                  >
+                {postData.translated_url && (
+                  <ButtonLink href={postData.translated_url} variant="light">
                     <BsTranslate size={20} className="mr-1" /> Read in{" "}
-                    {postData.fields.lang === "en" ? "Bahasa" : "English"}
+                    {postData.lang === "english" ? "Bahasa" : "English"}
                   </ButtonLink>
                 )}
                 <Button variant="dark" onClick={() => setIsMpdalOpen(true)}>
@@ -183,7 +175,7 @@ export default function Post({
         <article className="my-2 block" data-fade="1">
           <ReactMarkdown
             components={newTheme}
-            children={postData.fields.content}
+            children={postData.content}
             remarkPlugins={[remarkGfm, remarkHtml]}
             rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
           />
