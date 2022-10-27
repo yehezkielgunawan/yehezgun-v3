@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.2...v0.1.3) (2022-10-27)
+
+### Features
+
+- **articles page:** :sparkles: add search article feature ([6cd9585](https://github.com/yehezkielgunawan/yehezgun-v3/commit/6cd9585747a03aaa25ad9a02501c8613af121b5f))
+- **fetcher and types:** :sparkles: initiate the fetcher function to get experience list via sanity ([540700d](https://github.com/yehezkielgunawan/yehezgun-v3/commit/540700d51d312268bc4c7dd72d64ff82767d0e54))
+- **fetcher.ts and types.ts:** :sparkles: create function to fetch the project list from sanity CMS ([cc36024](https://github.com/yehezkielgunawan/yehezgun-v3/commit/cc3602437fb7ae72799a80f1e7adb5423ee8847c))
+- **fetcher.ts:** :sparkles: create function to fetch article data through sanity ([f7aa963](https://github.com/yehezkielgunawan/yehezgun-v3/commit/f7aa9630e7c5d2cdebc52326b120deff23ec80d3))
+- **formatDate.ts:** :sparkles: create special formatDate helper function for experience ([e452988](https://github.com/yehezkielgunawan/yehezgun-v3/commit/e452988c948456f1138e24c685e52feac32dd7d6))
+- **index.test:** :white_check_mark: add simple unit test to check if the page is rendered well ([f17698b](https://github.com/yehezkielgunawan/yehezgun-v3/commit/f17698b705c89dc655392cc2d97c3afa3ef3fa39))
+- **jest and testing file:** :sparkles: add base setup unit test ([07f744a](https://github.com/yehezkielgunawan/yehezgun-v3/commit/07f744acd5d47a2e0a51f8b9a7c33f842dd9bacd))
+- **package.json and sanity-config:** :sparkles: add sanity-client for image url ([80e7090](https://github.com/yehezkielgunawan/yehezgun-v3/commit/80e709038e471cd56487fa844ab750b289617c69))
+- **package.json, sanity-config:** :sparkles: create base setup for sanity through next-sanity ([a4980e3](https://github.com/yehezkielgunawan/yehezgun-v3/commit/a4980e34fadd5317d333ee309cbfc5b51b4c3ef5))
+- **Projects page:** :recycle: use data from sanity ([3606e17](https://github.com/yehezkielgunawan/yehezgun-v3/commit/3606e175165eab53a0d7cda243490b2472f79e55))
+- **yehezgun.yml:** :construction_worker: add base action ([f31853d](https://github.com/yehezkielgunawan/yehezgun-v3/commit/f31853d639a2448adfeb9996df4a4333d507ff41))
+
+### Bug Fixes
+
+- **articles:** :bug: remove autofocus props ([c0f64fe](https://github.com/yehezkielgunawan/yehezgun-v3/commit/c0f64fecf38e1257d0742e47f4834221d15c2688))
+- **fetcher.ts:** :bug: fix fetch article post statement ([ca5bc6e](https://github.com/yehezkielgunawan/yehezgun-v3/commit/ca5bc6e68c59ab456eaf481c6173f933b720ad71))
+- **Funding.ts and slug:** :speech_balloon: add trakteer acc for funding purpose ([25d8532](https://github.com/yehezkielgunawan/yehezgun-v3/commit/25d85328200df37b741b3d5fb2a779ea82b4a85e))
+- **next.config:** :bug: use serverruntimeconfig ([18cdb0b](https://github.com/yehezkielgunawan/yehezgun-v3/commit/18cdb0b867798ebd3774404fe22c5283631cc408))
+- **sanity-config:** :bug: update the type alias ([0fdde0a](https://github.com/yehezkielgunawan/yehezgun-v3/commit/0fdde0aad6fedad88be1320358824d1a4adc0e7a))
+- **yehezgun.yml:** :bug: fix env ([b473f7b](https://github.com/yehezkielgunawan/yehezgun-v3/commit/b473f7bb4f91cc5948746d130f6a50604d18a6a3))
+- **yehezgun.yml:** :green_heart: add env variable in yml ([2d62cc2](https://github.com/yehezkielgunawan/yehezgun-v3/commit/2d62cc2d93d0c6437bfb772277dff0d52ba8603f))
+- **yehezgun.yml:** :green_heart: fix CI build ([6dc4d72](https://github.com/yehezkielgunawan/yehezgun-v3/commit/6dc4d72c05ebeff6ef99d65220922ce415c7c48c))
+
 ### [0.1.2](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.1...v0.1.2) (2022-10-07)
 
 ### Features
