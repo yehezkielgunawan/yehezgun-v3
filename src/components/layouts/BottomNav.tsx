@@ -28,7 +28,7 @@ const BottomNav = () => {
         >
           <div
             className={clsxm(
-              router.pathname === menu.route &&
+              router?.pathname === menu.route &&
                 "rounded-full bg-primary-400  dark:bg-primary-600",
               "px-3 py-1"
             )}

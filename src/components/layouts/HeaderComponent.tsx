@@ -43,7 +43,7 @@ const HeaderComponent = () => {
               className={clsxm(
                 "hidden font-semibold hover:underline sm:inline-flex",
                 "p-1 hover:rounded-md hover:bg-primary-400 dark:hover:bg-primary-600",
-                router.pathname === menu.route && "font-black underline"
+                router?.pathname === menu.route && "font-black underline"
               )}
             >
               {menu.menu_name}
