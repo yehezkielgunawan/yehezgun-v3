@@ -27,6 +27,9 @@ jobs:
       - name: Run ESLint
         run: yarn lint
 
+      - name: Run Unit Test
+        run: yarn test:ci
+
       - name: Run TypeScript
         run: yarn typescript:ci
 
@@ -36,7 +39,5 @@ jobs:
       - name: Build the application
         run: yarn build
         env:
-          AIRTABLE_APIKEY: ${{secrets.AIRTABLE_APIKEY}}
-          AIRTABLE_BASE: ${{secrets.AIRTABLE_BASE}}
           UMAMI_WEB_ID: ${{secrets.UMAMI_WEB_ID}}
           UMAMI_SRC: ${{secrets.UMAMI_SRC}}
