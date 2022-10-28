@@ -964,16 +964,16 @@
     event-source-polyfill "1.0.25"
     eventsource "^2.0.2"
 
-"@sanity/groq-store@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-0.4.1.tgz#2a1f834b2f53e75f2b1b2d8c8457f345b9d38ecf"
-  integrity sha512-duLH/moE5TxJkUfwDiCCeHzRfltV/vzT4Qle48CdaWqT90CMJ+6m31PC4J3FG1uzNWFc82rOP6SG5nfww9ea4Q==
+"@sanity/groq-store@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-1.0.2.tgz#f59f8cabf52f26610be6c62ace59a6b7e3fec4c4"
+  integrity sha512-EgqnLTlaVjY8J20t4NkRFjs/dk6uem7zKQAKFS2R++OGusKCGV1VM/foUwxkA0/DaopzVrQp0OMpKWmOZUZJqQ==
   dependencies:
-    "@sanity/types" "^2.0.1"
-    eventsource "^1.0.7"
+    "@sanity/types" "^2.35.0"
+    eventsource "^2.0.2"
     fast-deep-equal "^3.1.3"
-    groq "^2.0.9"
-    groq-js "^1.0.1"
+    groq "^2.33.2"
+    groq-js "^1.1.0"
     mendoza "^2.1.1"
     simple-get "^4.0.1"
     split2 "^4.1.0"
@@ -989,10 +989,10 @@
   resolved "https://registry.yarnpkg.com/@sanity/timed-out/-/timed-out-4.0.2.tgz#c9f61f9a1609baa1eb3e4235a24ea2a775022cdf"
   integrity sha512-NBDKGj14g9Z+bopIvZcQKWCzJq5JSrdmzRR1CS+iyA3Gm8SnIWBfZa7I3mTg2X6Nu8LQXG0EPKXdOGozLS4i3w==
 
-"@sanity/types@^2.0.1":
-  version "2.34.0"
-  resolved "https://registry.yarnpkg.com/@sanity/types/-/types-2.34.0.tgz#9e3a4d696f0bb3390d843b5ee7fdeeea768a0efe"
-  integrity sha512-fNdrJSt0lQ7dfPu6bXmuqwWbl9mzfQtKHqWKsU6z2Dk6RuTZXF+EVTmpRHCHdbb5B2Hw9pocc/iReXtkAdQJsg==
+"@sanity/types@^2.35.0":
+  version "2.35.0"
+  resolved "https://registry.yarnpkg.com/@sanity/types/-/types-2.35.0.tgz#e74aba391885061188f8a045e37b9d1f0806ff38"
+  integrity sha512-hocM0bZVa6ONVjLA50gxRSwIcmsaRPpvhl71MgutHxcnvsGZD55n2LQZb4n7h+J9yEFSkz9lY8HbY8n/bw8tsw==
   dependencies:
     "@sanity/client" "^3.3.3"
     "@sanity/color" "^2.1.14"
@@ -2968,11 +2968,6 @@ event-source-polyfill@1.0.25:
   resolved "https://registry.yarnpkg.com/event-source-polyfill/-/event-source-polyfill-1.0.25.tgz#d8bb7f99cb6f8119c2baf086d9f6ee0514b6d9c8"
   integrity sha512-hQxu6sN1Eq4JjoI7ITdQeGGUN193A2ra83qC0Ltm9I2UJVAten3OFVN6k5RX4YWeCS0BoC8xg/5czOCIHVosQg==
 
-eventsource@^1.0.7:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.1.2.tgz#bc75ae1c60209e7cb1541231980460343eaea7c2"
-  integrity sha512-xAH3zWhgO2/3KIniEKYPr8plNSzlGINOUqYj0m0u7AB81iRw8b/3E73W6AuU+6klLbaSFmZnaETQ2lXPfAydrA==
-
 eventsource@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-2.0.2.tgz#76dfcc02930fb2ff339520b6d290da573a9e8508"
@@ -3395,12 +3390,12 @@ grapheme-splitter@^1.0.4:
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
-groq-js@^1.0.1:
+groq-js@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/groq-js/-/groq-js-1.1.0.tgz#15188fbbd543b282656682d9736459bf6a561b41"
   integrity sha512-y87W921Jg9IAksKT9LFvDMrYG9KIcgUDyE4ccENV7K26CKvg1V0lOTJbE1UNI8DcSk/bvx/MWFI7j3iUkCe/gA==
 
-groq@^2.0.9, groq@^2.33.2:
+groq@^2.33.2:
   version "2.33.2"
   resolved "https://registry.yarnpkg.com/groq/-/groq-2.33.2.tgz#3a85c85a1e43e79bba77f171f23997f541d61010"
   integrity sha512-5pf4c91JESCS28IJCgolJq/WBw4Xvf2m8FgZVUlrCig17I+qERosALAHLyyutXu403EYnyCD3DdCLaPb3aGneA==
@@ -5286,13 +5281,13 @@ neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-next-sanity@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.0.tgz#1f45105ad43438be7fdb8842c1837d05938c9195"
-  integrity sha512-J1rqCtrR6ZhFN1yKVl+Is+nLEKZBXHO6vm/TvChU1oiwWuCj5ELigbrLh+mJIYc7F77g7kvmAnS/UAMATjHvbw==
+next-sanity@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.2.tgz#2742d7929c57b30c361453b6728a9af68f172309"
+  integrity sha512-Ym0JRgh2QcInYo6K8Gq+lrRSykf5fhkbpOnUDPPQ/0/uyvTzOn/X40NudrqjFlasExJ04TdOPmILRpIVmKq9Dg==
   dependencies:
     "@sanity/client" "^3.4.1"
-    "@sanity/groq-store" "^0.4.1"
+    "@sanity/groq-store" "^1.0.2"
     groq "^2.33.2"
 
 next-seo@^5.5.0:
