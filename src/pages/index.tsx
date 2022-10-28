@@ -83,7 +83,6 @@ export default function Home({
             <NextImage
               src="/yehez_avatar_transparent.svg"
               alt="avatar_me"
-              objectFit="contain"
               width={240}
               height={240}
               className="hidden rounded-full bg-primary-200 dark:bg-primary-600 sm:table-cell"
