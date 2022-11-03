@@ -10,7 +10,7 @@ type MetaHeadProps = {
 };
 
 const MetaHead = ({ pageTitle, pageDesc, route, isArticle }: MetaHeadProps) => {
-  const ogImage = yehezgunOgImage(pageTitle, isArticle);
+  const ogImage = yehezgunOgImage(pageTitle, isArticle, pageDesc);
   return (
     <NextSeo
       title={`${pageTitle} | YehezGun`}

@@ -39,7 +39,12 @@ export default function AboutMe({
 
   return (
     <Layout>
-      <MetaHead pageTitle="About Me" route="aboutme" isArticle={false} />
+      <MetaHead
+        pageTitle="About Me"
+        pageDesc="A little description about me."
+        route="aboutme"
+        isArticle={false}
+      />
       <FundingModal isOpen={isOpen} handleClose={() => setIsOpen(false)} />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="my-4" data-fade="0">
