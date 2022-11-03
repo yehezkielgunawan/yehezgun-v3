@@ -1,10 +1,14 @@
-export default function yehezOgImage(text: string, isArticle: boolean): string {
+export default function yehezOgImage(
+  text: string,
+  isArticle: boolean,
+  pageDesc?: string
+): string {
   if (isArticle) {
-    return `https://og.yehezgun.com/api/article?logoWidth=124&templateTitle=${encodeURIComponent(
+    return `https://og-v2.yehezgun.com/api/og?title=${encodeURIComponent(
       text
-    )}&theme=dark`;
+    )}&desc=An%20article%20post%20by%20Yehezkiel%20Gunawan.&siteName=yehezgun.com`;
   }
-  return `https://og.yehezgun.com/api/simple?logoWidth=240&siteName=yehezgun.com&templateTitle=${encodeURIComponent(
+  return `https://og-v2.yehezgun.com/api/og?title=${encodeURIComponent(
     text
-  )}%20%7C%20YehezGun&theme=dark`;
+  )}&desc=${encodeURIComponent(pageDesc as string)}&siteName=yehezgun.com`;
 }
