@@ -66,7 +66,12 @@ export default function Articles({ articleList }: { articleList: Article[] }) {
 
   return (
     <Layout>
-      <MetaHead pageTitle="Articles" route="articles" isArticle={false} />
+      <MetaHead
+        pageTitle="Articles"
+        pageDesc="Here are my writings."
+        route="articles"
+        isArticle={false}
+      />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-3" data-fade="0">
           <h1>Articles</h1>
