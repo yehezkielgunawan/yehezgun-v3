@@ -12,7 +12,7 @@ const defaultSEOConfig = {
     type: "website",
     images: [
       {
-        url: "https://og.yehezgun.com/api/base?description=A%20personal%20website%20by%20Yehezkiel%20Gunawan.%20A%20showcase%20about%20my%20projects%2C%20thoughts%2C%20and%20experiences%20as%20a%20Frontend%20Engineer.&logoWidth=150&siteName=yehezgun.com&templateTitle=Yehezkiel%20Gunawan&theme=dark",
+        url: "https://og-v2.yehezgun.com/api/og?title=Yehezkiel%20Gunawan&desc=A%20personal%20website%20by%20Yehezkiel%20Gunawan.%20A%20showcase%20about%20my%20projects,%20thoughts,%20and%20experiences%20as%20a%20frontend%20engineer.&siteName=yehezgun.com",
         alt: "yehezgun.com og-image",
         width: 1200,
         height: 630,
