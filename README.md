@@ -13,7 +13,7 @@ But if you also find this template is useful, you also can use it. And of course
 - [Next.js](https://nextjs.org/)
 - [React & Typescript](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Airtable as CMS](https://airtable.com/)
+- [Sanity CMS](https://www.sanity.io/)
 - [React Giscus for comment section](https://www.npmjs.com/package/react-giscus)
 - [React Markdown](https://www.npmjs.com/package/react-markdown)
 
