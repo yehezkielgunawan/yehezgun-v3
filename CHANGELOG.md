@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.3...v0.2.0) (2022-11-05)
+
+### Bug Fixes
+
+- **main page:** :bug: remove unecessary objectFit props ([010e47a](https://github.com/yehezkielgunawan/yehezgun-v3/commit/010e47a1b2eb50af9923913d46c25fc4d6926091))
+
 ### [0.1.3](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.2...v0.1.3) (2022-10-27)
 
 ### Features
