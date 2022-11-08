@@ -5,11 +5,11 @@ import clsxm from "@/lib/helpers/clsxm";
 const PreloadContext = createContext<boolean>(false);
 
 export function PreloadProvider({ children }: { children: React.ReactNode }) {
-  const [isPreLoaded, setPreIsLoaded] = useState<boolean>(false);
+  const [isPreLoaded, setIsPreloaded] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setPreIsLoaded(true);
+      setIsPreloaded(true);
     }, 200);
   }, []);
 
