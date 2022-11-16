@@ -937,16 +937,16 @@
     event-source-polyfill "1.0.25"
     eventsource "^2.0.2"
 
-"@sanity/groq-store@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-1.0.2.tgz#f59f8cabf52f26610be6c62ace59a6b7e3fec4c4"
-  integrity sha512-EgqnLTlaVjY8J20t4NkRFjs/dk6uem7zKQAKFS2R++OGusKCGV1VM/foUwxkA0/DaopzVrQp0OMpKWmOZUZJqQ==
+"@sanity/groq-store@^1.0.3":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-1.1.1.tgz#83b70c9b5cfeb76cc165fc041720c1a3ba8f362f"
+  integrity sha512-dPAuSo+hcHpnJ1jGLPSrc3CiztcBXslpjtEG3CWRO8qxGAWxySj29ngu9lC38I2acfvEGkk7ilRmJdDMbFYlWQ==
   dependencies:
     "@sanity/types" "^2.35.0"
     eventsource "^2.0.2"
     fast-deep-equal "^3.1.3"
     groq "^2.33.2"
-    groq-js "^1.1.0"
+    groq-js "^1.1.1"
     mendoza "^2.1.1"
     simple-get "^4.0.1"
     split2 "^4.1.0"
@@ -3399,10 +3399,10 @@ grapheme-splitter@^1.0.4:
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
-groq-js@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/groq-js/-/groq-js-1.1.0.tgz#15188fbbd543b282656682d9736459bf6a561b41"
-  integrity sha512-y87W921Jg9IAksKT9LFvDMrYG9KIcgUDyE4ccENV7K26CKvg1V0lOTJbE1UNI8DcSk/bvx/MWFI7j3iUkCe/gA==
+groq-js@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/groq-js/-/groq-js-1.1.1.tgz#2ab132bc8015b0dccfe21adc28490d79e22c6f0d"
+  integrity sha512-qzUfJepffRUcSwjU3x2m30SUrhbssAR1Qs1DUq9+xmT2yeyO/3Il8+AkML8Tc6twWv20bL/KQgE8ig2Sbixu0w==
 
 groq@^2.33.2:
   version "2.33.2"
@@ -5295,13 +5295,13 @@ neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-next-sanity@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.2.tgz#2742d7929c57b30c361453b6728a9af68f172309"
-  integrity sha512-Ym0JRgh2QcInYo6K8Gq+lrRSykf5fhkbpOnUDPPQ/0/uyvTzOn/X40NudrqjFlasExJ04TdOPmILRpIVmKq9Dg==
+next-sanity@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.9.tgz#8ae6a63c77035fc7afa7567eb7794c1ff801106f"
+  integrity sha512-Iga8oF8+/sIpk3MJ5DFSDWq5ItOmsOUz0ytNksfp9g1k6aEOtLvT2eQ/vZ1WIxsnZj1tRv8LhAwPewxfM41Krw==
   dependencies:
     "@sanity/client" "^3.4.1"
-    "@sanity/groq-store" "^1.0.2"
+    "@sanity/groq-store" "^1.0.3"
     groq "^2.33.2"
 
 next-seo@^5.13.0:
