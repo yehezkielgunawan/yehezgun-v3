@@ -6,6 +6,11 @@ import AboutMe from "@/pages/aboutme";
 import Articles from "@/pages/articles";
 import Projects from "@/pages/projects";
 
+// mock useRouter
+jest.mock("next/router", () => ({
+  useRouter: jest.fn(),
+}));
+
 test("Render Home page successfully", () => {
   render(<Home featuredProjects={[]} />);
 });
