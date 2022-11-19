@@ -23,7 +23,7 @@
     "@tailwindcss/forms": "^0.4.1",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.2.1",
-    "next": "^13.0.0",
+    "next": "^13.0.4",
     "next-sanity": "^1.1.0",
     "next-seo": "^5.13.0",
     "next-themes": "^0.2.1",
