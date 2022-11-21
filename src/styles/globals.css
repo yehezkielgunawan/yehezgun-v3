@@ -39,7 +39,7 @@
   }
 
   .link-underline {
-    @apply underline decoration-dotted underline-offset-2;
+    @apply underline decoration-dotted underline-offset-2 hover:no-underline;
     @apply transition duration-100 ease-linear;
     @apply hover:rounded-md hover:bg-primary-500 hover:text-errieblack-50 dark:hover:text-errieblack-800;
   }
