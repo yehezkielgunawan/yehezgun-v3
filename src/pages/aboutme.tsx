@@ -1,4 +1,4 @@
-import Tippy from "@tippyjs/react";
+import Tippy from "@tippyjs/react/headless";
 import { useTheme } from "next-themes";
 import React, { useState } from "react";
 import { MdOutlineAttachMoney } from "react-icons/md";
@@ -83,7 +83,18 @@ export default function AboutMe({
           <div className="my-4 flex flex-wrap items-center justify-between gap-4">
             <div className="inline-flex items-center gap-3">
               {contactList.map((contact, index) => (
-                <Tippy key={index} delay={100} content={contact.name} arrow>
+                <Tippy
+                  key={index}
+                  delay={100}
+                  render={(attrs) => (
+                    <div
+                      className="max-w-xs rounded-lg bg-lightsteel-100 p-2 shadow-lg dark:bg-errieblack-500"
+                      {...attrs}
+                    >
+                      <p>{contact.name}</p>
+                    </div>
+                  )}
+                >
                   <UnstyledLink href={contact.link_route}>
                     <contact.icon
                       size={32}
