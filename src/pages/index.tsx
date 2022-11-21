@@ -1,4 +1,4 @@
-import Tippy from "@tippyjs/react";
+import Tippy from "@tippyjs/react/headless";
 
 import BaseImage from "@/components/BaseImage";
 import ButtonLink from "@/components/buttons/ButtonLink";
@@ -98,7 +98,14 @@ export default function Home({
                   interactive
                   delay={100}
                   arrow
-                  content={<>{techStack.description}</>}
+                  render={(attrs) => (
+                    <div
+                      className="max-w-xs rounded-lg bg-lightsteel-100 p-2 shadow-lg dark:bg-errieblack-500"
+                      {...attrs}
+                    >
+                      {techStack.description}
+                    </div>
+                  )}
                 >
                   <button>
                     <techStack.icon className="text-4xl" />
