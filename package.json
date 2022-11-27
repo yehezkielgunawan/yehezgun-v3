@@ -18,7 +18,7 @@
   "dependencies": {
     "@fontsource/fira-sans": "^4.5.8",
     "@fontsource/pt-serif": "^4.5.8",
-    "@giscus/react": "^1.1.2",
+    "@giscus/react": "^2.2.4",
     "@headlessui/react": "^1.7.4",
     "@tailwindcss/forms": "^0.4.1",
     "@tippyjs/react": "^4.2.6",
