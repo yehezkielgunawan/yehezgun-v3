@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import { menuList } from "@/constants/MenuList";
+import useScroll from "@/hooks/useScroll";
 import clsxm from "@/lib/helpers/clsxm";
 
 import Button from "../buttons/Button";
@@ -14,6 +15,7 @@ const HeaderComponent = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
   const router = useRouter();
+  const { scrollDirection } = useScroll();
 
   const handleChangeTheme = () => {
     return setTheme(theme === "light" ? "dark" : "light");
@@ -24,8 +26,18 @@ const HeaderComponent = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-gainsboro-400 font-primary opacity-90 backdrop-blur-sm dark:bg-gainsboro-800">
-      <div className="h-1.5 bg-gradient-to-r from-lightsteel-600 via-charcoal-300 to-errieblack-300"></div>
+    <header
+      className={clsxm(
+        "fixed top-0 z-50 w-full transition duration-300",
+        scrollDirection === "Up" ? "translate-y-0" : "-translate-y-16",
+        "bg-gainsboro-400 font-primary opacity-90 backdrop-blur-sm dark:bg-gainsboro-800"
+      )}
+    >
+      <div
+        className={clsxm(
+          "h-1.5 bg-gradient-to-r from-lightsteel-600 via-charcoal-300 to-errieblack-300"
+        )}
+      ></div>
       <nav
         className={clsx(
           "layout flex items-center justify-between",
