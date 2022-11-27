@@ -101,8 +101,8 @@ export default function Post({ postData }: { postData: Article }) {
               className="w-full rounded-sm object-cover"
             />
           </figure>
-          <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap">
-            <div className="space-y-1">
+          <div className="flex flex-wrap items-center justify-between gap-2 md:flex-nowrap md:items-end">
+            <div className="max-w-xl space-y-1">
               <h3>{postData.title}</h3>
               <div className="flex items-center gap-3 pb-4">
                 <p className="text-sm italic">
