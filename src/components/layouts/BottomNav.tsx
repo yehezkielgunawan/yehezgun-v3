@@ -17,7 +17,7 @@ const BottomNav = () => {
         "rounded-lg bg-charcoal-300 py-2 opacity-90 shadow-sm shadow-lightsteel-600 dark:shadow-lightsteel-100",
         "backdrop-blur-sm dark:bg-errieblack-400 sm:hidden",
         "transition duration-300",
-        scrollDirection === "Up" ? "translate-y-0" : "translate-y-20"
+        scrollDirection === "Down" ? "translate-y-20" : "translate-y-0"
       )}
     >
       {menuList.map((menu, index) => (

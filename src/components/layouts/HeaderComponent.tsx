@@ -29,7 +29,7 @@ const HeaderComponent = () => {
     <header
       className={clsxm(
         "fixed top-0 z-50 w-full transition duration-300",
-        scrollDirection === "Up" ? "translate-y-0" : "-translate-y-16",
+        scrollDirection === "Down" ? "-translate-y-16" : "translate-y-0",
         "bg-gainsboro-400 font-primary opacity-90 backdrop-blur-sm dark:bg-gainsboro-800"
       )}
     >
