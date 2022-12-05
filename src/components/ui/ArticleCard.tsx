@@ -1,8 +1,10 @@
 import React from "react";
 
+import { EVENT_TYPE_BLOG } from "@/constants/track";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
+import { trackEvent } from "@/lib/helpers/trackEvent";
 
 import BaseImage from "../BaseImage";
 import UnstyledLink from "../links/UnstyledLink";
@@ -24,8 +26,19 @@ const ArticleCard = ({
   lang,
   publishedDate,
 }: ArticleCardProps) => {
+  const handleClickBlogCard = () => {
+    trackEvent({
+      eventName: "Open the selected article/blog",
+      eventData: { type: EVENT_TYPE_BLOG, slug: slug },
+    });
+  };
+
   return (
-    <UnstyledLink className="group" href={`/articles/${slug}`}>
+    <UnstyledLink
+      className="group"
+      href={`/articles/${slug}`}
+      onClick={handleClickBlogCard}
+    >
       <div
         className={clsxm(
           "rounded-lg border py-2 shadow-lg",
