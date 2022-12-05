@@ -6,8 +6,10 @@ import Layout from "@/components/layouts/Layout";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { techStackList } from "@/constants/techStacks";
+import { EVENT_TYPE_RESUME } from "@/constants/track";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
+import { trackEvent } from "@/lib/helpers/trackEvent";
 import { getFeaturedProjectList } from "@/lib/services/fetcher";
 import { urlFor } from "@/lib/services/sanity-config";
 import { SingleProjectItem } from "@/lib/services/types";
@@ -29,6 +31,14 @@ export default function Home({
   featuredProjects: SingleProjectItem[];
 }) {
   const isLoaded = useLoaded();
+
+  const handleClickResume = () => {
+    trackEvent({
+      eventName: "Open the resume.",
+      eventData: { type: EVENT_TYPE_RESUME },
+    });
+  };
+
   return (
     <Layout>
       <main className={clsxm(isLoaded && "fade-start")}>
@@ -75,6 +85,7 @@ export default function Home({
                   openNewTab={true}
                   variant="outline"
                   className={clsxm("border-2 border-dotted", "hover:ring-1")}
+                  onClick={handleClickResume}
                 >
                   Resume
                 </ButtonLink>

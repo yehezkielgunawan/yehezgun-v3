@@ -1,7 +1,9 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
+import { EVENT_TYPE_LINK } from "@/constants/track";
 import clsxm from "@/lib/helpers/clsxm";
+import { trackEvent } from "@/lib/helpers/trackEvent";
 
 import BaseImage from "../BaseImage";
 import UnstyledLink from "../links/UnstyledLink";
@@ -21,8 +23,14 @@ const ProjectCard = ({
   projectImg,
   madeUsing,
 }: ProjectCardProps) => {
+  const handleClickProject = () => {
+    trackEvent({
+      eventName: "Access the project",
+      eventData: { type: EVENT_TYPE_LINK, projectName: projectTitle },
+    });
+  };
   return (
-    <UnstyledLink href={url} className="group">
+    <UnstyledLink href={url} className="group" onClick={handleClickProject}>
       <div
         className={clsxm(
           "my-4 rounded-lg border-2 border-lightsteel-300 py-4 px-6 dark:border-lightsteel-500",

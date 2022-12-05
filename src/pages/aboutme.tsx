@@ -11,9 +11,11 @@ import NextImage from "@/components/NextImage";
 import ExperienceCard from "@/components/ui/ExperienceCard";
 import FundingModal from "@/components/ui/FundingModal";
 import { contactList } from "@/constants/contactList";
+import { EVENT_TYPE_LINK } from "@/constants/track";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDateMonth } from "@/lib/helpers/formatDate";
+import { trackEvent } from "@/lib/helpers/trackEvent";
 import { getExperienceList } from "@/lib/services/fetcher";
 import { ExperienceType } from "@/lib/services/types";
 
@@ -36,6 +38,13 @@ export default function AboutMe({
   const isLoaded = useLoaded();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { theme } = useTheme();
+
+  const handleClickContact = (contactName: string) => {
+    trackEvent({
+      eventName: "Click Profile Icon",
+      eventData: { type: EVENT_TYPE_LINK, contactName: contactName },
+    });
+  };
 
   return (
     <Layout>
@@ -95,7 +104,10 @@ export default function AboutMe({
                     </div>
                   )}
                 >
-                  <UnstyledLink href={contact.link_route}>
+                  <UnstyledLink
+                    href={contact.link_route}
+                    onClick={() => handleClickContact(contact.name)}
+                  >
                     <contact.icon
                       size={32}
                       className="hover:text-primary-600"
