@@ -14,9 +14,9 @@ const BottomNav = () => {
     <div
       className={clsxm(
         "fixed bottom-0.5 left-1/2 flex w-full -translate-x-1/2 items-center justify-around",
-        "rounded-lg bg-charcoal-300 py-2 opacity-90 shadow-sm shadow-lightsteel-600 dark:shadow-lightsteel-100",
-        "backdrop-blur-sm dark:bg-errieblack-400 sm:hidden",
-        "transition duration-300",
+        "rounded-lg bg-charcoal-200/50 py-2 shadow-sm shadow-lightsteel-600 dark:shadow-lightsteel-100",
+        "dark:bg-errieblack-400/50 sm:hidden",
+        "backdrop-blur-sm transition duration-300",
         scrollDirection === "Down" ? "translate-y-20" : "translate-y-0"
       )}
     >
