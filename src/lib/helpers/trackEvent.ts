@@ -1,3 +1,5 @@
+import { UMAMI_WEB_ID } from "@/constants/baseConstants";
+
 // Full Docs: https://umami.is/docs/tracker-functions
 type TrackEventArgsType = {
   eventName: string;
@@ -10,7 +12,7 @@ export const trackEvent = ({
   eventName,
   eventData,
   url,
-  webID,
+  webID = UMAMI_WEB_ID,
 }: TrackEventArgsType) => {
   if (window.umami && typeof window.umami.trackEvent === "function") {
     window.umami.trackEvent(
