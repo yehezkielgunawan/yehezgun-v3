@@ -43,6 +43,7 @@ export default function AboutMe({
     trackEvent({
       eventName: "Click Profile Icon",
       eventData: { type: EVENT_TYPE_LINK, contactName: contactName },
+      url: "/aboutme",
     });
   };
 

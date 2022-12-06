@@ -27,6 +27,7 @@ const ProjectCard = ({
     trackEvent({
       eventName: "Access the project",
       eventData: { type: EVENT_TYPE_LINK, projectName: projectTitle },
+      url: "/projects",
     });
   };
   return (

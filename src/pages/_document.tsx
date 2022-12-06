@@ -23,6 +23,7 @@ export default class MyDocument extends Document {
             defer
             data-website-id={UMAMI_WEB_ID}
             src={UMAMI_WEB_SRC}
+            data-cache="true"
           ></script>
         </Head>
         <body>

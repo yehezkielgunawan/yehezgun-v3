@@ -36,6 +36,7 @@ export default function Home({
     trackEvent({
       eventName: "Open the resume.",
       eventData: { type: EVENT_TYPE_RESUME },
+      url: "/resume",
     });
   };
 
