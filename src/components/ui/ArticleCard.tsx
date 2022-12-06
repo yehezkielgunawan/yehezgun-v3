@@ -30,6 +30,7 @@ const ArticleCard = ({
     trackEvent({
       eventName: "Open the selected article/blog",
       eventData: { type: EVENT_TYPE_BLOG, slug: slug },
+      url: slug,
     });
   };
 
