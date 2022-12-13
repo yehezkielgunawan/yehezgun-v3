@@ -104,9 +104,9 @@ export default function Home({
           <div className="block space-y-3" data-fade="1">
             <h3>Current Favorite Tech Stacks</h3>
             <div className="flex flex-wrap items-center gap-4">
-              {techStackList.map((techStack, index) => (
+              {techStackList.map((techStack) => (
                 <Tippy
-                  key={index}
+                  key={techStack.name}
                   interactive
                   delay={100}
                   arrow
@@ -130,9 +130,9 @@ export default function Home({
         <section className="space-y-3 pt-10" data-fade="2">
           <h3 className="py-2">Featured Projects</h3>
           <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <UnstyledLink
-                key={index}
+                key={project._id}
                 href={project.project_url}
                 className={clsxm(
                   "relative w-full overflow-hidden rounded-md",

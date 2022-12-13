@@ -92,9 +92,9 @@ export default function AboutMe({
           </div>
           <div className="my-4 flex flex-wrap items-center justify-between gap-4">
             <div className="inline-flex items-center gap-3">
-              {contactList.map((contact, index) => (
+              {contactList.map((contact) => (
                 <Tippy
-                  key={index}
+                  key={contact.name}
                   delay={100}
                   render={(attrs) => (
                     <div
@@ -131,9 +131,9 @@ export default function AboutMe({
           <div className="block">
             <h1 className="my-4">Work Experience</h1>
             <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {experienceList.map((experience, index) => (
+              {experienceList.map((experience) => (
                 <ExperienceCard
-                  key={index}
+                  key={experience._id}
                   experienceName={experience.experience_name}
                   companyName={experience.company}
                   duration={`${formatDateMonth(experience.start_date)} - ${
