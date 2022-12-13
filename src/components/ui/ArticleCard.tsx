@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { EVENT_TYPE_BLOG } from "@/constants/track";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
@@ -26,13 +26,13 @@ const ArticleCard = ({
   lang,
   publishedDate,
 }: ArticleCardProps) => {
-  const handleClickBlogCard = () => {
+  const handleClickBlogCard = useCallback(() => {
     trackEvent({
       eventName: "Open the selected article/blog",
       eventData: { type: EVENT_TYPE_BLOG, slug: slug },
       url: slug,
     });
-  };
+  }, [slug]);
 
   return (
     <UnstyledLink

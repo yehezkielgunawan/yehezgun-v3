@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import { menuList } from "@/constants/MenuList";
@@ -17,9 +17,9 @@ const HeaderComponent = () => {
   const router = useRouter();
   const { scrollDirection } = useScroll();
 
-  const handleChangeTheme = () => {
+  const handleChangeTheme = useCallback(() => {
     return setTheme(theme === "light" ? "dark" : "light");
-  };
+  }, [setTheme, theme]);
 
   useEffect(() => {
     setMounted(true);
@@ -71,7 +71,7 @@ const HeaderComponent = () => {
                 "rounded-full border-none",
                 "hover:rotate-45"
               )}
-              onClick={() => handleChangeTheme()}
+              onClick={handleChangeTheme}
             >
               {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
             </Button>

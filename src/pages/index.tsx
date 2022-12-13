@@ -1,4 +1,5 @@
 import Tippy from "@tippyjs/react/headless";
+import { useCallback } from "react";
 
 import BaseImage from "@/components/BaseImage";
 import ButtonLink from "@/components/buttons/ButtonLink";
@@ -32,13 +33,13 @@ export default function Home({
 }) {
   const isLoaded = useLoaded();
 
-  const handleClickResume = () => {
+  const handleClickResume = useCallback(() => {
     trackEvent({
       eventName: "Open the resume.",
       eventData: { type: EVENT_TYPE_RESUME },
       url: "/resume",
     });
-  };
+  }, []);
 
   return (
     <Layout>
