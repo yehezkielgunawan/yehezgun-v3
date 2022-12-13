@@ -122,7 +122,7 @@ export default function Articles({ articleList }: { articleList: Article[] }) {
           />
         </section>
         <section className="mt-8" data-fade="1">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article, index) => (
                 <ArticleCard

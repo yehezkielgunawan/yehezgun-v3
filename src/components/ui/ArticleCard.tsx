@@ -42,16 +42,16 @@ const ArticleCard = ({
     >
       <div
         className={clsxm(
-          "rounded-lg border py-2 shadow-lg",
+          "rounded-lg border shadow-lg",
           "h-full w-full",
           "border-lightsteel-300 bg-gainsboro-100 dark:border-lightsteel-600 dark:bg-charcoal-500",
-          "transition duration-100 ease-in hover:scale-105",
+          "transition duration-100 ease-in",
           "hover:shadow-errieblack-200 dark:hover:shadow-lightsteel-400"
         )}
       >
-        <figure className="flex w-full items-center justify-center px-4">
+        <figure className="flex w-full items-center justify-center overflow-hidden">
           <BaseImage
-            className="h-72 w-80 object-contain md:w-96"
+            className="h-56 w-96 rounded-t-lg object-cover group-hover:scale-105"
             src={imageUrl}
             alt="article-image"
           />
@@ -72,7 +72,7 @@ const ArticleCard = ({
               {category}
             </span>
           </p>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
         </div>
       </div>
     </UnstyledLink>
