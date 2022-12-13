@@ -94,9 +94,9 @@ export default function Articles({ articleList }: { articleList: Article[] }) {
               onChange={filterByLanguage}
             />
             <div className="flex flex-wrap items-center gap-3">
-              {categoryList.map((category, index) => (
+              {categoryList.map((category) => (
                 <p
-                  key={index}
+                  key={category}
                   className={clsxm(
                     "rounded-md border border-lightsteel-400 py-1 px-2",
                     "cursor-pointer bg-gainsboro-300 dark:bg-gainsboro-800",
@@ -122,11 +122,11 @@ export default function Articles({ articleList }: { articleList: Article[] }) {
           />
         </section>
         <section className="mt-8" data-fade="1">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
             {filteredArticles.length > 0 ? (
-              filteredArticles.map((article, index) => (
+              filteredArticles.map((article) => (
                 <ArticleCard
-                  key={index}
+                  key={article._id}
                   slug={article.slug}
                   imageUrl={urlFor(article.cover).url()}
                   title={article.title}

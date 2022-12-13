@@ -49,9 +49,9 @@ export default function Projects({
           <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {projectList
               .filter((project) => project.is_featured === true)
-              .map((project, index) => (
+              .map((project) => (
                 <ProjectCard
-                  key={index}
+                  key={project._id}
                   projectTitle={project.project_name}
                   projectDesc={project.project_desc}
                   projectImg={urlFor(project.project_logo).url()}
@@ -66,9 +66,9 @@ export default function Projects({
           <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {projectList
               .filter((project) => !project.is_featured)
-              .map((singleProject, index) => (
+              .map((singleProject) => (
                 <ProjectCard
-                  key={index}
+                  key={singleProject._id}
                   projectTitle={singleProject.project_name}
                   projectDesc={singleProject.project_desc}
                   projectImg={urlFor(singleProject.project_logo).url()}

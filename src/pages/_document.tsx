@@ -25,6 +25,7 @@ export default class MyDocument extends Document {
             src={UMAMI_WEB_SRC}
             data-cache="true"
           ></script>
+          <script src="https://app.embed.im/snow.js" defer></script>
         </Head>
         <body>
           <Main />
