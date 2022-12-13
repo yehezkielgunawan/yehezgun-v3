@@ -30,7 +30,7 @@ const HeaderComponent = () => {
       className={clsxm(
         "fixed top-0 z-50 w-full transition duration-300",
         scrollDirection === "Down" ? "-translate-y-16" : "translate-y-0",
-        "bg-gainsboro-400/60 font-primary backdrop-blur-sm dark:bg-gainsboro-800/60"
+        "bg-gainsboro-400/70 font-primary backdrop-blur-sm dark:bg-gainsboro-800/70"
       )}
     >
       <div
@@ -41,7 +41,7 @@ const HeaderComponent = () => {
       <nav
         className={clsx(
           "layout flex items-center justify-between",
-          "mx-auto h-14 max-w-4xl px-4 py-0.5 md:px-1"
+          "mx-auto h-14 max-w-4xl px-4 py-0.5 lg:px-2"
         )}
       >
         <UnstyledLink href="/" openNewTab={false} className="font-bold">
@@ -55,7 +55,8 @@ const HeaderComponent = () => {
               className={clsxm(
                 "hidden font-semibold hover:underline sm:inline-flex",
                 "p-1 hover:rounded-md hover:bg-primary-400 dark:hover:bg-primary-600",
-                router?.pathname === menu.route && "font-black underline"
+                router?.pathname === menu.route &&
+                  "rounded-lg bg-primary-300 font-black underline dark:bg-primary-500"
               )}
             >
               {menu.menu_name}
