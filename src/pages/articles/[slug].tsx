@@ -1,7 +1,7 @@
 /* eslint-disable react/no-children-prop */
 import Giscus, { GiscusProps } from "@giscus/react";
 import { useTheme } from "next-themes";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { BsTranslate } from "react-icons/bs";
 import { FaCheck, FaCopy, FaTwitter } from "react-icons/fa";
 import { MdOutlineAttachMoney } from "react-icons/md";
@@ -20,10 +20,12 @@ import MetaHead from "@/components/layouts/MetaHead";
 import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import FundingModal from "@/components/ui/FundingModal";
+import { EVENT_TYPE_FUNDING } from "@/constants/track";
 import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDate } from "@/lib/helpers/formatDate";
+import { trackEvent } from "@/lib/helpers/trackEvent";
 import { getArticleData, getArticles } from "@/lib/services/fetcher";
 import { urlFor } from "@/lib/services/sanity-config";
 import { Article } from "@/lib/services/types";
@@ -57,7 +59,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }: { postData: Article }) {
-  const [isModalOpen, setIsMpdalOpen] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const { theme } = useTheme();
   const handleCopyLink = () => {
@@ -72,6 +74,19 @@ export default function Post({ postData }: { postData: Article }) {
   const isLoaded = useLoaded();
   const twitterCaption = `${postData.title} by @YehezGun`;
   const twitterUrl = typeof window !== "undefined" ? window.location.href : "";
+
+  const trackClickFunding = useCallback(() => {
+    trackEvent({
+      eventName: "Open Funding Dialog",
+      eventData: { type: EVENT_TYPE_FUNDING, slug: postData.slug },
+      url: postData.slug,
+    });
+  }, [postData.slug]);
+
+  const handleFundingClick = () => {
+    setIsModalOpen(true);
+    trackClickFunding();
+  };
 
   useEffect(() => {
     if (theme === "light") {
@@ -90,7 +105,7 @@ export default function Post({ postData }: { postData: Article }) {
       />
       <FundingModal
         isOpen={isModalOpen}
-        handleClose={() => setIsMpdalOpen(false)}
+        handleClose={() => setIsModalOpen(false)}
       />
       <main className={clsxm(isLoaded && "fade-start")}>
         <section className="space-y-2" data-fade="0">
@@ -128,7 +143,7 @@ export default function Post({ postData }: { postData: Article }) {
                     {postData.lang === "english" ? "Bahasa" : "English"}
                   </ButtonLink>
                 )}
-                <Button variant="dark" onClick={() => setIsMpdalOpen(true)}>
+                <Button variant="dark" onClick={handleFundingClick}>
                   <MdOutlineAttachMoney size={24} /> Support Me
                 </Button>
               </div>

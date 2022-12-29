@@ -1,6 +1,6 @@
 import Tippy from "@tippyjs/react/headless";
 import { useTheme } from "next-themes";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { MdOutlineAttachMoney } from "react-icons/md";
 
 import Button from "@/components/buttons/Button";
@@ -11,7 +11,7 @@ import NextImage from "@/components/NextImage";
 import ExperienceCard from "@/components/ui/ExperienceCard";
 import FundingModal from "@/components/ui/FundingModal";
 import { contactList } from "@/constants/contactList";
-import { EVENT_TYPE_LINK } from "@/constants/track";
+import { EVENT_TYPE_FUNDING, EVENT_TYPE_LINK } from "@/constants/track";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
 import { formatDateMonth } from "@/lib/helpers/formatDate";
@@ -45,6 +45,19 @@ export default function AboutMe({
       eventData: { type: EVENT_TYPE_LINK, contactName: contactName },
       url: "/aboutme",
     });
+  };
+
+  const trackClickFunding = useCallback(() => {
+    trackEvent({
+      eventName: "Open Funding Dialog",
+      eventData: { type: EVENT_TYPE_FUNDING },
+      url: "/aboutme",
+    });
+  }, []);
+
+  const handleFundingClick = () => {
+    setIsOpen(true);
+    trackClickFunding;
   };
 
   return (
@@ -120,7 +133,7 @@ export default function AboutMe({
             <Button
               variant={theme === "dark" ? "light" : "dark"}
               className="w-full justify-center gap-2 md:w-auto"
-              onClick={() => setIsOpen(true)}
+              onClick={handleFundingClick}
             >
               <MdOutlineAttachMoney size={24} /> Support Me
             </Button>
