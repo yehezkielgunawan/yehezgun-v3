@@ -17,7 +17,6 @@ export const sanityConfig = {
 export const previewClient = createClient({
   ...sanityConfig,
   useCdn: false,
-  token: process.env.SANITY_API_TOKEN,
 });
 
 export const sanityClient = createClient(sanityConfig);
