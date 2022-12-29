@@ -57,7 +57,7 @@ export default function AboutMe({
 
   const handleFundingClick = () => {
     setIsOpen(true);
-    trackClickFunding;
+    trackClickFunding();
   };
 
   return (
