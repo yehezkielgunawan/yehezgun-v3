@@ -2,11 +2,13 @@
 import imageUrlBuilder from "@sanity/image-url";
 import { createClient } from "next-sanity";
 
+import { SANITY_DATASET, SANITY_PROJECTID } from "@/constants/baseConstants";
+
 import { SanityImage } from "./types";
 
 export const sanityConfig = {
-  dataset: "production",
-  projectId: "xyi8gzmb",
+  dataset: SANITY_DATASET,
+  projectId: SANITY_PROJECTID,
   useCdn: true,
   apiVersion: "2022-10-19",
 };

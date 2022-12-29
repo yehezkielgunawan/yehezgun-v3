@@ -11,6 +11,11 @@ jest.mock("next/router", () => ({
   useRouter: jest.fn(),
 }));
 
+// mock next-sanity
+jest.mock("next-sanity", () => ({
+  createClient: jest.fn(),
+}));
+
 test("Render Home page successfully", () => {
   render(<Home featuredProjects={[]} />);
 });

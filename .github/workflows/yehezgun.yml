@@ -41,3 +41,5 @@ jobs:
         env:
           UMAMI_WEB_ID: ${{secrets.UMAMI_WEB_ID}}
           UMAMI_SRC: ${{secrets.UMAMI_SRC}}
+          SANITY_DATASET: ${{secrets.SANITY_DATASET}}
+          SANITY_PROJECTID: ${{secrets.SANITY_PROJECT_ID}}
