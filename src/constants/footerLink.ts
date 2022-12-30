@@ -13,7 +13,7 @@ export const footerLinks: Array<FooterLinkProps> = [
     labelName: "Personal Docs",
   },
   {
-    url: "https://umami.yehezgun.com/share/JAFbp7LG/yehezgun",
+    url: "https://umami-v2.yehezgun.com/share/vD8Bwpq4/yehezgun",
     labelName: "Analytics",
   },
   {
