@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.2.0...v0.2.1) (2022-12-31)
+
+### Features
+
+- **\_document:** :sparkles: add snow effect ([c87078e](https://github.com/yehezkielgunawan/yehezgun-v3/commit/c87078ef8328e03f4b9e2ddeeffd87f542e39e0f))
+- :sparkles: implement track event umami ([b6e313d](https://github.com/yehezkielgunawan/yehezgun-v3/commit/b6e313d2a6bd2a9ad75af5c88f8738bf9b7c0cb1))
+- **aboutme, slug:** :sparkles: track funding modal ([bfda91c](https://github.com/yehezkielgunawan/yehezgun-v3/commit/bfda91c2ff5544a855c03027650401eb3f4a19c8))
+- **package.json:** :sparkles: install umami data type ([99a99c8](https://github.com/yehezkielgunawan/yehezgun-v3/commit/99a99c8f762abe1f1a48d2782fbe5c6826d399b2))
+- **track, trackEvent.ts:** :sparkles: add event type ([c5f831e](https://github.com/yehezkielgunawan/yehezgun-v3/commit/c5f831e0aa5eefbf2304e1d1e7f35fc015a1b91a))
+- **trackEvent, track.ts:** :sparkles: create base helper function to track using umami ([777423d](https://github.com/yehezkielgunawan/yehezgun-v3/commit/777423df1a4e50b578842be304942c04134e28a2))
+- **trackEvent.ts:** :bug: add web_id ([4e0441b](https://github.com/yehezkielgunawan/yehezgun-v3/commit/4e0441bcf61b7dba322f486f75c1d1cc55daaee8))
+- **useScroll.tsx:** :sparkles: create hooks to detect scroll behavior ([8b853ae](https://github.com/yehezkielgunawan/yehezgun-v3/commit/8b853aeff1f509987531a8a6b44bc8c906babb26))
+
+### Bug Fixes
+
+- **\_document:** :bug: add data-cache for the tracker ([d145a83](https://github.com/yehezkielgunawan/yehezgun-v3/commit/d145a839ac4ff9818b2ebddfe5d808daa5512b78))
+- **\_document.tsx:** :bug: use next/script for tracker ([24d1a26](https://github.com/yehezkielgunawan/yehezgun-v3/commit/24d1a2673b11582171f90c4228fcd04a0fc25141))
+- :bug: add url for tracking purpose ([01a9278](https://github.com/yehezkielgunawan/yehezgun-v3/commit/01a9278d4a8300148c36fc5dbe5636b6f659fa59))
+- :bug: implement useCallback for every function ([574bbce](https://github.com/yehezkielgunawan/yehezgun-v3/commit/574bbcee120b63f2fea86de801241778e1ff2c5a))
+- :bug: use id of the array item when using looping function ([8fc75da](https://github.com/yehezkielgunawan/yehezgun-v3/commit/8fc75da8f91faeebf55cfdc6a9d5e149518408ea))
+- **aboutme:** :bug: fix tracking snippet ([12c3e91](https://github.com/yehezkielgunawan/yehezgun-v3/commit/12c3e911c4217774598fcd2a70ef55c69b11fce4))
+- **BottomNav, HeaderComponent:** :bug: quick fix on scroll behavior ([e646feb](https://github.com/yehezkielgunawan/yehezgun-v3/commit/e646febe55775599740ad1d7216dfe5490aa1e68))
+- **footerLink.ts:** :bug: update umami link ([0a6f2c2](https://github.com/yehezkielgunawan/yehezgun-v3/commit/0a6f2c24a4338afba69868aa88c7513e32d6ae25))
+- **next.config:** :bug: fix variable typo ([fd543ba](https://github.com/yehezkielgunawan/yehezgun-v3/commit/fd543ba140d5d8b439fad77003b924ce0165dae9))
+- **slug.tsx:** :bug: update import statement ([9c42a4c](https://github.com/yehezkielgunawan/yehezgun-v3/commit/9c42a4c1764ab0434bf5ff9e8493f511695b4d30))
+- **slug.tsx:** :lipstick: quick fix upper slug flex items ([0a0167a](https://github.com/yehezkielgunawan/yehezgun-v3/commit/0a0167a3e84bf3913cf34c91f21392eb89485fad))
+
 ## [0.2.0](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.1.3...v0.2.0) (2022-11-05)
 
 ### Bug Fixes
