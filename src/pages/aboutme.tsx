@@ -41,7 +41,7 @@ export default function AboutMe({
 
   const handleClickContact = (contactName: string) => {
     trackEvent({
-      eventName: "Click Profile Icon",
+      eventName: `Click profile icon: ${contactName}`,
       eventData: { type: EVENT_TYPE_LINK, contactName: contactName },
       url: "/aboutme",
     });
@@ -49,7 +49,7 @@ export default function AboutMe({
 
   const trackClickFunding = useCallback(() => {
     trackEvent({
-      eventName: "Open Funding Dialog",
+      eventName: "Open funding dialog modal",
       eventData: { type: EVENT_TYPE_FUNDING },
       url: "/aboutme",
     });
