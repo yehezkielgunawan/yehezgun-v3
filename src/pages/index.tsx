@@ -7,7 +7,7 @@ import Layout from "@/components/layouts/Layout";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import NextImage from "@/components/NextImage";
 import { techStackList } from "@/constants/techStacks";
-import { EVENT_TYPE_RESUME } from "@/constants/track";
+import { EVENT_TYPE_LINK, EVENT_TYPE_RESUME } from "@/constants/track";
 import useLoaded from "@/hooks/useLoaded";
 import clsxm from "@/lib/helpers/clsxm";
 import { trackEvent } from "@/lib/helpers/trackEvent";
@@ -38,6 +38,14 @@ export default function Home({
       eventName: "Open the resume.",
       eventData: { type: EVENT_TYPE_RESUME },
       url: "/resume",
+    });
+  }, []);
+
+  const trackFeaturedProject = useCallback((projectName: string) => {
+    trackEvent({
+      eventName: "Access the featured project",
+      eventData: { type: EVENT_TYPE_LINK, projectName: projectName },
+      url: "/",
     });
   }, []);
 
@@ -141,6 +149,7 @@ export default function Home({
                   "dark:hover:border-zinc-100 dark:hover:ring-zinc-100",
                   "duration-200 ease-in hover:-translate-y-1"
                 )}
+                onClick={() => trackFeaturedProject(project.project_name)}
               >
                 <BaseImage
                   alt="featured-project"
