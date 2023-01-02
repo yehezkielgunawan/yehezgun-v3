@@ -20,7 +20,7 @@ import MetaHead from "@/components/layouts/MetaHead";
 import ArrowLink from "@/components/links/ArrowLink";
 import { newTheme } from "@/components/markdown/newTheme";
 import FundingModal from "@/components/ui/FundingModal";
-import { EVENT_TYPE_FUNDING } from "@/constants/track";
+import { EVENT_TYPE_BLOG, EVENT_TYPE_FUNDING } from "@/constants/track";
 import useLoaded from "@/hooks/useLoaded";
 import { categoryColorList } from "@/lib/helpers/categoryColor";
 import clsxm from "@/lib/helpers/clsxm";
@@ -64,6 +64,7 @@ export default function Post({ postData }: { postData: Article }) {
   const { theme } = useTheme();
   const handleCopyLink = () => {
     setIsCopied(true);
+    trackCopyLinkTwitter("Copy");
     navigator.clipboard.writeText(window.location.href);
     setTimeout(() => {
       setIsCopied(false);
@@ -77,11 +78,23 @@ export default function Post({ postData }: { postData: Article }) {
 
   const trackClickFunding = useCallback(() => {
     trackEvent({
-      eventName: "Open Funding Dialog",
+      eventName: "Open funding dialog modal",
       eventData: { type: EVENT_TYPE_FUNDING, slug: postData.slug },
       url: postData.slug,
     });
   }, [postData.slug]);
+
+  const trackCopyLinkTwitter = useCallback(
+    (shareTo: "Twitter" | "Copy") => {
+      trackEvent({
+        eventName:
+          shareTo === "Twitter" ? "Share to Twitter" : "Copy article link",
+        eventData: { type: EVENT_TYPE_BLOG, slug: postData.slug },
+        url: postData.slug,
+      });
+    },
+    [postData.slug]
+  );
 
   const handleFundingClick = () => {
     setIsModalOpen(true);
@@ -180,6 +193,7 @@ export default function Post({ postData }: { postData: Article }) {
                   "hover:bg-sky-100 dark:hover:bg-sky-700",
                   "gap-2"
                 )}
+                onClick={() => trackCopyLinkTwitter("Twitter")}
               >
                 <FaTwitter size={20} /> Share on Twitter
               </ButtonLink>
