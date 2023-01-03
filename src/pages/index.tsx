@@ -35,7 +35,7 @@ export default function Home({
 
   const handleClickResume = useCallback(() => {
     trackEvent({
-      eventName: "Open the resume.",
+      eventName: "Open the resume",
       eventData: { type: EVENT_TYPE_RESUME },
       url: "/resume",
     });
@@ -43,7 +43,7 @@ export default function Home({
 
   const trackFeaturedProject = useCallback((projectName: string) => {
     trackEvent({
-      eventName: "Access the featured project",
+      eventName: `Access the featured project : ${projectName}`,
       eventData: { type: EVENT_TYPE_LINK, projectName: projectName },
       url: "/",
     });

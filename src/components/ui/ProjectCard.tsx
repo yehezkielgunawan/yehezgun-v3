@@ -25,7 +25,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   const handleClickProject = () => {
     trackEvent({
-      eventName: "Access the project",
+      eventName: `Access the project: ${projectTitle}`,
       eventData: { type: EVENT_TYPE_LINK, projectName: projectTitle },
       url: "/projects",
     });
