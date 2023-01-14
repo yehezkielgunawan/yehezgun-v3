@@ -31,7 +31,11 @@ const ProjectCard = ({
     });
   };
   return (
-    <UnstyledLink href={url} className="group" onClick={handleClickProject}>
+    <UnstyledLink
+      href={url}
+      className="group"
+      onClickCapture={handleClickProject}
+    >
       <div
         className={clsxm(
           "my-4 rounded-lg border-2 border-lightsteel-300 py-4 px-6 dark:border-lightsteel-500",

@@ -120,7 +120,7 @@ export default function AboutMe({
                 >
                   <UnstyledLink
                     href={contact.link_route}
-                    onClick={() => handleClickContact(contact.name)}
+                    onClickCapture={() => handleClickContact(contact.name)}
                   >
                     <contact.icon
                       size={32}
@@ -133,7 +133,7 @@ export default function AboutMe({
             <Button
               variant={theme === "dark" ? "light" : "dark"}
               className="w-full justify-center gap-2 md:w-auto"
-              onClick={handleFundingClick}
+              onClickCapture={handleFundingClick}
             >
               <MdOutlineAttachMoney size={24} /> Support Me
             </Button>

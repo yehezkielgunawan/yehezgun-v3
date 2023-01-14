@@ -38,7 +38,7 @@ const ArticleCard = ({
     <UnstyledLink
       className="group"
       href={`/articles/${slug}`}
-      onClick={handleClickBlogCard}
+      onClickCapture={handleClickBlogCard}
     >
       <div
         className={clsxm(

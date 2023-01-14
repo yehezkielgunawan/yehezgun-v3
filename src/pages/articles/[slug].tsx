@@ -156,7 +156,7 @@ export default function Post({ postData }: { postData: Article }) {
                     {postData.lang === "english" ? "Bahasa" : "English"}
                   </ButtonLink>
                 )}
-                <Button variant="dark" onClick={handleFundingClick}>
+                <Button variant="dark" onClickCapture={handleFundingClick}>
                   <MdOutlineAttachMoney size={24} /> Support Me
                 </Button>
               </div>
@@ -193,7 +193,7 @@ export default function Post({ postData }: { postData: Article }) {
                   "hover:bg-sky-100 dark:hover:bg-sky-700",
                   "gap-2"
                 )}
-                onClick={() => trackCopyLinkTwitter("Twitter")}
+                onClickCapture={() => trackCopyLinkTwitter("Twitter")}
               >
                 <FaTwitter size={20} /> Share on Twitter
               </ButtonLink>
