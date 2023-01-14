@@ -149,7 +149,9 @@ export default function Home({
                   "dark:hover:border-zinc-100 dark:hover:ring-zinc-100",
                   "duration-200 ease-in hover:-translate-y-1"
                 )}
-                onClick={() => trackFeaturedProject(project.project_name)}
+                onClickCapture={() =>
+                  trackFeaturedProject(project.project_name)
+                }
               >
                 <BaseImage
                   alt="featured-project"
