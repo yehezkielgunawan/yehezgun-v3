@@ -19,7 +19,7 @@
     "@fontsource/fira-sans": "^4.5.10",
     "@fontsource/pt-serif": "^4.5.11",
     "@giscus/react": "^2.2.4",
-    "@headlessui/react": "^1.7.4",
+    "@headlessui/react": "^1.7.9",
     "@tailwindcss/forms": "^0.4.1",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.2.1",
