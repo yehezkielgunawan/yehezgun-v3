@@ -520,12 +520,12 @@
   resolved "https://registry.yarnpkg.com/@fontsource/pt-serif/-/pt-serif-4.5.11.tgz#3758bddeea58fd95d0da8544841c310514ceb8ab"
   integrity sha512-/j/JFq8nIpd0Y01CiUzLmzSTaFtEAVMNLDD+jv5HTxA7McRddlkuovE90jbI06BaKsc6Z8BNbxUKPTeC17IKLg==
 
-"@giscus/react@^2.2.6":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-2.2.6.tgz#893216bf06de71b45280d131a9df6975c22c97f1"
-  integrity sha512-qGjikDm7euLOCfMPn500d7F3UIl/qI55/dWF4ALC5Fo/7i5qktKCAwy6/zop93PjP0hJL6mi54K6x36SyvaLyQ==
+"@giscus/react@^2.2.8":
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-2.2.8.tgz#ae02463a0bb27d1decc11e756f41182cc0797288"
+  integrity sha512-dPk3GMmsx5hHXXi8Xye7aen+lsZ/PR4I7AwTXKxKtAvxXsH5XAVB/bI6uWr4BrLEH3plZMzgOlVUIPOFJsHQCw==
   dependencies:
-    giscus "^1.2.6"
+    giscus "^1.2.8"
 
 "@headlessui/react@^1.7.4":
   version "1.7.4"
@@ -3393,12 +3393,12 @@ get-tsconfig@^4.2.0:
   resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.2.0.tgz#ff368dd7104dab47bf923404eb93838245c66543"
   integrity sha512-X8u8fREiYOE6S8hLbq99PeykTDoLVnxvF4DjWKJmz9xy2nNRdUcV8ZN9tniJFeKyTU3qnC9lL8n4Chd6LmVKHg==
 
-giscus@^1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/giscus/-/giscus-1.2.6.tgz#0ccdf3bd4e936da95d2e2708446850c1e5ec4496"
-  integrity sha512-VqMWmCdlUk9krX2M3oMgn9/Y6XEbRXRHtfhNTuRn/AdeGOeko54OFEIsizQ/nYWymuUNGZR48KGptCtYL77rtA==
+giscus@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/giscus/-/giscus-1.2.8.tgz#557964e1cb5e46c4b0abf69ed0b974c0718b8142"
+  integrity sha512-pufrgQYt1W+4ztiWp/PilLPN8NdyKvpbQ8jNqbAa1g84t6qqyevXHfkOYCi4x4d+y191vJAUc6seL1Dq74yUeA==
   dependencies:
-    lit "^2.5.0"
+    lit "^2.6.1"
 
 git-raw-commits@^2.0.0, git-raw-commits@^2.0.8:
   version "2.0.11"
@@ -4842,7 +4842,7 @@ lit-html@^2.6.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.5.0:
+lit@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/lit/-/lit-2.6.1.tgz#5951a2098b9bde5b328c73b55c15fdc0eefd96d7"
   integrity sha512-DT87LD64f8acR7uVp7kZfhLRrHkfC/N4BVzAtnw9Yg8087mbBJ//qedwdwX0kzDbxgPccWRW6mFwGbRQIxy0pw==
