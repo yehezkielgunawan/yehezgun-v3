@@ -26,7 +26,7 @@ const BottomNav = () => {
           href={menu.route}
           className={clsxm(
             "flex flex-col items-center justify-center",
-            "hover:rounded-md hover:border hover:border-primary-200",
+            "hover:rounded-md hover:outline hover:outline-primary-200 dark:hover:outline-lightsteel-200",
             "focus:border-none"
           )}
         >

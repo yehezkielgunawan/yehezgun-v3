@@ -145,8 +145,8 @@ export default function Home({
                 href={project.project_url}
                 className={clsxm(
                   "relative w-full overflow-hidden rounded-md",
-                  "hover:border-zinc-400 hover:ring hover:ring-zinc-400",
-                  "dark:hover:border-zinc-100 dark:hover:ring-zinc-100",
+                  "hover:outline hover:outline-zinc-400",
+                  "dark:hover:outline-zinc-100",
                   "duration-200 ease-in hover:-translate-y-1"
                 )}
                 onClickCapture={() =>

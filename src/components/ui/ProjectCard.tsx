@@ -40,8 +40,7 @@ const ProjectCard = ({
         className={clsxm(
           "my-4 rounded-lg border-2 border-lightsteel-300 py-4 px-6 dark:border-lightsteel-500",
           "duration-300 ease-in group-hover:-translate-y-1",
-          "group-hover:border-lightsteel-300",
-          "group-hover:ring group-hover:ring-lightsteel-300",
+          "group-hover:outline group-hover:outline-lightsteel-300",
           "bg-gainsboro-100 dark:bg-charcoal-500",
           "h-full",
           "flex flex-col justify-between"
