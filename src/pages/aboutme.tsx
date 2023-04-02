@@ -85,9 +85,10 @@ export default function AboutMe({
               </p>
               <p className="text-xs md:text-sm">
                 Besides of programming things, I like to explore some new tech
-                stuff, playing games sometimes, and watching animes. Oh by the
-                way, if you don&apos;t mind, you can support me through Ko-fi or
-                Saweria to keep this site alive and maintained.
+                stuff, playing games sometimes, do streaming in my Youtube
+                channel, and watching animes. Oh by the way, if you don&apos;t
+                mind, you can support me through Ko-fi or Trakteer to keep this
+                site alive and maintained.
               </p>
               <p className="text-[10px] italic md:text-xs">
                 Fun Fact: Actually, I&apos;m still struggling with native CSS
