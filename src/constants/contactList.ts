@@ -1,4 +1,10 @@
-import { FaDev, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaDev,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import { FcTemplate } from "react-icons/fc";
 import { IconType } from "react-icons/lib";
 import { MdEmail } from "react-icons/md";
@@ -15,6 +21,11 @@ export const contactList: Array<SingleContact> = [
     name: "Linkedin",
     icon: FaLinkedin,
     link_route: "https://www.linkedin.com/in/yehezkiel-gunawan-595128138/",
+  },
+  {
+    name: "Youtube",
+    icon: FaYoutube,
+    link_route: "https://www.youtube.com/@yehezkielgunawan28/streams",
   },
   {
     name: "Twitter",
