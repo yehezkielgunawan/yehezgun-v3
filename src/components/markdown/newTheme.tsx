@@ -14,7 +14,7 @@ import UnstyledLink from "../links/UnstyledLink";
 export const newTheme = {
   h1: (props: React.ComponentPropsWithRef<"h1">) => {
     return (
-      <h1 id={props.id} className="mt-16 mb-4 scroll-mt-16 hover:underline">
+      <h1 id={props.id} className="mb-4 mt-16 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h1>
     );
@@ -28,14 +28,14 @@ export const newTheme = {
   },
   h3: (props: React.ComponentPropsWithRef<"h3">) => {
     return (
-      <h3 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
+      <h3 id={props.id} className="mb-4 mt-12 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>{props.children}</UnstyledLink>
       </h3>
     );
   },
   h4: (props: React.ComponentPropsWithRef<"h4">) => {
     return (
-      <h4 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
+      <h4 id={props.id} className="mb-4 mt-12 scroll-mt-16 hover:underline">
         <UnstyledLink href={`#${props.id}`}>
           <h4>{props.children}</h4>
         </UnstyledLink>
@@ -44,7 +44,7 @@ export const newTheme = {
   },
   h5: (props: React.ComponentPropsWithRef<"h5">) => {
     return (
-      <h5 id={props.id} className="mt-12 mb-4 scroll-mt-16 hover:underline">
+      <h5 id={props.id} className="mb-4 mt-12 scroll-mt-16 hover:underline">
         <UnstyledLink href={`${props.id}`}>
           <h5>{props.children}</h5>
         </UnstyledLink>
@@ -83,7 +83,7 @@ export const newTheme = {
     return (
       <blockquote
         className={clsxm(
-          "rounded-md bg-lightsteel-200 py-1 px-2 dark:bg-lightsteel-800",
+          "rounded-md bg-lightsteel-200 px-2 py-1 dark:bg-lightsteel-800",
           "text-black dark:text-white",
           "border-l-8 border-primary-400 dark:border-primary-300",
           "shadow-md dark:shadow-gray-500",
@@ -124,7 +124,7 @@ export const newTheme = {
         </SyntaxHighlighter>
         <Button
           className={clsxm(
-            "absolute top-0 right-0 -translate-y-1/2",
+            "absolute right-0 top-0 -translate-y-1/2",
             "border-none bg-teal-500 hover:bg-teal-400 active:bg-teal-600"
           )}
           onClick={() => {

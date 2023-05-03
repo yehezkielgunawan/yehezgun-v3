@@ -10,7 +10,7 @@ const FooterComponent = () => {
   return (
     <footer
       className={clsxm(
-        "mx-auto max-w-4xl border-t border-charcoal-200 pt-12 pb-32 dark:border-charcoal-100 md:pb-12",
+        "mx-auto max-w-4xl border-t border-charcoal-200 pb-32 pt-12 dark:border-charcoal-100 md:pb-12",
         "px-4 lg:px-2",
         "space-y-8 font-primary"
       )}
