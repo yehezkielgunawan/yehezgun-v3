@@ -55,8 +55,8 @@
     "@types/testing-library__jest-dom": "^5.14.5",
     "@types/testing-library__react": "^10.2.0",
     "@types/umami": "^0.1.0",
-    "autoprefixer": "10.4.5",
-    "eslint": "^8.27.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.39.0",
     "eslint-config-next": "^13.3.4",
     "eslint-config-yehezgun": "^1.2.5",
     "husky": "^7.0.0",
@@ -64,7 +64,7 @@
     "jest-environment-jsdom": "^29.3.1",
     "lint-staged": "^12.3.7",
     "postcss": "^8.4.21",
-    "prettier": "^2.6.2",
+    "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.3.2",
     "ts-jest": "^29.1.0",
@@ -73,10 +73,10 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix --max-warnings=0",
-      "prettier --write src/"
+      "prettier --write"
     ],
     "*.{json,css,scss,md}": [
-      "prettier --write src/"
+      "prettier --write"
     ]
   }
 }
