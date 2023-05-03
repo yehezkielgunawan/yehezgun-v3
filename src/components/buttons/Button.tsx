@@ -7,7 +7,7 @@ const ButtonVariant = ["primary", "outline", "ghost", "light", "dark"] as const;
 
 type ButtonProps = {
   isLoading?: boolean;
-  variant?: typeof ButtonVariant[number];
+  variant?: (typeof ButtonVariant)[number];
 } & React.ComponentPropsWithRef<"button">;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -75,7 +75,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {isLoading && (
           <div
             className={clsxm(
-              "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+              "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
               {
                 "text-white": ["primary", "dark"].includes(variant),
                 "text-black": ["light"].includes(variant),

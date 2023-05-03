@@ -98,7 +98,7 @@ export default function Articles({ articleList }: { articleList: Article[] }) {
                 <p
                   key={category}
                   className={clsxm(
-                    "rounded-md border border-lightsteel-400 py-1 px-2",
+                    "rounded-md border border-lightsteel-400 px-2 py-1",
                     "cursor-pointer bg-gainsboro-300 dark:bg-gainsboro-800",
                     "hover:bg-lightsteel-300 dark:hover:bg-lightsteel-600",
                     categoryState === category &&

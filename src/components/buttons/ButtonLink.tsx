@@ -7,7 +7,7 @@ import UnstyledLink, { UnstyledLinkProps } from "../links/UnstyledLink";
 const ButtonVariant = ["primary", "outline", "ghost", "light", "dark"] as const;
 
 type ButtonLinkProps = {
-  variant?: typeof ButtonVariant[number];
+  variant?: (typeof ButtonVariant)[number];
 } & UnstyledLinkProps;
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(

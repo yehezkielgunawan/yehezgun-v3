@@ -65,7 +65,7 @@ const ArticleCard = ({
             )}{" "}
             <span
               className={clsxm(
-                "rounded-md py-1 px-2 text-xs md:text-sm",
+                "rounded-md px-2 py-1 text-xs md:text-sm",
                 categoryColorList[category]
               )}
             >
