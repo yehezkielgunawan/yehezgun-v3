@@ -127,8 +127,8 @@ export const newTheme = {
             "absolute right-0 top-0 -translate-y-1/2",
             "border-none bg-teal-500 hover:bg-teal-400 active:bg-teal-600"
           )}
-          onClick={() => {
-            navigator.clipboard.writeText(childrenValue);
+          onClick={async () => {
+            await navigator.clipboard.writeText(childrenValue);
             setIsCopied(true);
             setTimeout(() => {
               setIsCopied(false);
