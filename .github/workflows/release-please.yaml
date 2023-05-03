@@ -1,0 +1,26 @@
+name: release-please
+
+on:
+  workflow_dispatch:
+    inputs:
+      is_bump_minor:
+        description: "bump-minor-pre-major"
+        default: false
+        required: true
+        type: boolean
+      is_bump_patch_for_minor_pre_major:
+        description: "bump-patch-for-minor-pre-major"
+        default: false
+        required: true
+        type: boolean
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: release-please-action
+          bump-minor-pre-major: ${{ input.is_bump_minor }}
+          bump-patch-for-minor-pre-major: ${{ input.is_bump_patch_for_minor_pre_major }}
