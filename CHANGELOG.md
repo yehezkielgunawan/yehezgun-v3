@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.2](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.2.1...v0.2.2) (2023-05-04)
+
+
+### Features
+
+* **aboutme.tsx:** :speech_balloon: update wording about my Youtube channel ([e2a4304](https://github.com/yehezkielgunawan/yehezgun-v3/commit/e2a4304e243bf7bcbe590d5751f6028fb4976e02))
+* **contactList.ts:** :sparkles: add Youtube channel ([711b8ef](https://github.com/yehezkielgunawan/yehezgun-v3/commit/711b8ef07e5abbe77d5a66b23fa39d222a9bece8))
+* **home page:** :chart_with_upwards_trend: add tracker for featured projects ([e236d55](https://github.com/yehezkielgunawan/yehezgun-v3/commit/e236d55c1b89e24065851db0746eb76e6096144b))
+* **slug.tsx:** :sparkles: add tracker to the copy link ([50e429e](https://github.com/yehezkielgunawan/yehezgun-v3/commit/50e429ed26e511cfb5f36427dd16876c78cb1f5e))
+
+
+### Bug Fixes
+
+* **aboutme.tsx:** :chart_with_upwards_trend: update event name on the tracker ([17a303a](https://github.com/yehezkielgunawan/yehezgun-v3/commit/17a303a988559abfc0d59fbcc95eebc632604ddc))
+* **newTheme.tsx:** :bug: add async logic when copy blog link ([93402b0](https://github.com/yehezkielgunawan/yehezgun-v3/commit/93402b0e082a25739cfeda2c9ad1cbdadd4e0286))
+* **release-please.yaml:** :ambulance: fix typo ([4b1f0aa](https://github.com/yehezkielgunawan/yehezgun-v3/commit/4b1f0aa355fdad5310b6f1c5e556a5b77b0120ec))
+
 ### [0.2.1](https://github.com/yehezkielgunawan/yehezgun-v3/compare/v0.2.0...v0.2.1) (2022-12-31)
 
 ### Features
