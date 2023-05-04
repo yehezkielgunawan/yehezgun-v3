@@ -22,5 +22,5 @@ jobs:
         with:
           release-type: node
           package-name: release-please-action
-          bump-minor-pre-major: ${{ input.is_bump_minor }}
-          bump-patch-for-minor-pre-major: ${{ input.is_bump_patch_for_minor_pre_major }}
+          bump-minor-pre-major: ${{ inputs.is_bump_minor }}
+          bump-patch-for-minor-pre-major: ${{ inputs.is_bump_patch_for_minor_pre_major }}
