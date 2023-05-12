@@ -1393,9 +1393,9 @@
   integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
 
 "@types/umami@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@types/umami/-/umami-0.1.0.tgz#bf76780c8b60183f35a910db34228627d410a655"
-  integrity sha512-nsrcnBdKXTP/koCwL3c+ywQG0lk+uqNo74oIe0FHC109aO4vZoXL0eSQqkUdWa9Hwc3ssFgJINBBCe0MZVYUwg==
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@types/umami/-/umami-0.1.1.tgz#6c9d0d97457af93efebc922c61d3134b9c4ab933"
+  integrity sha512-00BsPEKZ8ASEyJDFJ1WwnXSdYkJYgQ4fltX9TP/UHX3o3KdUfPocc0jy5wHR3tBXV4LdJldjkZUjmGe/T4zspQ==
 
 "@types/unist@*", "@types/unist@^2.0.0":
   version "2.0.6"
