@@ -1,4 +1,5 @@
 /* eslint-disable react/no-children-prop */
+/*eslint-disable @typescript-eslint/no-explicit-any */
 import Giscus, { GiscusProps } from "@giscus/react";
 import { useTheme } from "next-themes";
 import React, { useCallback, useEffect, useState } from "react";
@@ -205,7 +206,7 @@ export default function Post({ postData }: { postData: Article }) {
           <ReactMarkdown
             components={newTheme}
             children={postData.content}
-            remarkPlugins={[remarkGfm, remarkHtml]}
+            remarkPlugins={[remarkGfm, remarkHtml as any]}
             rehypePlugins={[rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
           />
         </article>
