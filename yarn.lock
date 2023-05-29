@@ -532,10 +532,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.39.0.tgz#58b536bcc843f4cd1e02a7e6171da5c040f4d44b"
   integrity sha512-kf9RB0Fg7NZfap83B3QOqOGg9QmD9yBudqQXzzOtn3i4y7ZUXe5ONeW34Gwi+TxhH4mvj72R1Zc300KUMa9Bng==
 
-"@fontsource/fira-sans@^4.5.10":
-  version "4.5.10"
-  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.10.tgz#63a6dacfa482017a840b40e9c2cfefb187a0e515"
-  integrity sha512-4Edj+GA0LYSqfXOvdTwVGmCShT8Ycd8bKzdfzM302n+I6Hsg6h3gBkBeNgN19PhkcngDznZyHv3EkyrKqvMTGw==
+"@fontsource/fira-sans@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-5.0.1.tgz#ba214a91a85b7e100fa2e5ae6a4349f9d29c1b6f"
+  integrity sha512-9z6siRE4i4s+vUklZpbqp2CJgER2dPKfc9qA3RMHdIj4A/mo8HEz9//15EA5wYjbQIhnPtnrwBSsJRdBl8J+Qg==
 
 "@fontsource/pt-serif@^4.5.11":
   version "4.5.11"
