@@ -1,9 +1,9 @@
 import {
   FaDev,
   FaGithub,
+  FaInstagram,
   FaLinkedin,
   FaTwitter,
-  FaYoutube,
 } from "react-icons/fa";
 import { FcTemplate } from "react-icons/fc";
 import { IconType } from "react-icons/lib";
@@ -23,9 +23,9 @@ export const contactList: Array<SingleContact> = [
     link_route: "https://www.linkedin.com/in/yehezkiel-gunawan-595128138/",
   },
   {
-    name: "Youtube",
-    icon: FaYoutube,
-    link_route: "https://www.youtube.com/@yehezkielgunawan28/streams",
+    name: "Instagram",
+    icon: FaInstagram,
+    link_route: "https://www.instagram.com/yehez.gallery",
   },
   {
     name: "Twitter",
