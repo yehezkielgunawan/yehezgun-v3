@@ -1,5 +1,9 @@
 import React from "react";
 
+export const config = {
+  runtime: "experimental-edge",
+};
+
 function Resume() {
   return (
     <iframe
