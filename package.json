@@ -14,7 +14,7 @@
     "format": "prettier --write src",
     "format:ci": "prettier --check src",
     "typescript:ci": "tsc --noEmit",
-    "build:cloudflare": "yarn install --frozen-lockfile && yarn build"
+    "build:cloudflare": "next build && rm -rf cache"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
