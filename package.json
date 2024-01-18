@@ -13,7 +13,8 @@
     "test:ci": "jest --ci --collect-coverage --verbose",
     "format": "prettier --write src",
     "format:ci": "prettier --check src",
-    "typescript:ci": "tsc --noEmit"
+    "typescript:ci": "tsc --noEmit",
+    "build:cloudflare": "yarn install --frozen-lockfile && yarn build"
   },
   "dependencies": {
     "@fontsource/fira-sans": "^5.0.2",
