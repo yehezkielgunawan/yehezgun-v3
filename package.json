@@ -16,6 +16,9 @@
     "typescript:ci": "tsc --noEmit",
     "build:cloudflare": "yarn install --frozen-lockfile && yarn build"
   },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
   "dependencies": {
     "@fontsource/fira-sans": "^5.0.2",
     "@fontsource/pt-serif": "^4.5.11",
