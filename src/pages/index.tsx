@@ -15,10 +15,6 @@ import { getFeaturedProjectList } from "@/lib/services/fetcher";
 import { urlFor } from "@/lib/services/sanity-config";
 import { SingleProjectItem } from "@/lib/services/types";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export async function getStaticProps() {
   const featuredProjects = await getFeaturedProjectList();
 

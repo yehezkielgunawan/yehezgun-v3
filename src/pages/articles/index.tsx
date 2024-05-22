@@ -13,10 +13,6 @@ import { getArticles } from "@/lib/services/fetcher";
 import { urlFor } from "@/lib/services/sanity-config";
 import { Article } from "@/lib/services/types";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export async function getStaticProps() {
   const articleList = await getArticles();
 

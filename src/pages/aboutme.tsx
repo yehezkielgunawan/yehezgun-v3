@@ -19,10 +19,6 @@ import { trackEvent } from "@/lib/helpers/trackEvent";
 import { getExperienceList } from "@/lib/services/fetcher";
 import { ExperienceType } from "@/lib/services/types";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export async function getStaticProps() {
   const experienceList = await getExperienceList();
 

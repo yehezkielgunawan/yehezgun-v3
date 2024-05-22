@@ -31,10 +31,6 @@ import { getArticleData, getArticles } from "@/lib/services/fetcher";
 import { urlFor } from "@/lib/services/sanity-config";
 import { Article } from "@/lib/services/types";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export async function getStaticProps({
   params: { slug },
 }: {
@@ -112,6 +108,16 @@ export default function Post({ postData }: { postData: Article }) {
     }
     return setGiscusTheme("dark_dimmed");
   }, [theme]);
+
+  if (!isLoaded) {
+    return (
+      <Layout>
+        <div className="flex h-96 items-center justify-center">
+          <p>Loading...</p>
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>

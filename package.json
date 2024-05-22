@@ -13,8 +13,7 @@
     "test:ci": "jest --ci --collect-coverage --verbose",
     "format": "prettier --write src",
     "format:ci": "prettier --check src",
-    "typescript:ci": "tsc --noEmit",
-    "build:cloudflare": "next build && rm -rf .next/cache"
+    "typescript:ci": "tsc --noEmit"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
@@ -46,7 +45,6 @@
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.8.5",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@sanity/image-url": "^1.0.2",
