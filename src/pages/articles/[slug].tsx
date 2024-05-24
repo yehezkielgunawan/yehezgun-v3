@@ -112,6 +112,12 @@ export default function Post({ postData }: { postData: Article }) {
   if (!isLoaded) {
     return (
       <Layout>
+        <MetaHead
+          pageTitle={postData.title}
+          pageDesc="Yehezkiel Gunawan's Article Post"
+          route={`articles/${postData.slug}`}
+          isArticle={true}
+        />
         <div className="flex h-96 items-center justify-center">
           <p>Loading...</p>
         </div>
