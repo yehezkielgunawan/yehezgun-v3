@@ -157,7 +157,7 @@ export default function Home({
                   alt="featured-project"
                   src={urlFor(project.project_screenshot).url()}
                   className={clsxm(
-                    "w-full",
+                    "h-full w-full object-cover",
                     "duration-500 dark:brightness-75 dark:hover:brightness-95",
                     "brightness-90 hover:brightness-100"
                   )}
