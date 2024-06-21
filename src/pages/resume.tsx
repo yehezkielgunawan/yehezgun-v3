@@ -3,7 +3,7 @@ import React from "react";
 function Resume() {
   return (
     <iframe
-      src="https://drive.google.com/file/d/1IMkg2-xro8bbmw6cnfgI2_YboFEbIU82/preview"
+      src="https://drive.google.com/file/d/1oXe3GJlPHHDE3w14IzLSa650jXgvG-_K/preview"
       className="h-screen w-full"
     ></iframe>
   );
