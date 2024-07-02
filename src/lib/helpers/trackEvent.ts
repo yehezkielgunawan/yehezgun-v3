@@ -12,7 +12,11 @@ export const trackEvent = ({
   url,
   webID,
 }: TrackEventArgsType) => {
-  if (window.umami && typeof window.umami.trackEvent === "function") {
-    window.umami.trackEvent(eventName, eventData, url, webID);
+  if (window?.umami && typeof window?.umami?.track === "function") {
+    window?.umami?.track(eventName, {
+      ...eventData,
+      url: url || window.location.pathname,
+      webID: Number(webID),
+    });
   }
 };
