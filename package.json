@@ -11,12 +11,14 @@
     "release": "standard-version",
     "test": "jest --watch",
     "test:ci": "jest --ci --collect-coverage --verbose",
-    "format": "prettier --write src",
-    "format:ci": "prettier --check src",
-    "typescript:ci": "tsc --noEmit"
+    "format": "biome format --write src",
+    "format:ci": "biome format --check src",
+    "typescript:ci": "tsc --noEmit",
+    "migrate-eslint": "biome migrate eslint --write",
+    "migrate-prettier": "biome migrate prettier --write"
   },
   "engines": {
-    "node": "^14.18.0 || >=16.0.0"
+    "node": "^14.18.0 || >=18.0.0"
   },
   "dependencies": {
     "@fontsource/fira-sans": "^5.0.2",
@@ -45,6 +47,7 @@
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@sanity/image-url": "^1.0.2",
