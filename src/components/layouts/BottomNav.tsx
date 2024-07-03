@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import React from "react";
 
 import { menuList } from "@/constants/MenuList";
 import useScroll from "@/hooks/useScroll";

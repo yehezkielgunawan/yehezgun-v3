@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react";
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
 import { fundingSources } from "@/constants/Funding";

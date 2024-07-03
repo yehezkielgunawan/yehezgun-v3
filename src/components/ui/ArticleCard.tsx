@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 
 import { EVENT_TYPE_BLOG } from "@/constants/track";
 import { categoryColorList } from "@/lib/helpers/categoryColor";

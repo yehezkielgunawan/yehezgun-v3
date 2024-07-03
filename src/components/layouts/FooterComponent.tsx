@@ -1,5 +1,3 @@
-import React from "react";
-
 import { footerLinks } from "@/constants/footerLink";
 import clsxm from "@/lib/helpers/clsxm";
 
@@ -24,7 +22,7 @@ const FooterComponent = () => {
       >
         {footerLinks.map((footerLink, index) => (
           <UnstyledLink
-            key={index}
+            key={`${footerLink.labelName} ${index}`}
             href={footerLink.url}
             className={clsxm(
               "text-sm font-semibold hover:underline md:text-base",

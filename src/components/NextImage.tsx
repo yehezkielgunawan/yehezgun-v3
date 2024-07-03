@@ -1,5 +1,5 @@
 import Image, { ImageProps } from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 
 import clsxm from "@/lib/helpers/clsxm";
 

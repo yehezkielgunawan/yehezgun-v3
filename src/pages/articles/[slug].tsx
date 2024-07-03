@@ -2,7 +2,7 @@
 /*eslint-disable @typescript-eslint/no-explicit-any */
 import Giscus, { GiscusProps } from "@giscus/react";
 import { useTheme } from "next-themes";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { BsTranslate } from "react-icons/bs";
 import { FaCheck, FaCopy, FaTwitter } from "react-icons/fa";
 import { MdOutlineAttachMoney } from "react-icons/md";

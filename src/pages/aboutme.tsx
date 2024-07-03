@@ -1,6 +1,6 @@
 import Tippy from "@tippyjs/react/headless";
 import { useTheme } from "next-themes";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { MdOutlineAttachMoney } from "react-icons/md";
 
 import Button from "@/components/buttons/Button";

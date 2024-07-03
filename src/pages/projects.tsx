@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+
 
 import Layout from "@/components/layouts/Layout";
 import MetaHead from "@/components/layouts/MetaHead";

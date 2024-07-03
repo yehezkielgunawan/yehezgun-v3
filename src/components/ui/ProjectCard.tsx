@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 import { EVENT_TYPE_LINK } from "@/constants/track";

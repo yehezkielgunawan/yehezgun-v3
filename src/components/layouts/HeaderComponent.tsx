@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import { menuList } from "@/constants/MenuList";

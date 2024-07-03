@@ -1,4 +1,4 @@
-import React from "react";
+
 import { BsBriefcase, BsBuilding } from "react-icons/bs";
 import { GiJourney } from "react-icons/gi";
 
