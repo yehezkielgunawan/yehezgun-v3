@@ -81,11 +81,12 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --max-warnings=0",
-      "prettier --write"
+      "biome check --write src",
+      "biome format --write src",
+      "biome lint --write src"
     ],
     "*.{json,css,scss,md}": [
-      "prettier --write"
+      "biome format --write"
     ]
   }
 }

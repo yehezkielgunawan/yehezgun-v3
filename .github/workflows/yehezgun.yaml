@@ -12,32 +12,38 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: "yarn"
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: yarn --immutable
+        run: pnpm install
 
-      - name: Run Prettier
-        run: yarn format:ci
+      - name: Run Biome Formatter
+        run: pnpm format:ci
 
-      - name: Run ESLint
-        run: yarn lint
+      - name: Run Biome Linter
+        run: pnpm lint
 
       - name: Run Unit Test
-        run: yarn test:ci
+        run: pnpm test:ci
 
       - name: Run TypeScript
-        run: yarn typescript:ci
+        run: pnpm typescript:ci
 
       - name: Run unit tests in CI environment
-        run: yarn test:ci
+        run: pnpm test:ci
 
       - name: Build the application
-        run: yarn build
+        run: pnpm build
         env:
           UMAMI_WEB_ID: ${{secrets.UMAMI_WEB_ID}}
           UMAMI_SRC: ${{secrets.UMAMI_SRC}}
